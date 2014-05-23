@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:spring="http://www.springframework.org/tags"
+     xmlns:form="http://www.springframework.org/tags/form"
+     version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <spring:message code="label_category_form_edit" var="formTitle"/>
+    <spring:message code="label_category_title" var="labelCategoryTitle"/>
+    <spring:message code="label_category_img" var="labelCategoryImg"/>
+    <spring:url value="/admin/turns/category/img/" var="turnCategoryImg"/>
+    <spring:url value="/admin/turns" var="turnsUrl"/>
+    <div id="turnInfo">
+        <h4><a class="a_nav" onclick="javascript:history.back();">Назад</a>|<a class="a_nav" href="${turnsUrl}">К списку услуг и категорий</a></h4>
+        <h2>${formTitle}</h2>
+
+        <form:form method="POST" modelAttribute="turnCategory" enctype="multipart/form-data">
+
+            <c:if test="${not empty message}">
+                <div id="message" class="${message.type}">${message.message}</div>
+            </c:if>
+
+            <h3>
+                    <span class="formLabels">
+                        Категория
+                    </span>
+            </h3>
+            <c:choose>
+                <c:when test="${turnCategory.turns.size() gt 0}">
+                <div>
+                    <ul id="firstLevel">
+                        <li><div class="img"><img src="${turnCategoryImg}/${turnCategory.id}" alt="Жилищное право"/></div>
+                            <div class="hoverSecondLevel">
+                                <c:choose>
+                                    <c:when test="${turnCategory.title.length() ge 20}">
+                                        <a class="overfull" href="${turnsUrl}/category/${turnCategory.id}?edit">${turnCategory.title}</a>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <a href="#">${turnCategory.title}</a>
+                                    </c:otherwise>
+                                </c:choose>
+                                    <ul class="secondLevel">
+                                        <c:forEach items="${turnCategory.turns}" var="turn">
+                                            <li><a href="${turnsUrl}/${turn.id}?edit">${turn.title}</a></li>
+                                        </c:forEach>
+                                    </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                </c:when>
+                <c:otherwise>
+                    <span id="turns_empty">
+                        В этой категории нет услуг! <a class="addTurn" href="${turnsUrl}?add">Добавить услугу</a>
+                    </span>
+                </c:otherwise>
+            </c:choose>
+            <div>
+                <h3>
+                    <form:label path="title" cssClass="formLabels">
+                        ${labelCategoryTitle}
+                    </form:label>
+                </h3>
+                <form:input cssClass="formSections" path="title" id="category_input_title"/>
+                <form:errors path="title" cssClass="error"/>
+            </div>
+
+            <div>
+                <h3>
+                     <form:label path="title" cssClass="formLabels">
+                        ${labelCategoryImg}
+                     </form:label>
+                </h3>
+                <input class="formSections" type="file" name="file" id="input_img"/>
+                <form:errors path="img" cssClass="error"/>
+                <div>(Размер файла: 100кб, Расширение файла: PNG, Размер изображения: 64x64px)</div>
+            </div>
+            <div>
+                <input class="formButton" type="submit" />
+                <input class="formButton" type="reset" />
+            </div>
+        </form:form>
+    </div>
+</jsp:root>

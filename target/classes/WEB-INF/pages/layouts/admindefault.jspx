@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<html xmlns:jsp="http://java.sun.com/JSP/Page"
+      xmlns:tiles="http://tiles.apache.org/tags-tiles"
+      xmlns:spring="http://www.springframework.org/tags"
+      version="2.0">
+    <jsp:output doctype-root-element="HTML" doctype-system="about:legacy-compat"/>
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:directive.page pageEncoding="UTF-8"/>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+
+        <spring:theme code="adminStyleSheet" var="admin_theme" />
+        <spring:url value="/${admin_theme}" var="admin_theme_url" />
+        <spring:theme code="IEfix" var="IE" />
+        <spring:url value="/${IE}" var="IE_url" />
+        <spring:url value="/resources/style/ui-custom-theme/jquery-ui-1.10.4.custom.css" var="jqueryui_css" />
+        <spring:url value="/resources/style/messages.css" var="messages_css"/>
+        <spring:url value="/resources/style/ui.jqgrid.css" var="jqgrid_css"/>
+        <spring:url value="/resources/js/jquery-1.11.1.min.js" var="jquery" />
+        <spring:url value="/resources/ckeditor/ckeditor.js" var="ckeditor"/>
+        <spring:url value="/resources/ckeditor/adapters/jquery.js" var="ckeditor_jq"/>
+        <spring:url value="/resources/js/jquery-ui-1.10.4.custom.min.js" var="jquery_ui" />
+        <spring:url value="/resources/i18n/jquery.ui.datepicker-ru.js" var="jqueryui_ru" />
+        <spring:url value="/resources/i18n/grid.locale-ru.js" var="jqgrid_ru" />
+        <spring:url value="/resources/js/jquery.jqGrid.min.js" var="jqgrid" />
+
+        <link href="${admin_theme_url}" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="${IE_url}" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="${messages_css}" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="${jqueryui_css}" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="${jqgrid_css}" rel="stylesheet" type="text/css" media="screen"/>
+        <script type="text/javascript" src="${jquery}"><jsp:text/></script>
+        <script type="text/javascript" src="${ckeditor}"><jsp:text/></script>
+        <script type="text/javascript" src="${ckeditor_jq}"><jsp:text/></script>
+        <script type="text/javascript" src="${jquery_ui}"><jsp:text/></script>
+        <script type="text/javascript" src="${jqueryui_ru}"><jsp:text/></script>
+        <script type="text/javascript" src="${jqgrid}"><jsp:text/></script>
+        <script type="text/javascript" src="${jqgrid_ru}"><jsp:text/></script>
+
+        <spring:message code="default_title_admin" var="admin_title" htmlEscape="false"/>
+
+        <title><spring:message code="title_templete" arguments="${admin_title}"/></title>
+    </head>
+    <body>
+        <div id="container" class="headers">
+            <tiles:insertAttribute name="header"/>
+            <tiles:insertAttribute name="menu"/>
+            <div id="main">
+                <div id="all">
+                        <tiles:insertAttribute name="body"/>
+                </div>
+            </div>
+            <tiles:insertAttribute name="footer"/>
+        </div>
+    </body>
+</html>

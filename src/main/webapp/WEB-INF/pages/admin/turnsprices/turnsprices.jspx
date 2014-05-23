@@ -1,0 +1,191 @@
+<div id="turnInfo" class="grids" xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:spring="http://www.springframework.org/tags"
+     xmlns:form="http://www.springframework.org/tags/form"
+     version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <spring:message code="label_edit" var="labelEdit"/>
+    <spring:message code="label_delete" var="labelDelete"/>
+    <spring:message code="label_add" var="labelAdd"/>
+    <spring:message code="label_no" var="labelNo"/>
+    <spring:message code="label_yes" var="labelYes"/>
+    <spring:message code="label_warning" var="labelWarning"/>
+    <spring:message code="label_error" var="labelError"/>
+
+    <spring:message code="label_turn_not_selected" var="labelTurnNotSelected"/>
+    <spring:message code="label_turn_confirm_delete" var="labelTurnConfirmDelete"/>
+    <spring:message code="turns_empty" var="labelTurnsEmpty"/>
+    <spring:message code="label_turn" var="labelTurn"/>
+    <spring:message code="label_price" var="labelPrice"/>
+    <spring:message code="label_turnsprices" var="labelTurnsPrices"/>
+    <spring:url value="/admin/turnsprices" var="TurnsPricesUrl"></spring:url>
+
+
+
+
+    <script type="text/javascript">
+
+        $(function(){
+
+            //Таблица jqGrid для Услуг
+            $("#turnsprices_list").jqGrid({
+                url:'${TurnsPricesUrl}/turnspriceslist',
+                datatype: 'json',
+                mtype: 'GET',
+                colNames:['${labelTurn}','${labelPrice}'],
+                colModel :[
+                    {name:'turn', index:'turn', width:45, align:"center"},
+                    {name:'price', index:'price', width:45, align:"center"}
+                ],
+                jsonReader : {
+                    root:"turnPriceData",
+                    page: "currentPage",
+                    total: "totalPages",
+                    records: "totalRecords",
+                    repeatitems: false,
+                    id: "id"
+                },
+                emptyrecords: "${labelTurnsEmpty}",
+                pager: '#pager',
+                rowNum:20,
+                rowList:[20,30,40],
+                sortname: 'turn',
+                sortorder: 'asc',
+                viewrecords: true,
+                gridview: true,
+                autowidth:true,
+                height:460,
+                caption: '${labelTurnsPrices}'
+            });
+
+            //Добавляем панель управления услугами
+            $("#turnsprices_list").jqGrid('navGrid','#pager',
+                    {edit:false,add:false,del:false,search:false},
+                    {}, {}, {},
+                    {}
+            );
+
+            //Добавляем кнопку добавления к панели управления услугами
+            $("#turnsprices_list").navButtonAdd('#pager',
+                    {  caption:"${labelAdd}",
+                        buttonicon:"ui-icon-plus",
+                        onClickButton: addTurnPrice,
+                        position: "last",
+                        title:"",
+                        cursor: "pointer"
+                    }
+            );
+
+            //Добавляем кнопку редактирования к панели управления услугами
+            $("#turnsprices_list").navButtonAdd('#pager',
+                    {  caption:"${labelEdit}",
+                        buttonicon:"ui-icon-pencil",
+                        onClickButton: editTurnPrice,
+                        position: "last",
+                        title:"",
+                        cursor: "pointer"
+                    }
+            );
+
+            //Добавляем кнопку удаления к панели управления услугами
+            $("#turnsprices_list").navButtonAdd('#pager',
+                    {  caption:"${labelDelete}",
+                        buttonicon:"ui-icon-trash",
+                        onClickButton: deleteTurnPrice,
+                        position: "last",
+                        title:"",
+                        cursor: "pointer"
+                    }
+            );
+
+            });
+
+
+    </script>
+    <script type="text/javascript">
+
+        //Функция добавления услуги
+        function addTurnPrice() {
+            document.location.href = "${TurnsPricesUrl}/#turnsprices_form";
+        };
+
+        //Функция редактирования услуги
+        function editTurnPrice() {
+            var id = $("#turnsprices_list").jqGrid('getGridParam','selrow');
+            if (id != null) {
+                document.location.href = "${TurnsPricesUrl}/" + id + "?edit#turnsprices_form";
+            } else {
+                $( "#dialogSelectTurn" ).dialog({height:100, resizable:false, modal: true});
+            }
+        };
+
+        //Функция удаления услуги
+        function deleteTurnPrice() {
+            var id = $("#turnsprices_list").jqGrid('getGridParam','selrow');
+            if (id != null) {
+                $( "#dialog-confirm" ).dialog({
+                        resizable:false,
+                        height:160,
+                        modal: true,
+                        buttons: {
+                            "${labelYes}": function() {
+                                document.location.href = "${TurnsPricesUrl}/" + id + "?delete";
+                            },
+                            "${labelNo}": function() {
+                                $( this ).dialog( "close" );
+                            }
+                        }
+                });
+            } else {
+                $( "#dialogSelectTurn" ).dialog({height:100, resizable:false, modal: true});
+            }
+        };
+    </script>
+        <h2>${labelTurnsPrices}</h2>
+        <c:if test="${not empty message}">
+            <div id="message" class="${message.type}">${message.message}</div>
+        </c:if>
+
+        <div id="turnsprices_grid">
+            <table id="turnsprices_list"><jsp:text/></table>
+            <div id="pager"><jsp:text/></div>
+        </div>
+
+    <div id="turnsprices_form">
+        <form:form method="POST" modelAttribute="turnPrice">
+            <div>
+                <h3>
+                    <form:label path="turn" cssClass="formLabels">
+                        ${labelTurn}
+                    </form:label>
+                </h3>
+                <form:input cssClass="formSections" path="turn" id="turn_input_title"/>
+                <form:errors path="turn" cssClass="error"/>
+            </div>
+
+            <div>
+                <h3>
+                    <form:label path="price" cssClass="formLabels">
+                        ${labelPrice}
+                    </form:label>
+                </h3>
+                <form:input cssClass="formSections" path="price" id="turn_input_title"/>
+                <form:errors path="price" cssClass="error"/>
+            </div>
+            <div>
+                <input class="formButton" type="submit" />
+                <input class="formButton" type="reset" />
+            </div>
+        </form:form>
+    </div>
+
+        <div id="dialog-confirm" title="${labelWarning}" style="display:none">
+        <p>${labelTurnConfirmDelete}</p>
+        </div>
+
+        <div id="dialogSelectTurn" title="${labelError}" style="display:none">
+        <p>${labelTurnNotSelected}</p>
+        </div>
+
+</div>

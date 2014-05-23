@@ -1,0 +1,525 @@
+*{
+margin:0;
+padding:0;
+font:14px "Times New Roman", Times, serif;
+}
+html, body {
+height:100%;
+}
+html {
+background-image:url(../img/astreya-bg.jpg);
+color:#363636;
+}
+h1 {
+	color:#363636;
+	font-size:24px;
+	margin:10px;
+	text-align:center;
+}
+h2 {
+	color:#363636;
+	font-size:18px;
+	margin:5px;
+	text-align:center;
+}
+p {
+	line-height:21px;
+}
+a {
+	color:#363636;
+	font-size:inherit;
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:underline;
+	color:#000;
+}
+/*Главная область сайта*/
+#container {
+	max-width:1414px;
+	min-width:1140px;
+	height:100%;
+	margin:0 auto;
+}
+/*Шапка сайта*/
+	#header {
+		height:265px;
+		margin-bottom:10px;
+		position:relative;
+	}
+/*Изображение Астреи*/
+		#astreya {
+			position:absolute;
+			background:url(../img/astreya.png) no-repeat;
+			height:241px;
+			width:146px;
+			bottom:0;
+			left:40px;
+		}
+/*Логотип*/
+		#logo {
+			position:absolute;
+			left:50%;
+			margin-left:-400px;
+			bottom:24px;
+			width:646;
+		}
+/*Дублированное меню сверху*/
+		.secondaryMenu {
+			position:absolute;
+			left:50%;
+			margin-left:-350px;
+			top:3px;
+		}
+			.secondaryMenu ul {
+				list-style:none;
+			}
+				.secondaryMenu li {
+					margin-left:10px;
+					float:left;
+				}
+					.secondaryMenu a {
+						text-decoration:underline;
+						color:#363636;
+						font:16px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+					}
+					.secondaryMenu a:hover {
+						color:#000;
+						text-decoration:none;
+					}
+/*Контактная информация*/
+		#topInfo {
+			position:absolute;
+			font:14px "Times New Roman", Times, serif;
+			right:30px;
+			top:8px;
+			text-align:right;
+		}
+/*Форма записи на консультацию*/
+			.recordCons {
+				font-size:16px;
+				color:#363636;
+				border-bottom: 1px dashed #363636;
+			}
+				.recordCons:hover {
+					border-bottom:none;
+					text-decoration:none;
+				}
+/*Время работы и телефоны*/
+				.worktime ,.phones ,.consultation{
+					text-align:center;
+					margin-top:25px;
+				}
+					.phones {
+						margin-top:20px;
+						font-size:24px;
+					}
+/*Форма поиска*/
+		#searchBox {
+			display:inline-block;
+			position:absolute;
+			bottom:5px;
+			right:0;
+			border:3px solid #cead56;
+			background:#cead56;
+			-moz-border-radius:5px;
+			-webkit-border-radius:5px;
+			-o-border-radius:5px;
+			-ms-border-radius:5px;
+			border-radius:5px;
+		}
+			#search {
+				float:left;
+				outline:none;
+				width:270px;
+				padding:1px 0 1px 0;
+				padding-left:5px;
+				border:none;
+				color:#363636;
+				-moz-border-radius:2px 0 0 2px;
+				-webkit-border-radius:2px 0 0 2px;
+				-o-border-radius:2px 0 0 2px;
+				-ms-border-radius:2px 0 0 2px;
+				border-radius:2px 0 0 2px;
+				-webkit-box-shadow:inset 0px 1px 5px 0px #666666;
+				-moz-box-shadow:inset 0px 1px 5px 0px #666666;
+				-o-box-shadow:inset 0px 1px 5px 0px #666666;
+				-ms-box-shadow:inset 0px 1px 5px 0px #666666;
+				box-shadow:inset 0px 1px 5px 0px #666666;
+			}
+			#submit {
+				float:left;
+				width:57px;
+				border:1px solid #dfb585;
+				outline:none;
+				background:#f5eabb;
+				color:#363636;
+				-moz-border-radius:0 2px 2px 0;
+				-webkit-border-radius:0 2px 2px 0;
+				-o-border-radius:0 2px 2px 0;
+				-ms-border-radius:0 2px 2px 0;
+				border-radius:0 2px 2px 0;
+			}
+/*Главное меню*/
+	#mainMenu {
+		max-width:1415px;
+		min-width:1140px;
+		border:3px solid #cead56;
+		-moz-border-radius:5px;
+		-webkit-border-radius:5px;
+		-o-border-radius:5px;
+		-ms-border-radius:5px;
+		border-radius:5px;
+		background: -moz-linear-gradient(#ba9944, #8b5c39);
+		background: -webkit-linear-gradient(#ba9944, #8b5c39);
+		background: -o-linear-gradient(#ba9944, #8b5c39);
+		background: -ms-linear-gradient(#ba9944, #8b5c39);
+		background: linear-gradient(#ba9944, #8b5c39);
+		-webkit-box-shadow:1px 1px 5px 0px #666666;
+		-moz-box-shadow:1px 1px 5px 0px #666666;
+		-o-box-shadow:1px 1px 5px 0px #666666;
+		-ms-box-shadow:1px 1px 5px 0px #666666;
+		box-shadow:1px 1px 5px 0px #666666;
+	}
+		#mainMenu ul {
+			display:table;
+			width:100%;
+			list-style:none;
+			table-layout:fixed;
+		}
+			#mainMenu li {
+				display:table-cell;
+				vertical-align:middle;
+				border-left:1px solid #ba9944;
+				border-right:1px solid #8b5c39;
+			}
+				#mainMenu li.firstLi {
+					border-left:none;
+				}
+				#mainMenu li.lastLi {
+					border-right:none;
+				}
+					#mainMenu .hover:hover ,#mainMenu .firstHover:hover ,#mainMenu .lastHover:hover {
+						background: -moz-linear-gradient(#8b5c39, #ba9944);
+						background: -webkit-linear-gradient(#8b5c39, #ba9944);
+						background: -o-linear-gradient(#8b5c39, #ba9944);
+						background: -ms-linear-gradient(#8b5c39, #ba9944);
+						background: linear-gradient(#8b5c39, #ba9944);
+					}
+						#mainMenu .firstHover:hover {
+							-moz-border-radius:2px 0 0 2px;
+							-webkit-border-radius:2px 0 0 2px;
+							-o-border-radius:2px 0 0 2px;
+							-ms-border-radius:2px 0 0 2px;
+							border-radius:2px 0 0 2px;
+						}
+						#mainMenu .lastHover:hover {
+							-moz-border-radius:0 2px 2px 0;
+							-webkit-border-radius:0 2px 2px 0;
+							-o-border-radius:0 2px 2px 0;
+							-ms-border-radius:0 2px 2px 0;
+							border-radius:0 2px 2px 0;
+						}
+							#mainMenu a {
+								display:block;
+								height:50px;
+								text-align:center;
+								text-decoration:none;
+								color:#fff;
+								font:20px/50px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+							}
+							#mainMenu a:hover {
+								color:#363636;
+							}
+/*Центральный блок сайта*/
+	#main {
+		margin-top:13px;
+		min-height:100%;
+	}
+		#all {
+			padding:0 0 260px;
+			overflow:hidden;
+		}
+/*Левый блок*/
+			#left {
+				float:left;
+				width:269px;
+			}
+/*Левое меню*/
+				#leftMenu {
+					background:#eddc99;
+					border:3px solid #cead56;
+					-moz-border-radius:7px;
+					-webkit-border-radius:7px;
+					-o-border-radius:7px;
+					-ms-border-radius:7px;
+					border-radius:7px;
+					padding:20px 20px 0 20px;
+					margin-bottom:20px;
+					-webkit-box-shadow:1px 1px 5px 0px #666666;
+					-moz-box-shadow:1px 1px 5px 0px #666666;
+					-o-box-shadow:1px 1px 5px 0px #666666;
+					-ms-box-shadow:1px 1px 5px 0px #666666;
+					box-shadow:1px 1px 5px 0px #666666;
+				}
+					#firstLevel {
+						list-style:none;
+					}
+						#firstLevel>li {
+							background: -moz-linear-gradient(#ba9944, #8b5c39);
+							background: -webkit-linear-gradient(#ba9944, #8b5c39);
+							background: -o-linear-gradient(#ba9944, #8b5c39);
+							background: -ms-linear-gradient(#ba9944, #8b5c39);
+							background: linear-gradient(#ba9944, #8b5c39);
+							border:1px solid #8c5c39;
+							-moz-border-radius:5px;
+							-webkit-border-radius:5px;
+							-o-border-radius:5px;
+							-ms-border-radius:5px;
+							border-radius:5px;
+							height:39px;
+							margin-bottom:20px;
+							text-align:center;
+							position:relative;
+						}
+							.img  {
+								width:36px;
+								height:39px;
+								float:left;
+								position:relative;
+								border-right:1px solid #8b5c39;
+							}
+							.img img {
+								width:36px;
+								position:absolute;
+								left:0;
+							}
+							.hoverSecondLevel {
+								position:relative;
+								margin-left:37px;
+								height:39px;
+								width:186px;
+							}
+								.hoverSecondLevel>a { 
+									text-decoration:none;
+									color:#fff;
+									display:block;
+									width:183px;
+									height:39px;
+									font:18px/39px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+									border-left:1px solid #ba9944;
+								}
+									.hoverSecondLevel>a.overfull {
+										line-height:18px;
+									}
+										.hoverSecondLevel:hover>a {
+											position:absolute;
+											padding-right:23px;
+											background:#eddc99;
+											border-top:1px solid #8b5c39;
+											border-bottom:1px solid #8b5c39;
+											left:0;
+											top:-1px;
+											color:#363636;
+											z-index:2;
+										}
+										.secondLevel {
+												-moz-border-radius:5px 5px 5px 0;
+												-webkit-border-radius:5px 5px 5px 0;
+												-o-border-radius:5px 5px 5px 0;
+												-ms-border-radius:5px 5px 5px 0;
+												border-radius:0 5px 5px 5px;
+												list-style:none;
+												width:300px;
+												position:absolute;
+												display:none;
+												top:-1px;
+												border:1px solid #8b5c39;
+												left:206px;
+												background:#eddc99;
+												padding:12px 10px 0 10px;
+												z-index:1;
+										}
+												.secondLevel li {
+													text-align:left;
+													margin-bottom:24px;
+													background:url(../img/marker.png) 0% 7px no-repeat;
+													padding-left:10px;
+												}
+													.secondLevel li a {
+														font:14px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+														text-decoration:none;
+														color:#363636;
+													}
+													.secondLevel li a:hover {
+														text-decoration:underline;
+														color:#000;
+													}
+													.hoverSecondLevel:hover .secondLevel {
+														display:block;
+													}
+/*Блок отзывов*/
+	#right {
+		float:right;
+		width:269px;
+	}
+			#reviews {
+					background:#eddc99;
+					border:3px solid #cead56;
+					-moz-border-radius:7px;
+					-webkit-border-radius:7px;
+					-o-border-radius:7px;
+					-ms-border-radius:7px;
+					border-radius:7px;
+					padding:0 20px 0 20px;
+					-webkit-box-shadow:-1px 1px 5px 0px #666666;
+					-moz-box-shadow:-1px 1px 5px 0px #666666;
+					-o-box-shadow:-1px 1px 5px 0px #666666;
+					-ms-box-shadow:-1px 1px 5px 0px #666666;
+					box-shadow:-1px 1px 5px 0px #666666;
+				}
+					.review {
+							border:1px solid #8c5c39;
+							-moz-border-radius:5px;
+							-webkit-border-radius:5px;
+							-o-border-radius:5px;
+							-ms-border-radius:5px;
+							border-radius:5px;
+							height:39px;
+							margin-bottom:20px;
+							position:relative;
+							background:#ebd377;
+							height:162px;
+					}
+						.comment {
+							text-align:left;
+							line-height:21px;
+							padding:0 5px 0 5px;
+						}
+							.comment a {
+							text-decoration:underline;
+							color:#000;
+						}
+							.comment a:hover {
+							text-decoration:none;
+							color:#363636;
+						}
+/*Блок контента*/
+	#content {
+		border:3px solid #cead56;
+		margin:0 283px 0 283px;
+		background:#eddc99;
+		padding:5px 20px 20px 20px;
+		-moz-border-radius:7px;
+		-webkit-border-radius:7px;
+		-o-border-radius:7px;
+		-ms-border-radius:7px;
+		border-radius:7px;
+		-webkit-box-shadow:1px 1px 5px 0px #666666;
+		-moz-box-shadow:1px 1px 5px 0px #666666;
+		-o-box-shadow:1px 1px 5px 0px #666666;
+		-ms-box-shadow:1px 1px 5px 0px #666666;
+		box-shadow:1px 1px 5px 0px #666666;
+	}
+		#crumbs a {
+			text-decoration:underline;
+		}
+			#crumbs a:hover {
+			text-decoration:none;
+		}
+		.pointer {
+			margin:0 2px 0 2px;
+		}
+/*Футер*/
+	#footer {
+		height:260px;
+		position:relative;
+		margin-top:-260px;
+	}
+		hr {
+			margin-top:10px;
+		}
+		#bottomLogo {
+			position:absolute;
+			left:0;
+			top:10px;
+			width:277px;
+		}
+		#copyright {
+			position:absolute;
+			bottom:0;
+			left:0;
+		}
+		.bottomSecondaryMenu {
+			position:absolute;
+			left:400px;
+		}	
+			.bottomSecondaryMenu h1 {
+			margin:20px 0 0 0;
+			text-align:left;
+			}
+			.bottomSecondaryMenu ul {
+				list-style:none;
+			}
+				.bottomSecondaryMenu li {
+					line-height:21px;
+				}
+					.bottomSecondaryMenu a {
+						text-decoration:underline;
+						color:#363636;
+						font:16px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+					}
+					.bottomSecondaryMenu a:hover {
+						color:#000;
+						text-decoration:none;
+					}
+		.bottomServices {
+			position:absolute;
+			left:650px;
+			margin-bottom:20px;
+		}	
+			.bottomServices h1 {
+			margin:20px 0 0 0;
+			text-align:left;
+			}
+			.bottomServices ul {
+				list-style:none;
+			}
+				.bottomServices li {
+					line-height:21px;
+				}
+					.bottomServices a {
+						text-decoration:underline;
+						color:#363636;
+						font:16px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+					}
+					.bottomServices a:hover {
+						color:#000;
+						text-decoration:none;
+					}
+		#bottomInfo {
+			margin-top:20px;
+			width:420px;
+			position:absolute;
+			right:0;
+		}
+			#bottomPhones h1 {
+				float:left;
+				line-height:8px;
+			}
+			#bottomAdress h1 {
+				float:left;
+				line-height:0px;
+			}
+			
+			#bottomAdress {
+				margin-top:20px;
+			}
+				.bottomPhones {
+					font-size:24px;
+					margin-left:200px;
+				}
+				.bottomAdress {
+					line-height:24px;
+				}
+			

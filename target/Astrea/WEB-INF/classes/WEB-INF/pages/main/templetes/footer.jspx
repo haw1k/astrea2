@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div id="footer" xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:spring="http://www.springframework.org/tags"
+     version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <jsp:directive.page pageEncoding="UTF-8"/>
+    <spring:message code="copyright" var="copyright"/>
+
+    <hr color="#cead56">
+    <div id="bottomLogo">
+        <a href = "index.html"><img src="img/bottomLogo.png" alt = "Астрея | Юридическое агенство" border="0"/></a>
+    </div>
+    <div id="copyright">Астрея © 2014. Все права защищены.</div>
+    <div class="bottomSecondaryMenu">
+        <ul>
+            <h1>Главное меню</h1>
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">Вопрос-ответ</a></li>
+            <li><a href="#">Стоимость услуг</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+    </div>
+    <div class="bottomServices">
+        <ul>
+            <h1>Наши услуги</h1>
+            <li><a href="#">Жилищное право</a></li>
+            <li><a href="#">Гражданское право</a></li>
+            <li><a href="#">Земельное право</a></li>
+            <li><a href="#">Семейное право</a></li>
+            <li><a href="#">Наследственное право</a></li>
+            <li><a href="#">Трудовое право</a></li>
+            <li><a href="#">Налоговое право</a></li>
+            <li><a href="#">Представительство в суде</a></li>
+            <li><a href="#">Недвижимость</a></li>
+        </ul>
+    </div>
+    <div id="bottomInfo">
+        <div id="bottomPhones">
+            <h1>Наши телефоны:</h1>
+            <div class="bottomPhones">+7(343) 268-69-39<br>+7(902) 875-89-09<br></div>
+        </div>
+        <div id="bottomAdress">
+            <h1>Нам адрес:</h1>
+            <div class="bottomAdress">г.Екатеринбург ул.Красноуральская 23 оф.310<br>
+        </div>
+    </div>
+
+</div>

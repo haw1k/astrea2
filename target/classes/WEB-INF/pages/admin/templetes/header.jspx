@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div id="header" xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:spring="http://www.springframework.org/tags"
+     version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:directive.page pageEncoding="UTF-8"/>
+    <spring:url value="/resources/img/adminTopLogo.png" var="admin_logo_url" />
+    <spring:url value="/admin/" var="urlHome"/>
+
+    <div id="topLogo">
+        <a href = "${urlHome}"><img src="${admin_logo_url}"/></a>
+    </div>
+    <h1 id="admin_title"><spring:message code="admin_title_message" /></h1>
+
+</div>

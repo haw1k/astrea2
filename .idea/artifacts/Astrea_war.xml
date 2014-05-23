@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="Astrea:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="Astrea.war">
+      <element id="artifact" artifact-name="Astrea:war exploded" />
+    </root>
+  </artifact>
+</component>

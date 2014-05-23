@@ -1,0 +1,132 @@
+<div id="left" xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:spring="http://www.springframework.org/tags"
+     xmlns:c="http://java.sun.com/jsp/jstl/core"
+     version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:directive.page pageEncoding="UTF-8"/>
+
+    <div id="leftMenu">
+        <ul id="firstLevel">
+            <li>
+                <div class="img"><img src="img/home.png" alt="Жилищное право"></div>
+                <div class="hoverSecondLevel">
+                    <a href="#">Жилищное право</a>
+                    <ul class="secondLevel">
+                        <li><a href="#">Перевод жилого помещения в не жилое</a></li>
+                        <li><a href="#">Переустройство и перепланировка</a></li>
+                        <li><a href="#">Признание лица не преобретщим право пользования на жилое помещение</a></li>
+                        <li><a href="#">Устранение препядствий по пользованию жилым помещением</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="img"><img src="img/hands.png" alt="Гражданское право"></div>
+                <div class="hoverSecondLevel">
+                    <a href="#">Гражданское право</a>
+                    <ul class="secondLevel">
+                        <li><a href="#">Перевод жилого помещения в не жилое</a></li>
+                        <li><a href="#">Переустройство и перепланировка</a></li>
+                        <li><a href="#">Признание лица не преобретщим право пользования на жилое помещение</a></li>
+                        <li><a href="#">Устранение препядствий по пользованию жилым помещением</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="img"><img src="img/land.png" alt="Земельное право"></div>
+                <div class="hoverSecondLevel">
+                    <a href="#">Земельное право</a>
+                    <ul class="secondLevel">
+                        <li><a href="#">Перевод жилого помещения в не жилое</a></li>
+                        <li><a href="#">Переустройство и перепланировка</a></li>
+                        <li><a href="#">Признание лица не преобретщим право пользования на жилое помещение</a></li>
+                        <li><a href="#">Устранение препядствий по пользованию жилым помещением</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="img"><img src="img/dispute.png" alt="Семейное право"></div>
+                <div class="hoverSecondLevel">
+                    <a href="#">Семейное право</a>
+                    <ul class="secondLevel">
+                        <li><a href="#">Перевод жилого помещения в не жилое</a></li>
+                        <li><a href="#">Переустройство и перепланировка</a></li>
+                        <li><a href="#">Признание лица не преобретщим право пользования на жилое помещение</a></li>
+                        <li><a href="#">Устранение препядствий по пользованию жилым помещением</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="img"><img src="img/legacy.png" alt="Наследственное право"></div>
+                <div class="hoverSecondLevel">
+                    <a class="overfull" href="#">Наследственное право</a>
+                    <ul class="secondLevel">
+                        <li><a href="#">Перевод жилого помещения в не жилое</a></li>
+                        <li><a href="#">Переустройство и перепланировка</a></li>
+                        <li><a href="#">Признание лица не преобретщим право пользования на жилое помещение</a></li>
+                        <li><a href="#">Устранение препядствий по пользованию жилым помещением</a></li>
+                    </ul>
+                </div>
+            <li>
+                <div class="img"><img src="img/helmet.png" alt="Трудовое право"></div>
+                <div class="hoverSecondLevel">
+                    <a href="#">Трудовое право</a>
+                    <ul class="secondLevel">
+                        <li><a href="#">Перевод жилого помещения в не жилое</a></li>
+                        <li><a href="#">Переустройство и перепланировка</a></li>
+                        <li><a href="#">Признание лица не преобретщим право пользования на жилое помещение</a></li>
+                        <li><a href="#">Устранение препядствий по пользованию жилым помещением</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="img"><img src="img/car.png" alt="Налоговое право"></div>
+                <div class="hoverSecondLevel">
+                    <a href="#">Налоговое право</a>
+                    <ul class="secondLevel">
+                        <li><a href="#">Перевод жилого помещения в не жилое</a></li>
+                        <li><a href="#">Переустройство и перепланировка</a></li>
+                        <li><a href="#">Признание лица не преобретщим право пользования на жилое помещение</a></li>
+                        <li><a href="#">Устранение препядствий по пользованию жилым помещением</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="img"><img src="img/hammer.png" alt="Представительство в суде"></div>
+                <div class="hoverSecondLevel">
+                    <a class="overfull" href=#>Представительство в суде</a>
+                    <ul class="secondLevel">
+                        <li><a href="#">Перевод жилого помещения в не жилое</a></li>
+                        <li><a href="#">Переустройство и перепланировка</a></li>
+                        <li><a href="#">Признание лица не преобретщим право пользования на жилое помещение</a></li>
+                        <li><a href="#">Устранение препядствий по пользованию жилым помещением</a></li>
+                    </ul>
+                </div>
+            </div>
+            <li>
+                <div class="img"><img src="img/realty.png" alt="Недвижимость"></div>
+                <div class="hoverSecondLevel">
+                    <a href="#">Недвижимость</a>
+                    <ul class="secondLevel">
+                        <li><a href="#">Перевод жилого помещения в не жилое</a></li>
+                        <li><a href="#">Переустройство и перепланировка</a></li>
+                        <li><a href="#">Признание лица не преобретщим право пользования на жилое помещение</a></li>
+                        <li><a href="#">Устранение препядствий по пользованию жилым помещением</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+

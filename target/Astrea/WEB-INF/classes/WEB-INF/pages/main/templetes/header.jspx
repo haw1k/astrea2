@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div id="header" xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:spring="http://www.springframework.org/tags"
+     version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:directive.page pageEncoding="UTF-8"/>
+    <spring:url value="/resources/img/adminTopLogo.png" var="admin_logo_url"/>
+
+    <div id="astreya"></div>
+    <div id="logo">
+        <a href="index.html"><img src="img/logo.png" alt="Астрея | Юридическое агенство" border="0"/></a>
+
+        <div id="astreya"></div>
+        <div id="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Астрея | Юридическое агенство" border="0"/></a>
+        </div>
+        <div class="secondaryMenu">
+            <ul>
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Вопрос-ответ</a></li>
+                <li><a href="#">Стоимость услуг</a></li>
+                <li><a href="#">Отзывы</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+        <div id="topInfo">
+            <div class="adress">г.Екатеринбург ул.Красноуральская 23 оф.310<br></div>
+            <div class="worktime">Время работы: c 9:00 до 19:00 (Пн - Пт)<br></div>
+            <div class="phones">+7(343) 268-69-39<br>+7(902) 875-89-09<br></div>
+            <div class="consultation"><a href="#" class="recordCons">Записаться на консультацию</a></div>
+        </div>
+        <form id="searchBox" action="">
+            <input id="search" type="text" placeholder="Что вы хотите найти?">
+            <input id="submit" type="submit" value="Найти">
+        </form>
+    </div>

@@ -1,0 +1,240 @@
+<div id="turnInfo" class="grids" xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:spring="http://www.springframework.org/tags"
+     xmlns:joda="http://www.joda.org/joda/time/tags"
+     version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <spring:message code="label_edit" var="labelEdit"/>
+    <spring:message code="label_delete" var="labelDelete"/>
+    <spring:message code="label_add" var="labelAdd"/>
+    <spring:message code="label_id" var="labelId"/>
+    <spring:message code="label_no" var="labelNo"/>
+    <spring:message code="label_yes" var="labelYes"/>
+    <spring:message code="label_warning" var="labelWarning"/>
+    <spring:message code="label_error" var="labelError"/>
+
+    <spring:message code="label_turn_not_selected" var="labelTurnNotSelected"/>
+    <spring:message code="label_turn_confirm_delete" var="labelTurnConfirmDelete"/>
+    <spring:message code="turns_empty" var="labelTurnsEmpty"/>
+    <spring:message code="label_turns_list" var="labelTurnsList"/>
+    <spring:message code="label_creation_date" var="labelCreationDate"/>
+    <spring:message code="label_turn_title" var="labelTurnTitle"/>
+    <spring:message code="label_turn_text" var="labelTurnText"/>
+    <spring:message code="label_turn_category" var="labelTurnCategory"/>
+    <spring:message code="label_turns_and_categories" var="labelTurnsAndCategories"/>
+
+    <spring:message code="label_category_img" var="labelCategoryImg"/>
+    <spring:message code="label_categories_list" var="labelCategoriesList"/>
+    <spring:message code="categories_empty" var="labelCategoriesEmpty"/>
+    <spring:message code="label_category_title" var="labelCategoryTitle"/>
+    <spring:message code="label_category_not_selected" var="labelCategoryNotSelected"/>
+    <spring:url value="/admin/turns" var="TurnUrl"></spring:url>
+
+
+
+
+    <script type="text/javascript">
+
+        $(function(){
+
+            //Таблица jqGrid для Услуг
+            $("#turns_list").jqGrid({
+                url:'${TurnUrl}/turnslist',
+                datatype: 'json',
+                mtype: 'GET',
+                colNames:['${labelCreationDate}','${labelTurnTitle}','${labelTurnCategory}'],
+                colModel :[
+                    {name:'creationDateString',index:'creationDate', width:15, align:"center" },
+                    {name:'title', index:'title', width:65, align:"center"},
+                    {name:'turnCategory.title', index:'turnCategory.title', width:20, align:"center"}
+                ],
+                jsonReader : {
+                    root:"turnData",
+                    page: "currentPage",
+                    total: "totalPages",
+                    records: "totalRecords",
+                    repeatitems: false,
+                    id: "id"
+                },
+                emptyrecords: "${labelCategoriesEmpty}",
+                pager: '#pager',
+                rowNum:20,
+                rowList:[20,30,40],
+                sortname: 'title',
+                sortorder: 'asc',
+                viewrecords: true,
+                autowidth:true,
+                gridview: true,
+                height:460,
+                caption: '${labelTurnsList}'
+            });
+
+
+            //Добавляем панель управления услугами
+            $("#turns_list").jqGrid('navGrid','#pager',
+                    {edit:false,add:false,del:false,search:false},
+                    {}, {}, {},
+                    {}
+            );
+
+            //Добавляем кнопку добавления к панели управления услугами
+            $("#turns_list").navButtonAdd('#pager',
+                    {  caption:"${labelAdd}",
+                        buttonicon:"ui-icon-plus",
+                        onClickButton: addTurn,
+                        position: "last",
+                        title:"",
+                        cursor: "pointer"
+                    }
+            );
+
+            //Добавляем кнопку редактирования к панели управления услугами
+            $("#turns_list").navButtonAdd('#pager',
+                    {  caption:"${labelEdit}",
+                        buttonicon:"ui-icon-pencil",
+                        onClickButton: editTurn,
+                        position: "last",
+                        title:"",
+                        cursor: "pointer"
+                    }
+            );
+
+            //Добавляем кнопку удаления к панели управления услугами
+            $("#turns_list").navButtonAdd('#pager',
+                    {  caption:"${labelDelete}",
+                        buttonicon:"ui-icon-trash",
+                        onClickButton: deleteTurn,
+                        position: "last",
+                        title:"",
+                        cursor: "pointer"
+                    }
+            );
+
+            });
+
+            //Таблица jqGrid для Категорий
+            $(function(){
+                $("#categories_list").jqGrid({
+                    url:'${TurnUrl}/categorieslist',
+                    datatype: 'json',
+                    mtype: 'GET',
+                    colNames:['${labelCategoryTitle}'],
+                    colModel :[
+                        {name:'title', index:'title', width:100, align:"center"}
+                    ],
+                    jsonReader : {
+                        root:"turnCategoryData",
+                        page: "currentPage",
+                        total: "totalPages",
+                        records: "totalRecords",
+                        repeatitems: false,
+                        id: "id"
+                    },
+                    emptyrecords: "${labelCategoriesEmpty}",
+                    pager: '#pagerCategories',
+                    rowNum:10,
+                    rowList:[10,20,30],
+                    sortname: 'title',
+                    sortorder: 'asc',
+                    viewrecords: true,
+                    gridview: true,
+                    autowidth:true,
+                    height:460,
+                    caption: '${labelCategoriesList}'
+                });
+
+                //Добавляем панель управления категориями
+                $("#categories_list").jqGrid('navGrid','#pagerCategories',
+                        {edit:false,add:false,del:false,search:false},
+                        {}, {}, {},
+                        {}
+                );
+
+                //Добавляем кнопку редактирования к панели управления категориями
+                $("#categories_list").navButtonAdd('#pagerCategories',
+                        {  caption:"${labelEdit}",
+                            buttonicon:"ui-icon-pencil",
+                            onClickButton: editCategory,
+                            position: "last",
+                            title:"",
+                            cursor: "pointer"
+                        }
+                );
+             });
+    </script>
+    <script type="text/javascript">
+
+        //Функция добавления услуги
+        function addTurn() {
+            document.location.href = "${TurnUrl}/?add#button_back";
+        };
+
+        //Функция редактирования услуги
+        function editTurn() {
+            var id = $("#turns_list").jqGrid('getGridParam','selrow');
+            if (id != null) {
+                document.location.href = "${TurnUrl}/" + id + "?edit#button_back";
+            } else {
+                $( "#dialogSelectTurn" ).dialog({height:100, resizable:false, modal: true});
+            }
+        };
+
+        //Функция удаления услуги
+        function deleteTurn() {
+            var id = $("#turns_list").jqGrid('getGridParam','selrow');
+            if (id != null) {
+                $( "#dialog-confirm" ).dialog({
+                        resizable:false,
+                        height:160,
+                        modal: true,
+                        buttons: {
+                            "${labelYes}": function() {
+                                document.location.href = "${TurnUrl}/" + id + "?delete";
+                            },
+                            "${labelNo}": function() {
+                                $( this ).dialog( "close" );
+                            }
+                        }
+                });
+            } else {
+                $( "#dialogSelectTurn" ).dialog({height:100, resizable:false, modal: true});
+            }
+        };
+
+        //Функция редактирования категории
+        function editCategory() {
+                var id = $("#categories_list").jqGrid('getGridParam','selrow');
+                if (id != null) {
+                    document.location.href = "${TurnUrl}/category/" + id + "?edit#button_back";
+                } else {
+                    $( "#dialogSelectCategory" ).dialog({height:100, resizable:false, modal: true});
+                }
+         };
+    </script>
+        <h2>${labelTurnsAndCategories}</h2>
+        <c:if test="${not empty message}">
+            <div id="message" class="${message.type}">${message.message}</div>
+        </c:if>
+
+        <div id="turns_grid">
+            <table id="turns_list"><jsp:text/></table>
+            <div id="pager"><jsp:text/></div>
+        </div>
+
+        <div id="categories_grid">
+            <table id="categories_list"><jsp:text/></table>
+            <div id="pagerCategories"><jsp:text/></div>
+        </div>
+
+        <div id="dialog-confirm" title="${labelWarning}" style="display:none">
+        <p>${labelTurnConfirmDelete}</p>
+        </div>
+
+        <div id="dialogSelectTurn" title="${labelError}" style="display:none">
+        <p>${labelTurnNotSelected}</p>
+        </div>
+        <div id="dialogSelectCategory" title="${labelError}" style="display:none">
+        <p>${labelCategoryNotSelected}</p>
+        </div>
+</div>

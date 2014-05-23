@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+
+  <definition name="default" template="/WEB-INF/pages/layouts/admindefault.jspx">
+    <put-attribute name="header" value="/WEB-INF/pages/admin/templetes/header.jspx" />
+    <put-attribute name="menu" value="/WEB-INF/pages/admin/templetes/menu.jspx" />
+    <put-attribute name="footer" value="/WEB-INF/pages/admin/templetes/footer.jspx" />
+  </definition>
+
+  <definition name="maindefault" template="/WEB-INF/pages/layouts/maindefault.jspx">
+        <put-attribute name="main_header" value="/WEB-INF/pages/main/templetes/header.jspx" />
+        <put-attribute name="main_menu" value="/WEB-INF/pages/main/templetes/menu.jspx" />
+        <put-attribute name="main_leftmenu" value="/WEB-INF/pages/main/templetes/leftmenu.jspx" />
+        <put-attribute name="main_rightmenu" value="/WEB-INF/pages/main/templetes/rightmenu.jspx" />
+        <put-attribute name="main_footer" value="/WEB-INF/pages/main/templetes/footer.jspx" />
+  </definition>
+
+</tiles-definitions>

@@ -1,0 +1,7 @@
+#mainMenu , #firstLevel>li {
+	background:url(../img/grad1.jpg) left bottom repeat-x #8b5c39;
+}
+
+#mainMenu .hover:hover ,#mainMenu .firstHover:hover ,#mainMenu .lastHover:hover { 
+	background:url(../img/grad2.jpg) left bottom repeat-x #ba9944;
+}

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div id="turnInfo" xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:spring="http://www.springframework.org/tags"
+     xmlns:form="http://www.springframework.org/tags/form"
+     version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <spring:message code="label_turn_form_add" var="labelTurnFormAdd"/>
+    <spring:message code="label_turn_form_edit" var="labelTurnFormEdit"/>
+    <spring:message code="label_turn_title" var="labelTurnTitle"/>
+    <spring:message code="label_turn_text" var="labelTurnText"/>
+    <spring:message code="label_creation_date" var="labelCreationDate"/>
+    <spring:message code="label_turn_category" var="labelTurnCategory"/>
+    <spring:message code="label_change_date_confirm" var="labelChangeDateConfirm"/>
+    <spring:message code="label_no" var="labelNo"/>
+    <spring:message code="label_yes" var="labelYes"/>
+    <spring:eval expression="turn.id == null ? labelTurnFormAdd : labelTurnFormEdit" var="formTitle"/>
+    <spring:url value="/admin/turns" var="turnsUrl"/>
+
+    <script type="text/javascript">
+        $(function() {
+            $("#turn_textarea").ckeditor(
+                    {
+                        toolbar : 'Basic',
+                        uiColor : '#eddc99'
+                    }
+            );
+        });
+    </script>
+    <script type="text/javascript">
+        $(function() {
+            $.datepicker.setDefaults($.datepicker.regional['ru']);
+
+            $("#input_creation_date").datepicker(
+                    {
+                        dateFormat: 'yy-mm-dd',
+                        changeYear: true
+                    }
+            )
+        });
+    </script>
+
+        <h4><a class="a_nav" onclick="javascript:history.back();">Назад</a>|<a class="a_nav" href="${turnsUrl}">К списку услуг и категорий</a></h4>
+        <h2>${formTitle}</h2>
+        <form:form method="POST" modelAttribute="turn" commandName="turns">
+            <c:if test="${not empty message}">
+                <div id="message" class="${message.type}">${message.message}</div>
+            </c:if>
+            <div>
+                <h3>
+                    <form:label path="title" cssClass="formLabels">
+                        ${labelTurnTitle}
+                    </form:label>
+                </h3>
+                <form:input cssClass="formSections" path="title" id="turn_input_title"/>
+                <form:errors path="title" cssClass="error"/>
+            </div>
+
+            <div>
+                <h3>
+                    <form:label path="turnCategory.id" cssClass="formLabels">
+                        ${labelTurnCategory}
+                    </form:label>
+                </h3>
+                <form:select cssClass="formSections" path="turnCategory.id">
+                        <c:if test="${turn.turnCategory.id > 0}">
+                       <form:option value="${turn.turnCategory.id}" selected="selected">${turn.turnCategory.title}</form:option>
+                        </c:if>
+                       <c:forEach items="${categories}" var="category">
+                           <c:if test="${category.id != turn.turnCategory.id}">
+                               <form:option value="${category.id}">${category.title}</form:option>
+                           </c:if>
+                       </c:forEach>
+                </form:select>
+                <form:errors path="turnCategory.id"/>
+            </div>
+
+            <div>
+                <h3>
+                    <form:label path="creationDate" cssClass="formLabels">
+                        ${labelCreationDate}
+                    </form:label>
+                </h3>
+                <form:input cssClass="formSections" path="creationDate" id="input_creation_date"/>
+                <form:errors path="creationDate" cssClass="error"/>
+            </div>
+
+            <div>
+                 <h3>
+                    <form:label path="text" cssClass="formLabels">
+                        ${labelTurnText}
+                    </form:label>
+                </h3>
+                <form:textarea cssClass="formSections" path="text" cols="210" rows="20" id="turn_textarea"/>
+            </div>
+
+            <div>
+                <input class="formButton" type="submit" />
+                <input class="formButton" type="reset" />
+            </div>
+        </form:form>
+    </div>
