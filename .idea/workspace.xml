@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b497122-0284-4127-9fb0-3646829c1c6e" name="Default" comment="" />
+    <list default="true" id="8b497122-0284-4127-9fb0-3646829c1c6e" name="Default" comment="">
+      <change type="DELETED" beforePath="F:\idea\astrea2\src\main\java\ru\astrea\logic\controller\TurnController.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="Astrea.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -384,7 +387,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="preferences.pluginManager" />
+    <property name="options.lastSelected" value="settings.github" />
     <property name="options.splitter.main.proportions" value="0.28807947" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -1009,7 +1012,9 @@
       <workItem from="1400862511603" duration="595000" />
       <workItem from="1400863122412" duration="7000" />
       <workItem from="1400863472158" duration="16000" />
-      <workItem from="1400863682897" duration="618000" />
+      <workItem from="1400863682897" duration="651000" />
+      <workItem from="1400864990768" duration="33000" />
+      <workItem from="1400865034444" duration="123000" />
     </task>
     <task id="LOCAL-00001" summary="First commit astrea">
       <created>1400688484546</created>
@@ -1035,7 +1040,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="395675000" />
+    <option name="totallyTimeSpent" value="395864000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1355,11 +1360,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/i18n/messages.properties">
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="22" selection-start="468" selection-end="468" vertical-scroll-proportion="0.303233" vertical-offset="102" max-vertical-offset="1479" />
+      </provider>
+      <provider editor-type-id="ResourceBundle">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/themes/theme-standart.properties">
@@ -1367,7 +1372,7 @@
         <state line="3" column="0" selection-start="122" selection-end="122" vertical-scroll-proportion="0.05685619" vertical-offset="0" max-vertical-offset="897" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/TurnController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/AdminTurnController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="49" selection-start="591" selection-end="591" vertical-scroll-proportion="0.25" vertical-offset="0" max-vertical-offset="4216">
           <folding />
