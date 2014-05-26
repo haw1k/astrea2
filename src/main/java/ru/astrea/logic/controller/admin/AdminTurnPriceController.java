@@ -1,4 +1,4 @@
-package ru.astrea.logic.controller;
+package ru.astrea.logic.controller.admin;
 
 import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +21,7 @@ import java.util.Locale;
 
 @RequestMapping("/admin/turnsprices")
 @Controller
-public class TurnPriceController {
+public class AdminTurnPriceController {
     @Autowired
     TurnPriceService turnPriceService;
 

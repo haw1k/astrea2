@@ -5,11 +5,12 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <jsp:directive.page pageEncoding="UTF-8"/>
+    <spring:url value="/resources/img/bottomLogo.png" var="bottom_logo_url" />
     <spring:message code="copyright" var="copyright"/>
 
-    <hr color="#cead56">
+    <hr color="#cead56"/>
     <div id="bottomLogo">
-        <a href = "index.html"><img src="img/bottomLogo.png" alt = "Астрея | Юридическое агенство" border="0"/></a>
+        <a href = ""><img src="${bottom_logo_url}" alt = "Астрея | Юридическое агенство" border="0"/></a>
     </div>
     <div id="copyright">Астрея © 2014. Все права защищены.</div>
     <div class="bottomSecondaryMenu">
@@ -40,12 +41,13 @@
     <div id="bottomInfo">
         <div id="bottomPhones">
             <h1>Наши телефоны:</h1>
-            <div class="bottomPhones">+7(343) 268-69-39<br>+7(902) 875-89-09<br></div>
+            <div class="bottomPhones">+7(343) 268-69-39<br/>+7(902) 875-89-09<br/></div>
         </div>
         <div id="bottomAdress">
             <h1>Нам адрес:</h1>
-            <div class="bottomAdress">г.Екатеринбург ул.Красноуральская 23 оф.310<br>
+            <div class="bottomAdress">г.Екатеринбург ул.Красноуральская 23 оф.310<br/>
         </div>
     </div>
-
+    </div>
 </div>
+

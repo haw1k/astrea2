@@ -5,18 +5,21 @@
 
 <tiles-definitions>
 
-  <definition name="default" template="/WEB-INF/pages/layouts/admindefault.jspx">
-    <put-attribute name="header" value="/WEB-INF/pages/admin/templetes/header.jspx" />
-    <put-attribute name="menu" value="/WEB-INF/pages/admin/templetes/menu.jspx" />
-    <put-attribute name="footer" value="/WEB-INF/pages/admin/templetes/footer.jspx" />
-  </definition>
+    <definition name="default" template="/WEB-INF/pages/layouts/admindefault.jspx">
+        <put-attribute name="header" value="/WEB-INF/pages/admin/templetes/header.jspx" />
+        <put-attribute name="menu" value="/WEB-INF/pages/admin/templetes/menu.jspx" />
+        <put-attribute name="footer" value="/WEB-INF/pages/admin/templetes/footer.jspx" />
+    </definition>
 
-  <definition name="maindefault" template="/WEB-INF/pages/layouts/maindefault.jspx">
+    <definition name="maindefault" template="/WEB-INF/pages/layouts/maindefault.jspx">
         <put-attribute name="main_header" value="/WEB-INF/pages/main/templetes/header.jspx" />
         <put-attribute name="main_menu" value="/WEB-INF/pages/main/templetes/menu.jspx" />
-        <put-attribute name="main_leftmenu" value="/WEB-INF/pages/main/templetes/leftmenu.jspx" />
+        <put-attribute name="main_leftmenu" value="main_leftmenu" />
+        <put-attribute name="main_content" value="" />
         <put-attribute name="main_rightmenu" value="/WEB-INF/pages/main/templetes/rightmenu.jspx" />
         <put-attribute name="main_footer" value="/WEB-INF/pages/main/templetes/footer.jspx" />
-  </definition>
+    </definition>
 
+    <definition preparer="leftMenuController" name="main_leftmenu" template="/WEB-INF/pages/main/templetes/leftmenu.jspx">
+    </definition>
 </tiles-definitions>

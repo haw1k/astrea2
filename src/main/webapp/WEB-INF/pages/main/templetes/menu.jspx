@@ -13,12 +13,10 @@
     <spring:message code="main_button_4" var="button4"/>
     <spring:message code="main_button_5" var="button5"/>
     <spring:message code="main_button_6" var="button6"/>
-    <spring:url value="/admin/turns" var="turnsUrl"/>
-    <spring:url value="/admin/turnsprices" var="turnsPricesUrl"/>
-    
+
     <ul>
-        <li><div class="hover"><a href="${turnsUrl}">${button1}</a></div></li>
-        <li><div class="hover"><a href="${turnsPricesUrl}">${button2}</a></div></li>
+        <li><div class="hover"><a href="#">${button1}</a></div></li>
+        <li><div class="hover"><a href="#">${button2}</a></div></li>
         <li><div class="hover"><a href="#">${button3}</a></div></li>
         <li><div class="hover"><a href="#">${button4}</a></div></li>
         <li><div class="hover"><a href="#">${button5}</a></div></li>

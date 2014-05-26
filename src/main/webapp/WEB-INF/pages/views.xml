@@ -18,4 +18,12 @@
     <definition extends="default" name="admin/turnsprices">
         <put-attribute name="body" value="/WEB-INF/pages/admin/turnsprices/turnsprices.jspx" />
     </definition>
+
+    <definition extends="maindefault" name="about">
+        <put-attribute name="main_content" value="/WEB-INF/pages/main/about/about.jspx" />
+    </definition>
+
+    <!--<definition extends="maindefault" name="main_leftmenu">-->
+        <!--<put-attribute name="main_leftmenu" value="/WEB-INF/pages/main/templetes/leftmenu.jspx"/>-->
+    <!--</definition>-->
 </tiles-definitions>
