@@ -19,7 +19,6 @@ import java.io.Serializable;
 public class Turn implements Serializable {
     private Long id;
 
-    @NotNull(message = "{valid.turnTitle.NotEmpty}")
     @Size(min=3, max=255, message = "{valid.turnTitle.Size}")
     private String title;
 

@@ -22,9 +22,9 @@
             </c:if>
 
             <h3>
-                    <span class="formLabels">
-                        Категория
-                    </span>
+                <span class="formLabels">
+                    Категория
+                </span>
             </h3>
             <c:choose>
                 <c:when test="${turnCategory.turns.size() gt 0}">

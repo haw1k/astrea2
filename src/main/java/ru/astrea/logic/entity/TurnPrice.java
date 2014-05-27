@@ -1,7 +1,6 @@
 package ru.astrea.logic.entity;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 
@@ -24,7 +23,7 @@ public class TurnPrice implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "turnPrice_id")
+    @Column(name = "turn_price_id")
     public Long getId() {
 
         return id;
@@ -34,7 +33,6 @@ public class TurnPrice implements Serializable{
         this.id = id;
     }
 
-    @NotNull(message = "{valid.turn.NotEmpty}")
     @Size(min=3, max=255, message = "{valid.turnTitle.Size}")
     @Column(name="turn")
     public String getTurn() {
@@ -45,7 +43,6 @@ public class TurnPrice implements Serializable{
         this.turn = turn;
     }
 
-    @NotNull(message = "{valid.turnPrice.NotEmpty}")
     @Column(name="price")
     public String getPrice() {
         return price;
