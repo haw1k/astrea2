@@ -3,24 +3,49 @@
 <tiles-definitions>
 	<definition extends="default" name="admin/turns">
 		<put-attribute name="body" value="/WEB-INF/pages/admin/turns/turns.jspx" />
+        <put-attribute name="current" value="turns"/>
 	</definition>
     <definition extends="default" name="admin/turns/edit">
         <put-attribute name="body" value="/WEB-INF/pages/admin/turns/editTurn.jspx" />
+        <put-attribute name="current" value="turns"/>
     </definition>
     <definition extends="default" name="admin/turns/add">
         <put-attribute name="body" value="/WEB-INF/pages/admin/turns/editTurn.jspx" />
+        <put-attribute name="current" value="turns"/>
     </definition>
 
     <definition extends="default" name="admin/turns/category">
         <put-attribute name="body" value="/WEB-INF/pages/admin/categories/editCategory.jspx" />
+        <put-attribute name="current" value="turns"/>
     </definition>
 
     <definition extends="default" name="admin/turnsprices">
         <put-attribute name="body" value="/WEB-INF/pages/admin/turnsprices/turnsprices.jspx" />
+        <put-attribute name="current" value="prices"/>
     </definition>
 
     <definition extends="maindefault" name="about">
+        <put-attribute name="main_title" value="О компании" />
         <put-attribute name="main_content" value="/WEB-INF/pages/main/about/about.jspx" />
+        <put-attribute name="current" value="about"/>
+    </definition>
+
+    <definition extends="maindefault" name="turns">
+        <put-attribute name="main_title" value="Услуги" />
+        <put-attribute name="main_content" value="/WEB-INF/pages/main/turns/turns.jspx" />
+        <put-attribute name="current" value="turns"/>
+    </definition>
+
+    <definition extends="maindefault" name="turns/category">
+        <put-attribute name="main_title" value="Услуги" />
+        <put-attribute name="main_content" value="/WEB-INF/pages/main/turns/category.jspx" />
+        <put-attribute name="current" value="turns"/>
+    </definition>
+
+    <definition extends="maindefault" name="turn">
+        <put-attribute name="main_title" value="Услуги" />
+        <put-attribute name="main_content" value="/WEB-INF/pages/main/turns/turn.jspx" />
+        <put-attribute name="current" value="turns"/>
     </definition>
 
     <!--<definition extends="maindefault" name="main_leftmenu">-->

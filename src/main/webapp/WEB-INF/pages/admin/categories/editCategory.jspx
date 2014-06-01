@@ -9,8 +9,21 @@
     <spring:message code="label_category_form_edit" var="formTitle"/>
     <spring:message code="label_category_title" var="labelCategoryTitle"/>
     <spring:message code="label_category_img" var="labelCategoryImg"/>
-    <spring:url value="/admin/turns/category/img/" var="turnCategoryImg"/>
+    <spring:message code="label_category_text" var="labelCategoryText"/>
+    <spring:url value="/turns/categories/img" var="turnCategoryImg"/>
     <spring:url value="/admin/turns" var="turnsUrl"/>
+
+    <script type="text/javascript">
+        $(function() {
+            $("#category_textarea").ckeditor(
+                    {
+                        toolbar : 'Basic',
+                        uiColor : '#eddc99'
+                    }
+            );
+        });
+    </script>
+
     <div id="turnInfo">
         <h4><a class="a_nav" onclick="javascript:history.back();">Назад</a>|<a class="a_nav" href="${turnsUrl}">К списку услуг и категорий</a></h4>
         <h2>${formTitle}</h2>
@@ -76,6 +89,16 @@
                 <form:errors path="img" cssClass="error"/>
                 <div>(Размер файла: 100кб, Расширение файла: PNG, Размер изображения: 64x64px)</div>
             </div>
+
+            <div>
+                <h3>
+                    <form:label path="text" cssClass="formLabels">
+                        ${labelCategoryText}
+                    </form:label>
+                </h3>
+                <form:textarea cssClass="formSections" path="text" cols="210" rows="20" id="category_textarea"/>
+            </div>
+
             <div>
                 <input class="formButton" type="submit" />
                 <input class="formButton" type="reset" />

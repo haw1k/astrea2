@@ -6,21 +6,17 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
-import java.util.Arrays;
-import java.util.Set;
+import java.util.List;
 
 
 @Entity
 @Table (name = "turncategory")
 public class TurnCategory implements Serializable {
     private long id;
-
-    @NotNull(message = "{valid.categoryTitle.NotEmpty}")
-    @Size(min=3, max=255, message = "{valid.title.Size}")
     private String title;
-
+    private String text;
     private byte[] img;
-    private Set<Turn> turns;
+    private List<Turn> turns;
 
 
     @Id
@@ -43,6 +39,8 @@ public class TurnCategory implements Serializable {
 
 
     @Column(name = "title")
+    @NotNull(message = "{valid.categoryTitle.NotEmpty}")
+    @Size(min=3, max=255, message = "{valid.title.Size}")
     public String getTitle() {
         return title;
     }
@@ -56,25 +54,37 @@ public class TurnCategory implements Serializable {
         this.img = img;
     }
 
+    @Lob
+    @Column(name = "text",  columnDefinition = "TEXT")
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
     public TurnCategory() {
     }
 
-    public TurnCategory(int id, String title, byte[] img) {
+    public TurnCategory(int id, String title, byte[] img, String text) {
         this.id = id;
         this.title = title;
         this.img = img;
+        this.text = text;
     }
 
 
     @JsonIgnore
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "turnCategory")
-    public Set<Turn> getTurns() {
+    public List<Turn> getTurns() {
         return turns;
     }
 
-    public void setTurns(Set<Turn> turns) {
+    public void setTurns(List<Turn> turns) {
         this.turns = turns;
     }
+
 
 
     @Override
@@ -82,8 +92,7 @@ public class TurnCategory implements Serializable {
         return "TurnCategory{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
-                ", img=" + Arrays.toString(img) +
-//                ", turns=" + turns +
+                ", text=" + text +
                 '}';
     }
 }

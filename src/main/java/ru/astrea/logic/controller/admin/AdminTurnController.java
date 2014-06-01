@@ -149,13 +149,6 @@ public class AdminTurnController {
         return "redirect:/admin/turns/category/" + id +"?edit";
     }
 
-    @RequestMapping(value="/category/img/{id}", method = RequestMethod.GET)
-    @ResponseBody
-    public byte[] downloadImg(@PathVariable("id") Long id) {
-        TurnCategory turnCategory = turnCategoryService.findById(id);
-        return  turnCategory.getImg();
-    }
-
     @RequestMapping(value = "/category/{id}", params = "edit", method = RequestMethod.GET)
     public String editCategoryForm(@PathVariable("id") Long id, Model model) {
         model.addAttribute("turnCategory", turnCategoryService.findById(id));

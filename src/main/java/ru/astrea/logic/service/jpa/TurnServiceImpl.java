@@ -34,7 +34,6 @@ public class TurnServiceImpl implements TurnService {
 
     @Override
     public void deleteTurn(Long id) {
-        System.out.println(id);;
         turnRepository.delete(id);
     }
 

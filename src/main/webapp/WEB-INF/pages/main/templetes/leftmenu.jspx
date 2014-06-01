@@ -9,7 +9,7 @@
     <jsp:directive.page pageEncoding="UTF-8"/>
 
     <spring:url value="/admin/turns" var="turnsUrl"/>
-    <spring:url value="/admin/turns/category/img/" var="turnCategoryImg"/>
+    <spring:url value="/turns/categories/img" var="turnCategoryImg"/>
 
     <div id="leftMenu">
         <ul id="firstLevel">
@@ -19,17 +19,17 @@
                     <div class="hoverSecondLevel">
                         <c:choose>
                             <c:when test="${category.title.length() ge 20}">
-                                <a class="overfull" href="#">${category.title}</a>
+                                <a class="overfull" href="/turns/categories/${category.id}">${category.title}</a>
                             </c:when>
                             <c:otherwise>
-                                <a href="#">${category.title}</a>
+                                <a href="/turns/categories/${category.id}">${category.title}</a>
                             </c:otherwise>
                         </c:choose>
                         <ul class="secondLevel">
                             <c:choose>
                                 <c:when test="${not empty category.turns}">
                                     <c:forEach items="${category.turns}" var="turn">
-                                        <li><a href="#">${turn.title}</a></li>
+                                        <li><a href="/turns/${turn.id}">${turn.title}</a></li>
                                     </c:forEach>
                                 </c:when>
                                 <c:otherwise>

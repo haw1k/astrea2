@@ -1,0 +1,21 @@
+<div id="main_content" xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:spring="http://www.springframework.org/tags"
+     xmlns:joda="http://www.joda.org/joda/time/tags"
+     version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <spring:message code="main_button_2" var="turnsTitle" />
+
+    <h1>${turnsTitle}</h1>
+        <c:forEach items="${categories}" var="category">
+            <div id="turns_list_title"><a href="/turns/categories/${category.id}">${category.title}</a></div>
+            <ul id="turns_list">
+                <c:forEach items="${category.turns}" var="turn">
+                    <li id="turnLi">
+                        <a href="/turns/${turn.id}">${turn.title}</a>
+                    </li>
+                </c:forEach>
+            </ul>
+        </c:forEach>
+</div>

@@ -10,7 +10,7 @@
         <param-value>/resources/config/root-context.xml</param-value>
     </context-param>
 
-    <!-- Spring Security Configuration
+    <!--Spring Security Configuration-->
     <filter>
         <filter-name>springSecurityFilterChain</filter-name>
         <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
@@ -20,7 +20,7 @@
         <filter-name>springSecurityFilterChain</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
--->
+
     <!-- Spring MVC filters -->
     <filter>
         <filter-name>CharacterEncodingFilter</filter-name>
