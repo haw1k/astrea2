@@ -33,7 +33,7 @@ public class TurnPrice implements Serializable{
         this.id = id;
     }
 
-    @Size(min=3, max=255, message = "{valid.turnTitle.Size}")
+    @Size(min=3, message = "{valid.turnTitle.Size}")
     @Column(name="turn")
     public String getTurn() {
         return turn;
@@ -43,6 +43,7 @@ public class TurnPrice implements Serializable{
         this.turn = turn;
     }
 
+    @Size(min=1, message = "{valid.turnPrice.NotEmpty}")
     @Column(name="price")
     public String getPrice() {
         return price;

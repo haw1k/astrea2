@@ -31,6 +31,7 @@ public class RoleServiceImpl implements RoleService {
         return roleRepository.findOne(id);
     }
 
+
     @Override
     public void deleteRole(Long id) {
         roleRepository.delete(id);

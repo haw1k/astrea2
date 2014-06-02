@@ -61,5 +61,4 @@
     <beans:bean class="org.springframework.web.servlet.theme.CookieThemeResolver" id="themeResolver" p:cookieName="theme" p:defaultThemeName="standart"/>
 
     <beans:bean class="org.springframework.web.multipart.support.StandardServletMultipartResolver" id="multipartResolver"/>
-
 </beans:beans>

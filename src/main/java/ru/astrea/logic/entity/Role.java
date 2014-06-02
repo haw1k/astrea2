@@ -12,6 +12,26 @@ public class Role implements Serializable {
     private Long id;
     private String rolename;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Role role = (Role) o;
+
+        if (id != null ? !id.equals(role.id) : role.id != null) return false;
+        if (rolename != null ? !rolename.equals(role.rolename) : role.rolename != null) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (rolename != null ? rolename.hashCode() : 0);
+        return result;
+    }
+
     @JsonIgnore
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "roles")
     public List<User> getUsers() {
@@ -42,5 +62,14 @@ public class Role implements Serializable {
 
     public void setRolename(String rolename) {
         this.rolename = rolename;
+    }
+
+    public Role(Long id, String rolename, List<User> users) {
+        this.id = id;
+        this.rolename = rolename;
+        this.users = users;
+    }
+
+    public Role() {
     }
 }

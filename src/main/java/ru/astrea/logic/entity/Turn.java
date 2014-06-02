@@ -18,13 +18,10 @@ import java.io.Serializable;
 @Table (name = "turn")
 public class Turn implements Serializable {
     private Long id;
-
-    @Size(min=3, max=255, message = "{valid.turnTitle.Size}")
     private String title;
-
     private String text;
-
     private LocalDate creationDate;
+    private TurnCategory turnCategory;
 
     @Column(name = "creation_date")
     @Type(type="org.jadira.usertype.dateandtime.joda.PersistentLocalDate")
@@ -37,8 +34,7 @@ public class Turn implements Serializable {
         this.creationDate = creationDate;
     }
 
-    @NotNull(message = "{valid.turnCategory.NotEmpty}")
-    private TurnCategory turnCategory;
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -52,6 +48,7 @@ public class Turn implements Serializable {
     }
 
     @Column(name = "title")
+    @Size(min=3, message = "{valid.turnTitle.Size}")
     public String getTitle() {
         return title;
     }
@@ -74,6 +71,7 @@ public class Turn implements Serializable {
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="turncategory_id")
+    @NotNull(message = "{valid.turnCategory.NotEmpty}")
     public TurnCategory getTurnCategory() {
         return turnCategory;
     }

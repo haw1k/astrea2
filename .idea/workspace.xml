@@ -1,44 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b497122-0284-4127-9fb0-3646829c1c6e" name="Default" comment="Commit 1.06.2014 14 : 13">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/LoginController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/main/turns/MainCategoriesController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/main/turns/MainTurnsController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/Role.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/repository/RoleRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/service/RoleService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/service/jpa/RoleServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/repository/UserRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/service/UserService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/service/jpa/UserServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/turns/category.jspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/templetes/crumbs.jspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/style/login.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/config/security.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/turns/turn.jspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/turns/turns.jspx" />
-      <change type="DELETED" beforePath="F:\idea\astrea2\src\main\webapp\WEB-INF\pages\admin\templetes\menu.jspx" afterPath="" />
-      <change type="DELETED" beforePath="F:\idea\astrea2\src\main\webapp\WEB-INF\pages\main\templetes\menu.jspx" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/admin/AdminTurnController.java" afterPath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/admin/AdminTurnController.java" />
+    <list default="true" id="8b497122-0284-4127-9fb0-3646829c1c6e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/admin/AdminUserController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/UserGrid.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin/users/users.jspx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/main/LeftMenuController.java" afterPath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/main/LeftMenuController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/Role.java" afterPath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/Role.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/service/jpa/RoleServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/service/jpa/RoleServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/Turn.java" afterPath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/Turn.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/TurnCategory.java" afterPath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/TurnCategory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/service/jpa/TurnServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/service/jpa/TurnServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/about/about.jspx" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/about/about.jspx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/TurnPrice.java" afterPath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/TurnPrice.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/User.java" afterPath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/service/jpa/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/service/jpa/UserServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/style/adminCSS.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/style/adminCSS.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/layouts/admindefault.jspx" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/layouts/admindefault.jspx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/datasource-jpa.xml" afterPath="$PROJECT_DIR$/src/main/resources/datasource-jpa.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin/categories/editCategory.jspx" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin/categories/editCategory.jspx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/templetes/footer.jspx" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/templetes/footer.jspx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/layouts/layouts.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/layouts/layouts.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/templetes/leftmenu.jspx" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/templetes/leftmenu.jspx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/style/mainCSS.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/style/mainCSS.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/layouts/maindefault.jspx" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/layouts/maindefault.jspx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/style/messages.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/style/messages.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/i18n/messages.properties" afterPath="$PROJECT_DIR$/src/main/webapp/resources/i18n/messages.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/templetes/rightmenu.jspx" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/templetes/rightmenu.jspx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/config/mvc-dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/src/main/webapp/resources/config/mvc-dispatcher-servlet.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/config/root-context.xml" afterPath="$PROJECT_DIR$/src/main/webapp/resources/config/root-context.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/config/security.xml" afterPath="$PROJECT_DIR$/src/main/webapp/resources/config/security.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/views.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/views.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -106,48 +89,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Role.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/Role.java">
+      <file leaf-file-name="messages.properties" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/i18n/messages.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="29" selection-start="541" selection-end="541" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+            <state line="92" column="0" selection-start="2799" selection-end="2823" vertical-scroll-proportion="0.0" vertical-offset="1051" max-vertical-offset="1904">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/User.java">
+      <file leaf-file-name="users.jspx" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin/users/users.jspx">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="66" selection-start="602" selection-end="602" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="884">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Turn.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/Turn.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="4" selection-start="1837" selection-end="1899" vertical-scroll-proportion="0.0" vertical-offset="48" max-vertical-offset="1564">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/style/login.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="1" selection-start="2441" selection-end="2441" vertical-scroll-proportion="0.22039859" vertical-offset="1716" max-vertical-offset="3281">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TurnCategory.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/TurnCategory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="4" selection-start="1573" selection-end="1584" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1326">
+            <state line="12" column="72" selection-start="801" selection-end="801" vertical-scroll-proportion="0.24667473" vertical-offset="0" max-vertical-offset="1751">
               <folding />
             </state>
           </provider>
@@ -166,17 +120,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/TurnPrice.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/form/PhoneConstraintValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/form/Phone.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/Consultation.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/templetes/content_header.jspx" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/templetes/crumbs.jspx" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/templetes/rightmenu.jspx" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/templetes/footer.jspx" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/main/MainTurnsController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/TurnCategory.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin/turns/category.jspx" />
         <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/main/MainCategoriesController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/about/about.jspx" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/turns/category.jspx" />
@@ -184,39 +127,50 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/main/turns/MainTurnsController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/turns/turn.jspx" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/templetes/menu.jspx" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/layouts/maindefault.jspx" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/style/mainCSS.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/config/root-context.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/admin/AdminTurnController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/main/MainImgController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/main/turns/MainCategoriesController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin/categories/editCategory.jspx" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/templetes/leftmenu.jspx" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/style/messages.css" />
         <option value="$USER_HOME$/Desktop/Новая папка (5)/index.html" />
         <option value="$USER_HOME$/AppData/Local/Temp/Temp1_2-sbornik-22-luchshix-form-vxoda.zip/css/style.css" />
         <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/config/security.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jspx" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/style/login.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/views.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin/templetes/menu.jspx" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/style/adminCSS.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/i18n/messages.properties" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/layouts/layouts.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/layouts/admindefault.jspx" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/Turn.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/repository/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/repository/RoleRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/service/RoleService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/service/jpa/TurnServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/service/jpa/RoleServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/service/jpa/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/datasource-jpa.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/admin/AdminRoleController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/views.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin/turns/editTurn.jspx" />
         <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/Role.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/LongToRole.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/config/root-context.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/StringToRole.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/style/adminCSS.css" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/service/jpa/RoleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/service/RoleService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/main/LeftMenuController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/config/security.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/UserGrid.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/layouts/admindefault.jspx" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/layouts/maindefault.jspx" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/style/messages.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/config/mvc-dispatcher-servlet.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/datasource-jpa.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/admin/AdminUserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/service/jpa/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin/users/users.jspx" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/i18n/messages.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/TurnCategory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/Turn.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/TurnPrice.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/User.java" />
       </list>
     </option>
   </component>
@@ -340,70 +294,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Astrea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Astrea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="astrea2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="astrea2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.1.Final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hibernate-jpa-2.0-api-1.0.1.Final.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="astrea2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.1.Final" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hibernate-jpa-2.0-api-1.0.1.Final.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="persistence" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -542,6 +438,196 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="users" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="astrea2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="astrea2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="turnsprices" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="astrea2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="astrea2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="turns" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="astrea2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="astrea2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templetes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="astrea2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="astrea2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="categories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="astrea2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="astrea2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -594,6 +680,66 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="i18n" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="astrea2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="astrea2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="astrea2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="astrea2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -621,6 +767,74 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="logic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="astrea2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="astrea2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jpa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="astrea2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="astrea2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="repository" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -652,6 +866,152 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="entity" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="astrea2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="astrea2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="astrea2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="astrea2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="astrea2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="astrea2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="form" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="astrea2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="astrea2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Astrea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Astrea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -1306,7 +1666,12 @@
       <workItem from="1401518775140" duration="4865000" />
       <workItem from="1401523675474" duration="27385000" />
       <workItem from="1401565362486" duration="5226000" />
-      <workItem from="1401604399582" duration="5963000" />
+      <workItem from="1401604399582" duration="21259000" />
+      <workItem from="1401627892655" duration="14174000" />
+      <workItem from="1401642590174" duration="2551000" />
+      <workItem from="1401645843929" duration="2868000" />
+      <workItem from="1401648724402" duration="5888000" />
+      <workItem from="1401684364251" duration="3623000" />
     </task>
     <task id="LOCAL-00001" summary="First commit astrea">
       <created>1400688484546</created>
@@ -1340,11 +1705,15 @@
       <created>1401198617571</created>
       <updated>1401198617571</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Commit 1.06.2014 14 : 13">
+      <created>1401610493664</created>
+      <updated>1401610493664</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="486278000" />
+    <option name="totallyTimeSpent" value="530678000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1385,13 +1754,12 @@
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15654951" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="773" y="58" width="374" height="924" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6" sideWeight="0.17831326" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19595315" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="773" y="58" width="374" height="924" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7625" sideWeight="0.17831326" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14886364" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272727" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1403,6 +1771,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1486784" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39886364" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1413,7 +1782,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8408551" sideWeight="0.82168674" order="8" side_tool="true" content_ui="tabs" x="0" y="363" width="1920" height="313" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8397727" sideWeight="0.82168674" order="8" side_tool="true" content_ui="tabs" x="0" y="363" width="1920" height="313" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="ASM" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1422,16 +1791,16 @@
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16506922" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="773" y="58" width="374" height="924" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1773163" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="773" y="58" width="374" height="924" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45454547" sideWeight="0.17831326" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.94204545" sideWeight="0.17831326" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11255411" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1486784" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272727" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1472,218 +1841,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/form/PhoneConstraintValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="5" selection-start="595" selection-end="595" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/Consultation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="35" selection-start="1655" selection-end="1655" vertical-scroll-proportion="0.0" vertical-offset="959" max-vertical-offset="1564">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/templetes/crumbs.jspx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="439" selection-end="439" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="323" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/style/adminIE.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="853">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/templetes/footer.jspx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="10" selection-start="1699" selection-end="1699" vertical-scroll-proportion="0.7122128" vertical-offset="74" max-vertical-offset="1003" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/turns/category.jspx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="6" selection-start="805" selection-end="805" vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="459">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/about/about.jspx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="64" selection-start="1496" selection-end="1496" vertical-scroll-proportion="0.33415234" vertical-offset="0" max-vertical-offset="814">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/turns/turns.jspx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="912" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="442" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/turns/turn.jspx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="26" selection-start="378" selection-end="378" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="306" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="57" selection-start="839" selection-end="839" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1921">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="50" selection-start="2756" selection-end="2756" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5729">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/config/root-context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="675" selection-end="675" vertical-scroll-proportion="-8.84" vertical-offset="0" max-vertical-offset="323">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/templetes/rightmenu.jspx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="68" selection-start="1332" selection-end="1332" vertical-scroll-proportion="-17.653847" vertical-offset="0" max-vertical-offset="697" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/main/turns/MainTurnsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="5" selection-start="1265" selection-end="1265" vertical-scroll-proportion="0.49097472" vertical-offset="0" max-vertical-offset="831">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/admin/AdminTurnPriceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="0" selection-start="1470" selection-end="1470" vertical-scroll-proportion="0.05978898" vertical-offset="357" max-vertical-offset="1853">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/main/MainAboutController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="23" selection-start="556" selection-end="556" vertical-scroll-proportion="0.23915592" vertical-offset="0" max-vertical-offset="853">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/main/turns/MainCategoriesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="983" selection-end="983" vertical-scroll-proportion="0.31887457" vertical-offset="0" max-vertical-offset="853">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/templetes/leftmenu.jspx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="45" selection-start="1834" selection-end="1834" vertical-scroll-proportion="0.6989117" vertical-offset="0" max-vertical-offset="1054" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin/templetes/footer.jspx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="451" selection-end="451" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="289" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin/turns/editTurn.jspx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="3" selection-start="223" selection-end="278" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="1836">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/Новая папка (5)/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="26" selection-start="307" selection-end="307" vertical-scroll-proportion="0.123337366" vertical-offset="0" max-vertical-offset="827" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_2-sbornik-22-luchshix-form-vxoda.zip/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="27" selection-start="596" selection-end="596" vertical-scroll-proportion="0.11258278" vertical-offset="255" max-vertical-offset="3672" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/admin/AdminTurnController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="30" selection-start="2421" selection-end="2421" vertical-scroll-proportion="0.0" vertical-offset="67" max-vertical-offset="3638">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="47" selection-start="795" selection-end="801" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/i18n/messages.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="37" selection-start="777" selection-end="777" vertical-scroll-proportion="0.5708861" vertical-offset="110" max-vertical-offset="1513">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/style/messages.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="1" selection-start="655" selection-end="655" vertical-scroll-proportion="0.5063291" vertical-offset="110" max-vertical-offset="1003">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/config/security.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="19" selection-start="879" selection-end="879" vertical-scroll-proportion="0.35555556" vertical-offset="0" max-vertical-offset="765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/style/adminCSS.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="169" column="53" selection-start="3616" selection-end="3616" vertical-scroll-proportion="0.31265822" vertical-offset="2626" max-vertical-offset="8687">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/style/mainCSS.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="319" column="25" selection-start="7389" selection-end="7389" vertical-scroll-proportion="0.40886077" vertical-offset="5100" max-vertical-offset="12189">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin/categories/editCategory.jspx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="18" selection-start="3866" selection-end="3866" vertical-scroll-proportion="1.1960784" vertical-offset="408" max-vertical-offset="1938">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/views.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="53" selection-start="1583" selection-end="1583" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/layouts/maindefault.jspx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="44" selection-start="2485" selection-end="2485" vertical-scroll-proportion="-17.653847" vertical-offset="272" max-vertical-offset="1190">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final-sources.jar!/javax/persistence/JoinTable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="18" selection-start="2362" selection-end="2362" vertical-scroll-proportion="0.6576788" vertical-offset="255" max-vertical-offset="1785">
-          <folding />
-        </state>
+        <state line="67" column="18" selection-start="2362" selection-end="2362" vertical-scroll-proportion="0.6576788" vertical-offset="255" max-vertical-offset="1785" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/repository/TurnPriceRepository.java">
@@ -1707,42 +1867,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/service/jpa/RoleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="33" selection-start="1184" selection-end="1184" vertical-scroll-proportion="0.5915916" vertical-offset="337" max-vertical-offset="1003">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/service/RoleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="278" selection-end="278" vertical-scroll-proportion="-3.642857" vertical-offset="0" max-vertical-offset="459">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/service/jpa/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="5" selection-start="1149" selection-end="1149" vertical-scroll-proportion="0.6412661" vertical-offset="150" max-vertical-offset="1003">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="4" selection-start="224" selection-end="416" vertical-scroll-proportion="0.17936695" vertical-offset="0" max-vertical-offset="853">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/repository/RoleRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="0" selection-start="228" selection-end="228" vertical-scroll-proportion="0.13950762" vertical-offset="0" max-vertical-offset="853">
@@ -1761,9 +1885,144 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/layouts/admindefault.jspx">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jspx">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="44" selection-start="2341" selection-end="2341" vertical-scroll-proportion="0.14389358" vertical-offset="510" max-vertical-offset="1377">
+        <state line="22" column="47" selection-start="1096" selection-end="1096" vertical-scroll-proportion="0.43137255" vertical-offset="0" max-vertical-offset="867" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/style/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="120" column="1" selection-start="2576" selection-end="2576" vertical-scroll-proportion="0.0" vertical-offset="1716" max-vertical-offset="3281" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin/categories/editCategory.jspx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="32" selection-start="1123" selection-end="4684" vertical-scroll-proportion="0.8355502" vertical-offset="1043" max-vertical-offset="1938">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/views.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="90" selection-start="2015" selection-end="2015" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1088">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin/turns/editTurn.jspx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="17" selection-start="2225" selection-end="2225" vertical-scroll-proportion="-10.461538" vertical-offset="561" max-vertical-offset="1836">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/style/adminCSS.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="275" column="5" selection-start="6311" selection-end="6311" vertical-scroll-proportion="0.4837587" vertical-offset="4258" max-vertical-offset="8755" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/style/adminIE.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="60" selection-start="236" selection-end="236" vertical-scroll-proportion="0.09615385" vertical-offset="0" max-vertical-offset="884" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.0.3.RELEASE/spring-beans-4.0.3.RELEASE-sources.jar!/org/springframework/beans/factory/support/BeanDefinitionValueResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="345" column="34" selection-start="13393" selection-end="13393" vertical-scroll-proportion="0.36199096" vertical-offset="4916" max-vertical-offset="6494" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/3.2.3.RELEASE/spring-security-core-3.2.3.RELEASE-sources.jar!/org/springframework/security/crypto/bcrypt/BCryptPasswordEncoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="11" selection-start="1564" selection-end="1564" vertical-scroll-proportion="0.33333334" vertical-offset="183" max-vertical-offset="1326" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/config/root-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="38" selection-start="578" selection-end="578" vertical-scroll-proportion="-5.44" vertical-offset="0" max-vertical-offset="323">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="25" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/main/LeftMenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="77" selection-start="1073" selection-end="1073" vertical-scroll-proportion="0.4091456" vertical-offset="0" max-vertical-offset="831">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/config/security.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="14" selection-start="1654" selection-end="1654" vertical-scroll-proportion="-19.04" vertical-offset="0" max-vertical-offset="578">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/service/RoleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="29" selection-start="339" selection-end="340" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/admin/AdminTurnPriceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="46" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.07971864" vertical-offset="204" max-vertical-offset="1853">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/main/MainAboutController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="3" selection-start="408" selection-end="562" vertical-scroll-proportion="0.13950762" vertical-offset="0" max-vertical-offset="853">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/TurnGrid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="3" selection-start="84" selection-end="862" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.0.3.RELEASE/spring-webmvc-4.0.3.RELEASE.jar!/META-INF/spring-form.tld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1572" column="4" selection-start="49621" selection-end="49621" vertical-scroll-proportion="-11.995238" vertical-offset="36800" max-vertical-offset="41191">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/UserGrid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="5" selection-start="604" selection-end="604" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+          <folding>
+            <element signature="e#739#740#0" expanded="false" />
+            <element signature="e#770#771#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="20" selection-start="539" selection-end="539" vertical-scroll-proportion="0.30852994" vertical-offset="0" max-vertical-offset="2006">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/layouts/maindefault.jspx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="66" selection-start="2079" selection-end="2079" vertical-scroll-proportion="-10.461538" vertical-offset="272" max-vertical-offset="1224">
           <folding />
         </state>
       </provider>
@@ -1775,53 +2034,164 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jspx">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/layouts/admindefault.jspx">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="47" selection-start="1096" selection-end="1096" vertical-scroll-proportion="0.43137255" vertical-offset="0" max-vertical-offset="867">
+        <state line="50" column="8" selection-start="3366" selection-end="3438" vertical-scroll-proportion="0.46553808" vertical-offset="465" max-vertical-offset="1479">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/datasource-jpa.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final-sources.jar!/javax/validation/constraints/Size.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="39" selection-start="2155" selection-end="2155" vertical-scroll-proportion="0.7222222" vertical-offset="167" max-vertical-offset="1020">
+        <state line="61" column="8" selection-start="2223" selection-end="2223" vertical-scroll-proportion="0.48182884" vertical-offset="184" max-vertical-offset="1037">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/Turn.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/service/jpa/RoleServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="4" selection-start="1837" selection-end="1899" vertical-scroll-proportion="0.0" vertical-offset="48" max-vertical-offset="1564">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="66" selection-start="602" selection-end="602" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="884">
+        <state line="45" column="33" selection-start="1219" selection-end="1219" vertical-scroll-proportion="0.7221571" vertical-offset="149" max-vertical-offset="1020">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5729">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/java-blog-aggregator-master/src/main/java/cz/jiripinkas/jba/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="68" selection-start="1186" selection-end="1186" vertical-scroll-proportion="0.49303943" vertical-offset="0" max-vertical-offset="867" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/admin/AdminTurnController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="43" selection-start="1990" selection-end="1990" vertical-scroll-proportion="0.46171966" vertical-offset="67" max-vertical-offset="3638">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/java-blog-aggregator-master/src/main/java/cz/jiripinkas/jba/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="619" selection-end="619" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1156" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/java-blog-aggregator-master/src/main/java/cz/jiripinkas/jba/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="30" selection-start="1594" selection-end="1594" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1224" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/java-blog-aggregator-master/src/main/java/cz/jiripinkas/jba/controller/RegisterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="5" selection-start="914" selection-end="914" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/admin/AdminUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="0" selection-start="1632" selection-end="1632" vertical-scroll-proportion="0.0" vertical-offset="431" max-vertical-offset="1938">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/datasource-jpa.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="41" selection-start="1987" selection-end="1987" vertical-scroll-proportion="0.589372" vertical-offset="192" max-vertical-offset="1020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/config/mvc-dispatcher-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="1586" selection-end="1586" vertical-scroll-proportion="0.0" vertical-offset="65" max-vertical-offset="1173">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/service/jpa/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="13" selection-start="1152" selection-end="1152" vertical-scroll-proportion="0.34232122" vertical-offset="65" max-vertical-offset="918">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin/turns/turns.jspx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="214" column="29" selection-start="8801" selection-end="8801" vertical-scroll-proportion="1.2744861" vertical-offset="2584" max-vertical-offset="4182">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/form/ImgValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="195" selection-end="195" vertical-scroll-proportion="0.07971864" vertical-offset="0" max-vertical-offset="853">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/TurnCategory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="4" selection-start="1573" selection-end="1584" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1326">
+        <state line="39" column="27" selection-start="793" selection-end="793" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1309">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/Turn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="20" selection-start="1455" selection-end="1455" vertical-scroll-proportion="0.0" vertical-offset="286" max-vertical-offset="1700">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/Role.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="29" selection-start="541" selection-end="541" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+        <state line="26" column="0" selection-start="687" selection-end="687" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/style/login.css">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/style/messages.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="1" selection-start="2441" selection-end="2441" vertical-scroll-proportion="0.22039859" vertical-offset="1716" max-vertical-offset="3281">
+        <state line="39" column="19" selection-start="770" selection-end="770" vertical-scroll-proportion="0.5017585" vertical-offset="235" max-vertical-offset="1088">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/TurnPrice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="0" selection-start="882" selection-end="882" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="55" selection-start="914" selection-end="914" vertical-scroll-proportion="0.31418523" vertical-offset="191" max-vertical-offset="1224">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/i18n/messages.properties">
+      <provider editor-type-id="ResourceBundle">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="0" selection-start="2799" selection-end="2823" vertical-scroll-proportion="0.0" vertical-offset="1051" max-vertical-offset="1904">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin/users/users.jspx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="72" selection-start="801" selection-end="801" vertical-scroll-proportion="0.24667473" vertical-offset="0" max-vertical-offset="1751">
           <folding />
         </state>
       </provider>

@@ -2,6 +2,7 @@
 <html xmlns:jsp="http://java.sun.com/JSP/Page"
       xmlns:tiles="http://tiles.apache.org/tags-tiles"
       xmlns:spring="http://www.springframework.org/tags"
+      xmlns:security="http://www.springframework.org/security/tags"
       version="2.0">
     <jsp:output doctype-root-element="HTML" doctype-system="about:legacy-compat"/>
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
@@ -23,6 +24,7 @@
         <spring:url value="/resources/i18n/jquery.ui.datepicker-ru.js" var="jqueryui_ru" />
         <spring:url value="/resources/i18n/grid.locale-ru.js" var="jqgrid_ru" />
         <spring:url value="/resources/js/jquery.jqGrid.min.js" var="jqgrid" />
+        <spring:url value="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js" var="jqueryValid" />
         <spring:message code="button_1" var="button1"/>
         <spring:message code="button_2" var="button2"/>
         <spring:message code="button_3" var="button3"/>
@@ -32,6 +34,7 @@
         <spring:message code="button_7" var="button7"/>
         <spring:url value="/admin/turns" var="turnsUrl"/>
         <spring:url value="/admin/turnsprices" var="turnsPricesUrl"/>
+        <spring:url value="/admin/users" var="usersUrl"/>
 
         <link href="${admin_theme_url}" rel="stylesheet" type="text/css" media="screen"/>
         <link href="${IE_url}" rel="stylesheet" type="text/css" media="screen"/>
@@ -45,6 +48,7 @@
         <script type="text/javascript" src="${jqueryui_ru}"><jsp:text/></script>
         <script type="text/javascript" src="${jqgrid}"><jsp:text/></script>
         <script type="text/javascript" src="${jqgrid_ru}"><jsp:text/></script>
+        <script type="text/javascript" src="${jqueryValid}"><jsp:text/></script>
 
         <spring:message code="default_title_admin" var="admin_title" htmlEscape="false"/>
 
@@ -62,7 +66,9 @@
                     <li><div id="${current == 'reviews' ? 'active' : ''}" class="hover"><a href="#">${button4}</a></div></li>
                     <li><div id="${current == 'consultation' ? 'active' : ''}" class="hover"><a href="#">${button5}</a></div></li>
                     <li><div id="${current == 'other' ? 'active' : ''}" class="hover"><a href="#">${button6}</a></div></li>
-                    <li><div id="${current == 'users' ? 'active' : ''}" class="hover"><a href="#">${button7}</a></div></li>
+                    <security:authorize access="hasRole('Администратор')">
+                        <li><div id="${current == 'users' ? 'active' : ''}" class="hover"><a href="${usersUrl}">${button7}</a></div></li>
+                    </security:authorize>
                 </ul>
             </div>
             <div id="main">

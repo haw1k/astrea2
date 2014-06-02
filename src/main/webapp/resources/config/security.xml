@@ -7,21 +7,23 @@
            http://www.springframework.org/schema/security
            http://www.springframework.org/schema/security/spring-security.xsd">
 
-    <http>
-        <intercept-url pattern="/admin**" access="ROLE_ADMIN" />
-        <intercept-url pattern="/admin/**" access="ROLE_ADMIN" />
-        <form-login login-page="/login"
+    <http use-expressions="true">
+        <intercept-url pattern="/admin/users**" access="hasRole('Администратор')"/>
+        <intercept-url pattern="/admin**" access="hasAnyRole('Администратор','Модератор')"/>
+        <intercept-url pattern="/admin/**" access="hasAnyRole('Администратор','Модератор')"/>
+         <form-login login-page="/login"
+                     default-target-url="/admin"
         authentication-failure-url="/login?error" />
         <logout logout-url="/logout"
                 logout-success-url="/login?logout"
                  />
     </http>
 
+
     <authentication-manager>
         <authentication-provider>
-            <user-service>
-                <user name="admin" password="admin" authorities="ROLE_USER, ROLE_ADMIN" />
-            </user-service>
+           <password-encoder hash="bcrypt"/>
+           <jdbc-user-service data-source-ref="dataSource" authorities-by-username-query="select user.username, role.rolename from user join user_role on user.user_id = user_role.users_user_id join role on user_role.roles_role_id = role.role_id where user.username = ?" users-by-username-query="select username,password,enabled from user where username = ?"/>
         </authentication-provider>
     </authentication-manager>
 </beans:beans>

@@ -4,6 +4,7 @@ import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,6 +23,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User addUser(User user) {
+        user.setEnabled(true);
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        user.setPassword(encoder.encode(user.getPassword()));
+        System.out.println(user.getPassword());
         User savedUser = userRepository.save(user);
         return savedUser;
     }
@@ -38,6 +43,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User editUser(User user) {
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        user.setPassword(encoder.encode(user.getPassword()));
         return userRepository.save(user);
     }
 

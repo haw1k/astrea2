@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import ru.astrea.logic.entity.TurnCategory;
+import ru.astrea.logic.service.RoleService;
 import ru.astrea.logic.service.TurnCategoryService;
+import ru.astrea.logic.service.UserService;
 
 import java.util.List;
 
@@ -17,6 +19,12 @@ public class LeftMenuController extends ViewPreparerSupport {
 
     @Autowired
     private TurnCategoryService turnCategoryServiceService;
+
+    @Autowired
+    private UserService userService;
+
+    @Autowired
+    private RoleService roleService;
 
     @Override
     public void execute(TilesRequestContext tilesContext,
