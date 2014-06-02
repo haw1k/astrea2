@@ -53,7 +53,9 @@ public class User implements Serializable {
     }
 
     @Size(min=3,  message = "{valid.username.Size}")
-    @Column(name = "username")
+//    @UniqueUsername(message = "{valid.username.Unique}")
+//    @Username(message = "Логин может состоять из букв, цифр, дефисов и подчёркиваний. Длина от 3 до 16 символов.")
+    @Column(name = "username", unique = true)
     public String getUsername() {
         return username;
     }
@@ -81,6 +83,25 @@ public class User implements Serializable {
     }
 
     public User() {
+    }
+
+    @Transient
+    public String getRolesString() {
+        String rolesString = "";
+        StringBuilder builder = new StringBuilder();
+        if(roles != null) {
+            for (Role role : roles) {
+                if(roles.lastIndexOf(role) != (roles.size()-1)) {
+                    builder.append(role.getRolename());
+                    builder.append(",");
+                }
+                else {
+                    builder.append(role.getRolename());
+                }
+            }
+            rolesString = builder.toString();
+        }
+        return rolesString;
     }
 
 }

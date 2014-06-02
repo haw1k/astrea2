@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+<div id="turnInfo" xmlns:jsp="http://java.sun.com/JSP/Page"
      xmlns:c="http://java.sun.com/jsp/jstl/core"
      xmlns:spring="http://www.springframework.org/tags"
      xmlns:form="http://www.springframework.org/tags/form"
@@ -10,8 +9,17 @@
     <spring:message code="label_category_title" var="labelCategoryTitle"/>
     <spring:message code="label_category_img" var="labelCategoryImg"/>
     <spring:message code="label_category_text" var="labelCategoryText"/>
+    <spring:message code="label_file_size" var="labelFileSize"/>
+    <spring:message code="label_category" var="labelCategory"/>
+    <spring:message code="label_back" var="labelBack"/>
+    <spring:message code="label_list_turns" var="labelListTurns"/>
+    <spring:message code="label_category_empty" var="labelCategoryEmpty"/>
+    <spring:message code="label_add_turn" var="labelAddTurn"/>
+    <spring:message code="valid.title.Size" var="titleSize"/>
+    <spring:message code="valid.title.NotEmpty" var="titleNotEmpty"/>
     <spring:url value="/turns/categories/img" var="turnCategoryImg"/>
     <spring:url value="/admin/turns" var="turnsUrl"/>
+
 
     <script type="text/javascript">
         $(function() {
@@ -23,39 +31,58 @@
             );
         });
     </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".editCategoryForm").validate(
+                    {
+                        rules: {
+                            title: {
+                                required: true,
+                                minlength: 3
+                            }
+                        },
+                        messages:{
+                            title: {
+                                required: "${titleNotEmpty}",
+                                minlength: "${titleSize}"
+                            }
+                        },
+                        errorElement: "span"
+                    }
+            );
+        });
+    </script>
+        <h4><a class="a_nav" onclick="javascript:history.back();"><c:out value="${labelBack}"/></a>|<a class="a_nav" href="${turnsUrl}"><c:out value="${labelListTurns}"/></a></h4>
+        <h2><c:out value="${formTitle}"/></h2>
 
-    <div id="turnInfo">
-        <h4><a class="a_nav" onclick="javascript:history.back();">Назад</a>|<a class="a_nav" href="${turnsUrl}">К списку услуг и категорий</a></h4>
-        <h2>${formTitle}</h2>
-
-        <form:form method="POST" modelAttribute="turnCategory" enctype="multipart/form-data">
+        <form:form method="POST" modelAttribute="turnCategory" cssClass="editCategoryForm" enctype="multipart/form-data">
 
             <c:if test="${not empty message}">
-                <div id="message" class="${message.type}">${message.message}</div>
+                <div id="message" class="${message.type}"><c:out value="${message.message}"/></div>
             </c:if>
 
             <h3>
                 <span class="formLabels">
-                    Категория
+                    <c:out value="${labelCategory}"/>
                 </span>
             </h3>
             <c:choose>
                 <c:when test="${turnCategory.turns.size() gt 0}">
                 <div>
                     <ul id="firstLevel">
-                        <li><div class="img"><img src="${turnCategoryImg}/${turnCategory.id}" alt="Жилищное право"/></div>
+                        <li><div class="img"><img src="${turnCategoryImg}/${turnCategory.id}" alt="${turnCategory.title}"/></div>
                             <div class="hoverSecondLevel">
                                 <c:choose>
                                     <c:when test="${turnCategory.title.length() ge 20}">
-                                        <a class="overfull" href="${turnsUrl}/category/${turnCategory.id}?edit">${turnCategory.title}</a>
+                                        <a class="overfull" href="${turnsUrl}/category/${turnCategory.id}?edit"><c:out value="${turnCategory.title}"/></a>
                                     </c:when>
                                     <c:otherwise>
-                                        <a href="#">${turnCategory.title}</a>
+                                        <a href="#"><c:out value="${turnCategory.title}"/></a>
                                     </c:otherwise>
                                 </c:choose>
                                     <ul class="secondLevel">
                                         <c:forEach items="${turnCategory.turns}" var="turn">
-                                            <li><a href="${turnsUrl}/${turn.id}?edit">${turn.title}</a></li>
+                                            <li><a href="${turnsUrl}/${turn.id}?edit"><c:out value="${turn.title}"/></a></li>
                                         </c:forEach>
                                     </ul>
                             </div>
@@ -65,14 +92,14 @@
                 </c:when>
                 <c:otherwise>
                     <span id="turns_empty">
-                        В этой категории нет услуг! <a class="addTurn" href="${turnsUrl}?add">Добавить услугу</a>
+                        <c:out value="${labelCategoryEmpty}"/><a class="addTurn" href="${turnsUrl}?add"><c:out value="${labelAddTurn}"/></a>
                     </span>
                 </c:otherwise>
             </c:choose>
             <div>
                 <h3>
                     <form:label path="title" cssClass="formLabels">
-                        ${labelCategoryTitle}
+                        <c:out value="${labelCategoryTitle}"/>
                     </form:label>
                 </h3>
                 <form:input cssClass="formSections" path="title" id="category_input_title"/>
@@ -81,19 +108,19 @@
 
             <div>
                 <h3>
-                     <form:label path="title" cssClass="formLabels">
-                        ${labelCategoryImg}
+                     <form:label path="img" cssClass="formLabels">
+                         <c:out value="${labelCategoryImg}"/>
                      </form:label>
                 </h3>
                 <input class="formSections" type="file" name="file" id="input_img"/>
                 <form:errors path="img" cssClass="error"/>
-                <div>(Размер файла: 100кб, Расширение файла: PNG, Размер изображения: 64x64px)</div>
+                <div><c:out value="${labelFileSize}"/> </div>
             </div>
 
             <div>
                 <h3>
                     <form:label path="text" cssClass="formLabels">
-                        ${labelCategoryText}
+                        <c:out value="${labelCategoryText}"/>
                     </form:label>
                 </h3>
                 <form:textarea cssClass="formSections" path="text" cols="210" rows="20" id="category_textarea"/>
@@ -104,5 +131,4 @@
                 <input class="formButton" type="reset" />
             </div>
         </form:form>
-    </div>
-</jsp:root>
+</div>

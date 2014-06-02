@@ -13,13 +13,19 @@
     <spring:message code="label_warning" var="labelWarning"/>
     <spring:message code="label_error" var="labelError"/>
 
+    <spring:message code="label_back" var="labelBack"/>
+    <spring:message code="label_main_page" var="labelMainPage"/>
     <spring:message code="label_turn_not_selected" var="labelTurnNotSelected"/>
     <spring:message code="label_turn_confirm_delete" var="labelTurnConfirmDelete"/>
     <spring:message code="turns_empty" var="labelTurnsEmpty"/>
     <spring:message code="label_turn" var="labelTurn"/>
     <spring:message code="label_price" var="labelPrice"/>
     <spring:message code="label_turnsprices" var="labelTurnsPrices"/>
+    <spring:message code="valid.title.Size" var="titleSize"/>
+    <spring:message code="valid.title.NotEmpty" var="titleNotEmpty"/>
+    <spring:message code="valid.turnPrice.NotEmpty" var="priceNotEmpty"/>
     <spring:url value="/admin/turnsprices" var="TurnsPricesUrl"></spring:url>
+    <spring:url value="/" var="mainPage"/>
 
 
 
@@ -142,22 +148,51 @@
             }
         };
     </script>
-        <h2>${labelTurnsPrices}</h2>
-        <c:if test="${not empty message}">
-            <div id="message" class="${message.type}">${message.message}</div>
-        </c:if>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".editTurnPriceForm").validate(
+                    {
+                        rules: {
+                            turn: {
+                                required: true,
+                                minlength: 3
+                            },
+                            price: {
+                                required: true
+                            }
+                        },
+                        messages:{
+                            turn: {
+                                required: "${titleNotEmpty}",
+                                minlength: "${titleSize}"
+                            },
+                            price: {
+                                required: "${priceNotEmpty}"
+                            }
+                        },
+                        errorElement: "span"
+                    }
+            );
+        });
+    </script>
 
-        <div id="turnsprices_grid">
-            <table id="turnsprices_list"><jsp:text/></table>
-            <div id="pager"><jsp:text/></div>
-        </div>
+    <h4><a class="a_nav" onclick="javascript:history.back();"><c:out value="${labelBack}"/></a>|<a class="a_nav" href="${mainPage}"><c:out value="${labelMainPage}"/> </a></h4>
+    <h2>${labelTurnsPrices}</h2>
+    <c:if test="${not empty message}">
+        <div id="message" class="${message.type}"><c:out value="${message.message}"/></div>
+    </c:if>
+
+    <div id="turnsprices_grid">
+        <table id="turnsprices_list"><jsp:text/></table>
+        <div id="pager"><jsp:text/></div>
+    </div>
 
     <div id="turnsprices_form">
-        <form:form method="POST" modelAttribute="turnPrice">
+        <form:form method="POST" modelAttribute="turnPrice" cssClass="editTurnPriceForm">
             <div>
                 <h3>
                     <form:label path="turn" cssClass="formLabels">
-                        ${labelTurn}
+                         <c:out value="${labelTurn}"/>
                     </form:label>
                 </h3>
                 <form:input cssClass="formSections" path="turn" id="turn_input_title"/>
@@ -167,10 +202,10 @@
             <div>
                 <h3>
                     <form:label path="price" cssClass="formLabels">
-                        ${labelPrice}
+                         <c:out value="${labelPrice}"/>
                     </form:label>
                 </h3>
-                <form:input cssClass="formSections" path="price" id="turn_input_title"/>
+                <form:input cssClass="formSections" path="price" />
                 <form:errors path="price" cssClass="error"/>
             </div>
             <div>
@@ -181,11 +216,11 @@
     </div>
 
         <div id="dialog-confirm" title="${labelWarning}" style="display:none">
-        <p>${labelTurnConfirmDelete}</p>
+            <p><c:out value="${labelTurnConfirmDelete}"/></p>
         </div>
 
         <div id="dialogSelectTurn" title="${labelError}" style="display:none">
-        <p>${labelTurnNotSelected}</p>
+            <p><c:out value="${labelTurnNotSelected}"/></p>
         </div>
 
 </div>

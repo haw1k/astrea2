@@ -24,6 +24,7 @@
     </beans:bean>
 
     <beans:bean id="imgValidator" class="ru.astrea.logic.controller.form.ImgValidator"/>
+    <beans:bean id="usernameValidator" class="ru.astrea.logic.controller.form.UsernameValidator"/>
 
     <interceptors>
         <beans:bean

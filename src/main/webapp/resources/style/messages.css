@@ -56,3 +56,6 @@ span.error {
     border: 1px solid #000;
 }
 
+.checkboxes {
+    height:30px;
+}

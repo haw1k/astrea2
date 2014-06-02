@@ -4,6 +4,15 @@
      xmlns:joda="http://www.joda.org/joda/time/tags"
      xmlns:form="http://www.springframework.org/tags/form"
      version="2.0">
+    <spring:message code="label_edit" var="labelEdit"/>
+    <spring:message code="label_delete" var="labelDelete"/>
+    <spring:message code="label_add" var="labelAdd"/>
+    <spring:message code="label_no" var="labelNo"/>
+    <spring:message code="label_yes" var="labelYes"/>
+    <spring:message code="label_warning" var="labelWarning"/>
+    <spring:message code="label_error" var="labelError"/>
+
+    <spring:message code="label_users_title" var="labelUsersTitle"/>
     <spring:message code="label_username" var="labelUsername"/>
     <spring:message code="label_password" var="labelPassword"/>
     <spring:message code="valid.username.SizeJ" var="usernameSize"/>
@@ -11,88 +20,242 @@
     <spring:message code="valid.username.NotEmpty" var="usernameNotEmpty"/>
     <spring:message code="valid.password.NotEmpty" var="passwordNotEmpty"/>
     <spring:message code="valid.user.role.NotEmpty" var="roleNotEmpty"/>
+    <spring:message code="valid.username.Unique" var="usernameUnique"/>
+    <spring:message code="label_back" var="labelBack"/>
+    <spring:message code="label_main_page" var="labelMainPage"/>
     <spring:message code="label_role" var="labelRole"/>
+    <spring:message code="label_users_list" var="labelUsers"/>
+    <spring:message code="users_empty" var="labelUsersEmpty"/>
+    <spring:message code="label_user_confirm_delete" var="labelUserConfirmDelete"/>
+    <spring:message code="label_user_not_selected" var="labelUserNotSelected"/>
     <spring:url value="/" var="mainPage"/>
-    <!--<script type="text/javascript">-->
-        <!--$(document).ready(function() {-->
-           <!--$(".registrationForm").validate(-->
-               <!--{-->
-                   <!--rules: {-->
-                       <!--username: {-->
-                           <!--required: true,-->
-                           <!--rangelength: [3, 45]-->
-                       <!--},-->
-                       <!--password: {-->
-                           <!--required: true,-->
-                           <!--rangelength: [5, 45]-->
-                       <!--},-->
-                       <!--roles: {-->
-                           <!--required: true-->
-                       <!--}-->
-                   <!--},-->
-                   <!--messages:{-->
-                       <!--username: {-->
-                           <!--required: "${usernameR}",-->
-                           <!--rangelength: "${usernameSize}"-->
-                       <!--},-->
-                       <!--password: {-->
-                           <!--required: "${passwordR}",-->
-                           <!--rangelength: "${passwordSize}"-->
-                       <!--},-->
-                       <!--roles: {-->
-                           <!--required: "${roleNotNull}"-->
-                       <!--}-->
-                   <!--},-->
-                   <!--errorElement: "span"-->
-                <!--}-->
-           <!--);-->
-        <!--});-->
-    <!--</script>-->
-    <h4><a class="a_nav" onclick="javascript:history.back();">Назад</a>|<a class="a_nav" href="${mainPage}">К главной странице</a></h4>
-    <h2>${formTitle}</h2>
+    <spring:url value="/admin/users" var="usersUrl"></spring:url>
+    <script type="text/javascript">
 
-    <form:form method="POST" modelAttribute="user" cssClass="registrationForm">
+        $(function(){
 
-        <c:if test="${not empty message}">
-            <div id="message" class="${message.type}">${message.message}</div>
-        </c:if>
+            $("#users_list").jqGrid({
+                url:'${usersUrl}/userslist',
+                datatype: 'json',
+                mtype: 'GET',
+                colNames:['${labelUsername}','${labelRole}'],
+                colModel :[
+                    {name:'username', index:'username', width:100, align:"center"},
+                    {name:'rolesString', index:'roles', width:100, align:"center"}
+                ],
+                jsonReader : {
+                    root:"userData",
+                    page: "currentPage",
+                    total: "totalPages",
+                    records: "totalRecords",
+                    repeatitems: false,
+                    id: "id"
+                },
+                emptyrecords: "${labelUsersEmpty}",
+                pager: '#pager',
+                rowNum:20,
+                rowList:[20,30,40],
+                sortname: 'username',
+                sortorder: 'asc',
+                viewrecords: true,
+                gridview: true,
+                autowidth:true,
+                height:460,
+                caption: '${labelUsers}'
+            });
 
-        <div>
-            <h3>
-                <form:label path="username" cssClass="formLabels">
-                    ${labelUsername}
-                </form:label>
-            </h3>
-            <form:input cssClass="formSections" path="username" id="username_inpute_title"/>
-            <form:errors path="username" cssClass="error"/>
-        </div>
+            $("#users_list").jqGrid('navGrid','#pager',
+                    {edit:false,add:false,del:false,search:false},
+                    {}, {}, {},
+                    {}
+            );
 
-        <div>
-            <h3>
-                <form:label type="password" path="password" cssClass="formLabels">
-                    ${labelPassword}
-                </form:label>
-            </h3>
-            <form:password cssClass="formSections"  path="password" id="password_inpute_title"/>
-            <form:errors path="password" cssClass="error"/>
-        </div>
+            $("#users_list").navButtonAdd('#pager',
+                    {  caption:"${labelAdd}",
+                        buttonicon:"ui-icon-plus",
+                        onClickButton: addUser,
+                        position: "last",
+                        title:"",
+                        cursor: "pointer"
+                    }
+            );
 
-        <div>
-            <h3>
-                <form:label path="roles" cssClass="formLabels">
-                    ${labelRole}
-                </form:label>
-            </h3>
-            <!--<c:forEach items="${userRoles}" var="role">-->
-                    <!--<form:checkbox cssClass="formCheckBox" path="roles" value="${role.id}"/>-->
-                    <!--<span class="forCheckBox">${role.rolename}</span>-->
-            <!--</c:forEach>-->
-            <form:checkboxes path="roles" items="${userRoles}" itemValue="id" itemLabel="rolename"/>
-            <form:errors path="roles" cssClass="error"/>
-        </div>
+            $("#users_list").navButtonAdd('#pager',
+                    {  caption:"${labelEdit}",
+                        buttonicon:"ui-icon-pencil",
+                        onClickButton: editUser,
+                        position: "last",
+                        title:"",
+                        cursor: "pointer"
+                    }
+            );
 
-        <div>
-            <input class="formButton" type="submit" />
-        </div>
-    </form:form>
+            $("#users_list").navButtonAdd('#pager',
+                    {  caption:"${labelDelete}",
+                        buttonicon:"ui-icon-trash",
+                        onClickButton: deleteUser,
+                        position: "last",
+                        title:"",
+                        cursor: "pointer"
+                    }
+            );
+
+        });
+
+
+    </script>
+    <script type="text/javascript">
+
+        //Функция добавления услуги
+        function addUser() {
+            document.location.href = "${usersUrl}/#registrationForm";
+        };
+
+        //Функция редактирования услуги
+        function editUser() {
+            var id = $("#users_list").jqGrid('getGridParam','selrow');
+            if (id != null) {
+                document.location.href = "${usersUrl}/" + id + "?edit#registrationForm";
+            } else {
+                $( "#dialogSelectUser" ).dialog({height:100, resizable:false, modal: true});
+            }
+        };
+
+        //Функция удаления услуги
+        function deleteUser() {
+            var id = $("#users_list").jqGrid('getGridParam','selrow');
+            if (id != null) {
+                $( "#dialog-confirm" ).dialog({
+                    resizable:false,
+                    height:160,
+                    modal: true,
+                    buttons: {
+                        "${labelYes}": function() {
+                            document.location.href = "${usersUrl}/" + id + "?delete";
+                        },
+                        "${labelNo}": function() {
+                            $( this ).dialog( "close" );
+                        }
+                    }
+                });
+            } else {
+                $( "#dialogSelectUser" ).dialog({height:100, resizable:false, modal: true});
+            }
+        };
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+           $(".registrationForm").validate(
+               {
+                   rules: {
+                       username: {
+                           required: true,
+                           minlength: 3,
+                           remote: {
+                               url: "<spring:url value='/admin/users/available'/>",
+                               type: "GET",
+                               data: {
+                                   username: function() {
+                                       if (("${params}" == null) || ("${params}" == "")) {
+                                           return $("#username").val();
+                                       }
+                                       else {
+                                           return null;
+                                       }
+                                   }
+                               }
+                           }
+                       },
+                       password: {
+                           required: true,
+                           minlength: 5
+                       },
+                       roles: {
+                                required: true
+                       }
+                   },
+                   messages:{
+                       username: {
+                           required: "${usernameNotEmpty}",
+                           minlength: "${usernameSize}",
+                           remote: "${usernameUnique}"
+                       },
+                       password: {
+                           required: "${passwordNotEmpty}",
+                           minlength: "${passwordSize}"
+                       },
+
+                       roles: {
+                          required: "${roleNotEmpty}"
+                       }
+
+                   },
+
+                   errorElement: "span"
+                }
+           );
+        });
+    </script>
+    <h4><a class="a_nav" onclick="javascript:history.back();"><c:out value="${labelBack}"/></a>|<a class="a_nav" href="${mainPage}"><c:out value="${labelMainPage}"/> </a></h4>
+    <h2>${labelUsersTitle}</h2>
+    <c:if test="${not empty message}">
+        <div id="message" class="${message.type}"><c:out value="${message.message}"/></div>
+    </c:if>
+
+    <div id="users_grid">
+        <table id="users_list"><jsp:text/></table>
+        <div id="pager"><jsp:text/></div>
+    </div>
+
+    <div id="turnsprices_form">
+        <form:form method="POST" modelAttribute="user" cssClass="registrationForm">
+
+            <div class="formGroup">
+                <h3>
+                    <form:label path="username" cssClass="formLabels">
+                        <c:out value="${labelUsername}"/>
+                    </form:label>
+                </h3>
+                <form:input cssClass="formSections" path="username"/>
+                <form:errors path="username" cssClass="error"/>
+            </div>
+
+            <div class="formGroup">
+                <h3>
+                    <form:label type="password" path="password" cssClass="formLabels">
+                        <c:out value="${labelPassword}"/>
+                    </form:label>
+                </h3>
+                <form:password cssClass="formSections"  path="password"/>
+                <form:errors path="password" cssClass="error"/>
+            </div>
+
+            <div class="formGroup">
+                <h3>
+                    <form:label path="roles" cssClass="formLabels">
+                        <c:out value="${labelRole}"/>
+                    </form:label>
+                </h3>
+                <form:errors path="roles" cssClass="error"/>
+                <c:forEach items="${userRoles}" var="role">
+                    <div class="checkboxes">
+                        <span class="forCheckBox"><c:out value="${role.rolename}"/></span>
+                        <form:checkbox cssClass="formCheckBox" path="roles" value="${role.id}"/>
+                    </div>
+                </c:forEach>
+            </div>
+
+            <div>
+                <input class="formButton" type="submit" />
+            </div>
+        </form:form>
+    </div>
+
+    <div id="dialog-confirm" title="${labelWarning}" style="display:none">
+        <p><c:out value="${labelUserConfirmDelete}"/></p>
+    </div>
+
+    <div id="dialogSelectUser" title="${labelError}" style="display:none">
+        <p><c:out value="${labelUserNotSelected}"/></p>
+    </div>
 </div>

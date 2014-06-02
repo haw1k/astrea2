@@ -3,7 +3,7 @@ package ru.astrea.logic.controller.form;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-public class PhoneConstraintValidator implements ConstraintValidator<Phone, String> {
+public class PhoneValidator implements ConstraintValidator<Phone, String> {
 
     @Override
     public void initialize(Phone phone) {

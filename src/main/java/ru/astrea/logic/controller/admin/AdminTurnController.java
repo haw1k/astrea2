@@ -90,7 +90,7 @@ public class AdminTurnController {
             return "admin/turns/edit";
         }
         model.asMap().clear();
-        System.out.println(turnService.addTurn(turn));
+        turnService.addTurn(turn);
         redirectAttributes.addFlashAttribute("message", new Message("success", messageSource.getMessage("turn_save_success", new Object[]{}, locale)));
         return "redirect:/admin/turns/";
     }

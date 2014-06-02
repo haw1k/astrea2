@@ -4,7 +4,6 @@ import org.hibernate.annotations.Type;
 import org.hibernate.validator.constraints.Email;
 import org.joda.time.LocalDate;
 import org.springframework.format.annotation.DateTimeFormat;
-import ru.astrea.logic.controller.form.Phone;
 
 import javax.persistence.*;
 import javax.validation.constraints.Min;
@@ -53,7 +52,6 @@ public class Consultation implements Serializable {
         this.email = email;
     }
 
-    @Phone
     @Column(name = "phone")
     public String getPhone() {
         return phone;

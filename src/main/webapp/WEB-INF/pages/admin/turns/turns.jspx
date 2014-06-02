@@ -29,7 +29,10 @@
     <spring:message code="categories_empty" var="labelCategoriesEmpty"/>
     <spring:message code="label_category_title" var="labelCategoryTitle"/>
     <spring:message code="label_category_not_selected" var="labelCategoryNotSelected"/>
+    <spring:message code="label_back" var="labelBack"/>
+    <spring:message code="label_main_page" var="labelMainPage"/>
     <spring:url value="/admin/turns" var="TurnUrl"></spring:url>
+    <spring:url value="/" var="mainPage"/>
 
 
 
@@ -212,6 +215,7 @@
                 }
          };
     </script>
+        <h4><a class="a_nav" onclick="javascript:history.back();"><c:out value="${labelBack}"/></a>|<a class="a_nav" href="${mainPage}"><c:out value="${labelMainPage}"/> </a></h4>
         <h2>${labelTurnsAndCategories}</h2>
         <c:if test="${not empty message}">
             <div id="message" class="${message.type}">${message.message}</div>

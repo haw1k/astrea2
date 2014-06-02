@@ -36,7 +36,7 @@ public class UserGrid {
         return userData;
     }
 
-    public void setUserData(List<User> turnData) {
+    public void setUserData(List<User> userData) {
         this.userData = userData;
     }
 }
