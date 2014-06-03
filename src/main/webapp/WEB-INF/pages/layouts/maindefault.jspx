@@ -40,7 +40,7 @@
     <tiles:useAttribute name="current"/>
     <body>
         <div id="container" class="headers">
-        <tiles:insertAttribute name="main_header" ignore="true"/>
+        <tiles:insertAttribute name="main_header" />
         <div id="mainMenu">
             <ul>
                 <li><div id="${current == 'about' ? 'active' : ''}" class="hover"><a href="/about">${button1}</a></div></li>

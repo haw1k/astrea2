@@ -53,8 +53,6 @@ public class User implements Serializable {
     }
 
     @Size(min=3,  message = "{valid.username.Size}")
-//    @UniqueUsername(message = "{valid.username.Unique}")
-//    @Username(message = "Логин может состоять из букв, цифр, дефисов и подчёркиваний. Длина от 3 до 16 символов.")
     @Column(name = "username", unique = true)
     public String getUsername() {
         return username;

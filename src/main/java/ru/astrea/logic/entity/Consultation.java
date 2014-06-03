@@ -4,22 +4,41 @@ import org.hibernate.annotations.Type;
 import org.hibernate.validator.constraints.Email;
 import org.joda.time.LocalDate;
 import org.springframework.format.annotation.DateTimeFormat;
+import ru.astrea.logic.controller.form.Phone;
 
 import javax.persistence.*;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.Past;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 
 @Entity
 @Table(name="consultation")
 public class Consultation implements Serializable {
     private long id;
-    private String contact;
+    private String name;
     private String email;
     private String phone;
     private String description;
     private LocalDate creationDate;
+    private Boolean processed;
 
+    @Size(min=3, message="${valid.name}")
+    @Column(name = "name")
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Column(name = "processed")
+    public Boolean getProcessed() {
+        return processed;
+    }
+
+    public void setProcessed(Boolean processed) {
+        this.processed = processed;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -32,17 +51,7 @@ public class Consultation implements Serializable {
         this.id = id;
     }
 
-    @Min(1)
-    @Column(name = "contact")
-    public String getContact() {
-        return contact;
-    }
-
-    public void setContact(String contact) {
-        this.contact = contact;
-    }
-
-    @Email
+    @Email(message = "${valid.email}")
     @Column(name = "email")
     public String getEmail() {
         return email;
@@ -52,6 +61,7 @@ public class Consultation implements Serializable {
         this.email = email;
     }
 
+    @Phone(message = "${valid.phone}")
     @Column(name = "phone")
     public String getPhone() {
         return phone;
@@ -72,7 +82,6 @@ public class Consultation implements Serializable {
 
     @Column(name = "creation_date")
     @Type(type="org.jadira.usertype.dateandtime.joda.PersistentLocalDate")
-    @Past(message = "Не корректная дата")
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     public LocalDate getCreationDate() {
         return creationDate;
@@ -80,5 +89,32 @@ public class Consultation implements Serializable {
 
     public void setCreationDate(LocalDate creationDate) {
         this.creationDate = creationDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Consultation{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", description='" + description + '\'' +
+                ", creationDate=" + creationDate +
+                ", processed=" + processed +
+                '}';
+    }
+
+    public Consultation() {
+    }
+
+    public Consultation(long id, String name, String email, String phone, String description, LocalDate creationDate, Boolean processed) {
+
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+        this.description = description;
+        this.creationDate = creationDate;
+        this.processed = processed;
     }
 }
