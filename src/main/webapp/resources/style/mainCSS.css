@@ -720,8 +720,13 @@ a:hover {
     margin-bottom: 10px;
     background: #ffffff;
     outline: none;
+    resize: none;
 }
 
 .formLabels {
-    font-size:24px;
+    font-size:20px;
+}
+
+#dialog-form {
+    display:none;
 }

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <div id="header" xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:f="http://java.sun.com/jsf/core"
+     xmlns:h="http://java.sun.com/jsf/html"
      xmlns:spring="http://www.springframework.org/tags"
      version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
@@ -7,17 +9,63 @@
     <jsp:output omit-xml-declaration="yes"/>
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:directive.page pageEncoding="UTF-8"/>
+    <spring:message code="valid.name.NotEmpty" var="nameNotEmpty"/>
+    <spring:message code="valid.name.Size" var="nameSize"/>
+    <spring:message code="valid.phone.NotEmpty" var="phoneNotEmpty"/>
+    <spring:message code="valid.phone" var="phone"/>
+    <spring:message code="valid.email" var="email"/>
     <spring:url value="/resources/img/logo.png" var="logo_url" />
+
     <script type="text/javascript">
-        $(function() {
+        $(document).ready(function() {
+            $("#consultationForm").validate(
+                    {
+                        rules: {
+                            consultationName: {
+                                required: true,
+                                minlength: 2
+                            },
+                            consultationPhone: {
+                                required: true,
+                                digits: true,
+                                maxlength: 20
+                            },
+                            consultationEmail: {
+                                email: true
+                            }
+                        },
+                        messages:{
+                            consultationName: {
+                                required: "${nameNotEmpty}",
+                                minlength: "${nameSize}"
+                            },
+                            consultationPhone: {
+                                required: "${phoneNotEmpty}",
+                                digits: "${phone}"
+                            },
+                            consultationEmail: {
+                                email: "${email}"
+                            }
+                        },
+                        errorElement: "span"
+                    }
+            );
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
             $( "#dialog-form" ).dialog({
                 autoOpen: false,
-                height: 300,
-                width: 350,
+                height: 550,
+                width: 550,
                 modal: true,
+                resizable:false,
                 buttons: {
                     "Записатся": function() {
-                        $( this ).dialog( "close" );
+                        if($("#consultationForm").valid()) {
+                            sendConsultation();
+                            $( this ).dialog( "close" );
+                        }
                     },
                     "Отмена": function() {
                         $( this ).dialog( "close" );
@@ -29,6 +77,28 @@
                         $( "#dialog-form" ).dialog( "open" );
                     });
         });
+    </script>
+    <script type="text/javascript">
+        function sendConsultation() {
+            var consultation = {
+                name : $("#consultationName").val(),
+                email : $("#consultationEmail").val(),
+                phone : $("#consultationPhone").val(),
+                description : $("#consultationText").val()
+            }
+
+             $.ajax({
+               url:"consultation/add",
+               contentType:"application/json",
+               data:JSON.stringify(consultation),
+               type:"POST",
+               success: function(response) {
+                   if(response.status == "success"){
+                        $('#formSuccess').html("Вы успешно записаны на консультацию");
+                   }
+               }
+            });
+        };
     </script>
     <div id="astreya"><jsp:text/></div>
     <div id="logo">
@@ -56,27 +126,27 @@
         </form>
 
     <div id="dialog-form" title="Записатся на консультацию">
-        <form action="/consultation/add" method="POST">
+        <form id="consultationForm" action="" method="POST">
             <div>
                 <h3>
                     <label for="consultationName" class="formLabels">Ваше имя</label>
                 </h3>
                 <input type="text" name="consultationName" id="consultationName" class="formSections"/>
-
+                <div class="example">(Пример: Иван)</div>
                 <h3>
                     <label for="consultatioEmail" class="formLabels">Ваш email</label>
                 </h3>
                 <input type="email" name="consultationEmail" id="consultationEmail" class="formSections"/>
-
+                <div class="example">(Пример: 9826360592)</div>
                 <h3>
                     <label for="consultationPhone" class="formLabels">Ваш номер телефона</label>
                 </h3>
                 <input type="text" name="consultationPhone" id="consultationPhone" class="formSections"/>
-
+                <div class="example">(Пример: ivan@gmail.com)</div>
                 <h3>
                     <label for="consultationText" class="formLabels">Краткое описание проблемы</label>
                 </h3>
-                <input type="textarea" name="consultationText" id="consultationText" class="formSections"/>
+                <textarea rows="10" cols="45" name="consultationText" id="consultationText" class="formSections"><jsp:text/></textarea>
             </div>
         </form>
     </div>
