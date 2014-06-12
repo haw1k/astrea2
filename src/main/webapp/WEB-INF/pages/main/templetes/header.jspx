@@ -14,6 +14,24 @@
     <spring:message code="valid.phone.NotEmpty" var="phoneNotEmpty"/>
     <spring:message code="valid.phone" var="phone"/>
     <spring:message code="valid.email" var="email"/>
+    <spring:message code="main_button_1" var="button1"/>
+    <spring:message code="main_button_2" var="button2"/>
+    <spring:message code="main_button_3" var="button3"/>
+    <spring:message code="main_button_4" var="button4"/>
+    <spring:message code="main_button_5" var="button5"/>
+    <spring:message code="main_button_6" var="button6"/>
+    <spring:message code="label_signup_consultation" var="labelSignUpConsultation"/>
+    <spring:message code="label_search_placeholder" var="labelSearchPlaceHolder"/>
+    <spring:message code="label_search" var="labelSearch"/>
+    <spring:message code="label_name" var="labelName"/>
+    <spring:message code="label_name_example" var="labelNameExample"/>
+    <spring:message code="label_email" var="labelEmail"/>
+    <spring:message code="label_email_example" var="labelEmailExample"/>
+    <spring:message code="label_phone" var="labelPhone"/>
+    <spring:message code="label_phone_example" var="labelPhoneExample"/>
+    <spring:message code="label_description" var="labelDescription"/>
+    <spring:message code="label_close" var="labelClose"/>
+    <spring:message code="label_success_signup_consultation" var="labelSuccessSignUpConsultation"/>
     <spring:url value="/resources/img/logo.png" var="logo_url" />
 
     <script type="text/javascript">
@@ -56,7 +74,7 @@
         $(document).ready(function() {
             $( "#dialog-form" ).dialog({
                 autoOpen: false,
-                height: 550,
+                height: 600,
                 width: 550,
                 modal: true,
                 resizable:false,
@@ -92,64 +110,76 @@
                contentType:"application/json",
                data:JSON.stringify(consultation),
                type:"POST",
-               success: function(response) {
-                   if(response.status == "success"){
-                        $('#formSuccess').html("Вы успешно записаны на консультацию");
-                   }
+               success: function() {
+                   $( "#success" ).dialog({
+                       autoOpen: false,
+                       height: 200,
+                       width: 400,
+                       modal: true,
+                       resizable:false,
+                       buttons: {
+                           "${labelClose}": function() {
+                               $( this ).dialog( "close" );
+                           }
+                       }
+                   });
+                   $( "#success" ).dialog( "open" );
+                   $("#consultationForm")[0].reset();
                }
             });
         };
     </script>
     <div id="astreya"><jsp:text/></div>
     <div id="logo">
-        <a href=""><img src="${logo_url}" alt="Астрея | Юридическое агенство" border="0"/></a>
+        <a href=""><img src="${logo_url}" border="0"/></a>
     </div>
         <div class="secondaryMenu">
             <ul>
-                <li><a href="#">О компании</a></li>
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#">Вопрос-ответ</a></li>
-                <li><a href="#">Стоимость услуг</a></li>
-                <li><a href="#">Отзывы</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="/about">${button1}</a></li>
+                <li><a href="/turns">${button2}</a></li>
+                <li><a href="#">${button3}</a></li>
+                <li><a href="#">${button4}</a></li>
+                <li><a href="#">${button5}</a></li>
+                <li><a href="#">${button6}</a></li>
             </ul>
         </div>
         <div id="topInfo">
             <div class="adress">г.Екатеринбург ул.Красноуральская 23 оф.310<br/></div>
             <div class="worktime">Время работы: c 9:00 до 19:00 (Пн - Пт)<br/></div>
             <div class="phones">+7(343) 268-69-39<br/>+7(902) 875-89-09<br/></div>
-            <div class="consultation"><button id="joinConsultation">Записатся на консультацию</button></div>
+            <div class="consultation"><button id="joinConsultation">${labelSignUpConsultation}</button></div>
         </div>
         <form id="searchBox">
-            <input id="search" type="text" placeholder="Что вы хотите найти?"/>
-            <input id="submit" type="submit" value="Найти"/>
+            <input id="search" type="text" placeholder="${labelSearchPlaceHolder}"/>
+            <input id="submit" type="submit" value="${labelSearch}"/>
         </form>
 
-    <div id="dialog-form" title="Записатся на консультацию">
+    <div id="dialog-form" title="${labelSignUpConsultation}">
         <form id="consultationForm" action="" method="POST">
             <div>
                 <h3>
-                    <label for="consultationName" class="formLabels">Ваше имя</label>
+                    <label for="consultationName" class="formLabels">${labelName}</label>
                 </h3>
                 <input type="text" name="consultationName" id="consultationName" class="formSections"/>
-                <div class="example">(Пример: Иван)</div>
+                <div class="example">${labelNameExample}</div>
                 <h3>
-                    <label for="consultatioEmail" class="formLabels">Ваш email</label>
+                    <label for="consultatioEmail" class="formLabels">${labelEmail}</label>
                 </h3>
                 <input type="email" name="consultationEmail" id="consultationEmail" class="formSections"/>
-                <div class="example">(Пример: 9826360592)</div>
+                <div class="example">${labelEmailExample}</div>
                 <h3>
-                    <label for="consultationPhone" class="formLabels">Ваш номер телефона</label>
+                    <label for="consultationPhone" class="formLabels">${labelPhone}</label>
                 </h3>
                 <input type="text" name="consultationPhone" id="consultationPhone" class="formSections"/>
-                <div class="example">(Пример: ivan@gmail.com)</div>
+                <div class="example">${labelPhoneExample}</div>
                 <h3>
-                    <label for="consultationText" class="formLabels">Краткое описание проблемы</label>
+                    <label for="consultationText" class="formLabels">${labelDescription}</label>
                 </h3>
                 <textarea rows="10" cols="45" name="consultationText" id="consultationText" class="formSections"><jsp:text/></textarea>
             </div>
         </form>
     </div>
+    <div id="success"><div class="success">${labelSuccessSignUpConsultation}</div></div>
 
 </div>
 

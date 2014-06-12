@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b497122-0284-4127-9fb0-3646829c1c6e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/form/JsonResponse.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_tanesha_recaptcha4j_recaptcha4j_0_0_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/reCaptcha.jspx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Astrea.iml" afterPath="$PROJECT_DIR$/Astrea.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Astrea_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Astrea_war_exploded.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/ConsultationGrid.java" />
+      <change type="DELETED" beforePath="F:\idea\astrea2\src\main\java\ru\astrea\logic\controller\form\JsonResponse.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/main/consultation/ConsultationController.java" afterPath="$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/main/consultation/ConsultationController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/templetes/header.jspx" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/templetes/header.jspx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/style/mainCSS.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/style/mainCSS.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/style/messages.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/style/messages.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/i18n/messages.properties" afterPath="$PROJECT_DIR$/src/main/webapp/resources/i18n/messages.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/views.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/views.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Astrea.iws" />
@@ -77,7 +73,26 @@
     <favorites_list name="Astrea" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="adminCSS.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/style/adminCSS.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="348" column="0" selection-start="8004" selection-end="8004" vertical-scroll-proportion="0.0" vertical-offset="5495" max-vertical-offset="8908">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.jspx" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/templetes/header.jspx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="21" selection-start="2241" selection-end="2241" vertical-scroll-proportion="0.80169284" vertical-offset="0" max-vertical-offset="3247">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -90,10 +105,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/views.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/LongToRole.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/config/root-context.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/StringToRole.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/service/jpa/RoleServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/service/RoleService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/config/security.xml" />
@@ -133,14 +144,18 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/layouts/maindefault.jspx" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/reCaptcha.jspx" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/style/mainCSS.css" />
         <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/form/JsonResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/Consultation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/main/consultation/ConsultationController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin/turns/editTurn.jspx" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/style/messages.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/i18n/messages.properties" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/style/mainCSS.css" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/main/consultation/ConsultationController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/templetes/header.jspx" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/ConsultationGrid.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/i18n/messages.properties" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin/consultation/consultations.jspx" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/admin/AdminConsultationController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/views.xml" />
       </list>
     </option>
   </component>
@@ -187,10 +202,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="232" />
-    <option name="y" value="51" />
-    <option name="width" value="1680" />
-    <option name="height" value="908" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -253,31 +268,6 @@
       <sortByType ProjectPane="false" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Problems" />
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Astrea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Astrea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -906,6 +896,31 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Astrea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Astrea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -936,30 +951,30 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.astrea.logic.entity" />
       <recent name="ru.astrea.logic.service.jpa" />
       <recent name="ru.astrea.logic.controller.form" />
-      <recent name="ru.astrea.logic.entity" />
       <recent name="ru.astrea.logic.controller.main" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\idea\astrea2\src\main\webapp\WEB-INF\pages\admin" />
+      <recent name="F:\idea\astrea2\src\main\java\ru\astrea\logic\controller\admin" />
+      <recent name="F:\idea\astrea2\src\main\webapp\WEB-INF\pages\admin\consultation" />
       <recent name="F:\idea\astrea\src\main\webapp\resources\img" />
       <recent name="F:\idea\astrea\src\main\webapp\WEB-INF\pages\main\templetes" />
-      <recent name="F:\idea\astrea\src\main\webapp\WEB-INF\pages\admin\turns" />
-      <recent name="F:\Servers\IDEA projects\Astrea\src\main\webapp\WEB-INF\pages\admin\turnsprices" />
-      <recent name="F:\Servers\IDEA projects\Astrea\src\main\webapp\resources\img" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="ru.astrea.webapp.domain" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="ru.astrea.webapp.service" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\idea\astrea2\src\main\webapp\WEB-INF\pages\admin" />
       <recent name="F:\idea\astrea2\src\main\webapp\resources\style" />
       <recent name="F:\idea\astrea\src\main\webapp\resources\style" />
       <recent name="F:\idea\astrea\src\main\webapp\resources\img" />
       <recent name="F:\idea\astrea\src\main\webapp\WEB-INF\pages\main" />
-      <recent name="F:\idea\astrea\src\main\webapp\WEB-INF\pages\main\" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ru.astrea.webapp.service" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 7.0.53">
@@ -1571,7 +1586,8 @@
       <workItem from="1401872016548" duration="1815000" />
       <workItem from="1401953494192" duration="19000" />
       <workItem from="1402379586123" duration="550000" />
-      <workItem from="1402473604013" duration="19902000" />
+      <workItem from="1402473604013" duration="19936000" />
+      <workItem from="1402511202973" duration="9456000" />
     </task>
     <task id="LOCAL-00001" summary="First commit astrea">
       <created>1400688484546</created>
@@ -1621,11 +1637,15 @@
       <created>1401795547312</created>
       <updated>1401795547312</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Commit 11.06.2014 21 : 24">
+      <created>1402500259652</created>
+      <updated>1402500259652</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="606312000" />
+    <option name="totallyTimeSpent" value="615802000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1648,7 +1668,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="232" y="51" width="1680" height="908" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1666,8 +1686,8 @@
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21516646" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="773" y="58" width="374" height="924" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2773224" sideWeight="0.17831326" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18477103" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="773" y="58" width="374" height="924" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44772726" sideWeight="0.17831326" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1687,17 +1707,17 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39886364" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284091" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8397727" sideWeight="0.82168674" order="8" side_tool="true" content_ui="tabs" x="0" y="363" width="1920" height="313" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8397727" sideWeight="0.82168674" order="8" side_tool="true" content_ui="tabs" x="0" y="363" width="1920" height="313" />
       <window_info id="ASM" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1708,18 +1728,18 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.94204545" sideWeight="0.17831326" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1486784" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272727" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="top" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39886364" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -1746,7 +1766,8 @@
     <MESSAGE value="Commit 2.06.2014 12 : 09" />
     <MESSAGE value="Commit 2.06.2014 22 : 30" />
     <MESSAGE value="Commit 3.06.2014 17 : 38" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit 3.06.2014 17 : 38" />
+    <MESSAGE value="Commit 11.06.2014 21 : 24" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit 11.06.2014 21 : 24" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1756,38 +1777,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin/turns/editTurn.jspx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="7" selection-start="2101" selection-end="2132" vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="2261">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/service/TurnService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="17" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/TurnGrid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="5" selection-start="862" selection-end="862" vertical-scroll-proportion="0.4583822" vertical-offset="0" max-vertical-offset="853" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin/turns/turns.jspx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="59" selection-start="1749" selection-end="1749" vertical-scroll-proportion="0.1789601" vertical-offset="345" max-vertical-offset="4250" />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_51/src.zip!/java/beans/PropertyEditorSupport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="177" column="16" selection-start="4771" selection-end="4771" vertical-scroll-proportion="0.33333334" vertical-offset="2239" max-vertical-offset="4743" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/java-blog-aggregator-master/src/main/webapp/WEB-INF/jsp/user-register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="60" selection-start="1089" selection-end="1089" vertical-scroll-proportion="0.6783555" vertical-offset="0" max-vertical-offset="1683" />
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/java-blog-aggregator-master/src/main/webapp/WEB-INF/jsp/users.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="11" selection-start="446" selection-end="446" vertical-scroll-proportion="0.08222491" vertical-offset="204" max-vertical-offset="1088" />
@@ -1843,11 +1832,6 @@
         <state line="149" column="27" selection-start="5968" selection-end="5968" vertical-scroll-proportion="-13.076923" vertical-offset="2193" max-vertical-offset="4522" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="45" selection-start="1456" selection-end="1456" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1445" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/form/PhoneValidator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="5" selection-start="585" selection-end="585" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442" />
@@ -1888,11 +1872,6 @@
         <state line="16" column="18" selection-start="521" selection-end="521" vertical-scroll-proportion="0.15943728" vertical-offset="0" max-vertical-offset="853" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/admin/AdminUserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="5" selection-start="4773" selection-end="4773" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="2567" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/main/LeftMenuController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="0" selection-start="862" selection-end="862" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493" />
@@ -1903,19 +1882,9 @@
         <state line="10" column="13" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/style/adminCSS.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="266" column="29" selection-start="6137" selection-end="6137" vertical-scroll-proportion="0.0" vertical-offset="4205" max-vertical-offset="8908" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="313" column="19" selection-start="11147" selection-end="11147" vertical-scroll-proportion="0.7692308" vertical-offset="4641" max-vertical-offset="5814" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/views.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1088" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/jsp/lib/jsp-impl.jar!/standardSchemas/jspxml2.xsd">
@@ -1930,44 +1899,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/reCaptcha.jspx">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="102">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/style/mainCSS.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="718" column="18" selection-start="15764" selection-end="15764" vertical-scroll-proportion="0.6764706" vertical-offset="11608" max-vertical-offset="12546">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="102" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/templetes/crumbs.jspx">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="853">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/Consultation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="7" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1530">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jspx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="25" selection-start="1376" selection-end="1376" vertical-scroll-proportion="0.7762557" vertical-offset="0" max-vertical-offset="731">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="853" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/templetes/footer.jspx">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/Role.java">
@@ -1977,46 +1919,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/admin/AdminTurnController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="5" selection-start="4057" selection-end="4057" vertical-scroll-proportion="0.767341" vertical-offset="625" max-vertical-offset="3638">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/form/JsonResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="424" selection-end="424" vertical-scroll-proportion="0.5304965" vertical-offset="0" max-vertical-offset="705">
-          <folding>
-            <element signature="e#169#170#0" expanded="false" />
-            <element signature="e#198#199#0" expanded="false" />
-            <element signature="e#242#243#0" expanded="false" />
-            <element signature="e#278#279#0" expanded="false" />
-            <element signature="e#311#312#0" expanded="false" />
-            <element signature="e#340#341#0" expanded="false" />
-            <element signature="e#384#385#0" expanded="false" />
-            <element signature="e#420#421#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/templetes/leftmenu.jspx">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1054">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1054" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/form/Message.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="13" selection-start="55" selection-end="55" vertical-scroll-proportion="0.04822695" vertical-offset="0" max-vertical-offset="705">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/templetes/header.jspx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="45" selection-start="1448" selection-end="1448" vertical-scroll-proportion="0.4947146" vertical-offset="366" max-vertical-offset="3220">
           <folding />
         </state>
       </provider>
@@ -2028,35 +1938,136 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/i18n/messages.properties">
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin/turns/turns.jspx">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="0" selection-start="4259" selection-end="4259" vertical-scroll-proportion="0.8306773" vertical-offset="1776" max-vertical-offset="2295">
+        <state line="29" column="59" selection-start="1749" selection-end="1749" vertical-scroll-proportion="114.53846" vertical-offset="3471" max-vertical-offset="4250">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin/turns/editTurn.jspx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="21" selection-start="2195" selection-end="2195" vertical-scroll-proportion="-21.653847" vertical-offset="270" max-vertical-offset="2261">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/style/mainCSS.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="731" column="1" selection-start="15930" selection-end="15930" vertical-scroll-proportion="0.0" vertical-offset="11875" max-vertical-offset="12682">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/admin/AdminUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="113" column="5" selection-start="4773" selection-end="4773" vertical-scroll-proportion="1.7843971" vertical-offset="255" max-vertical-offset="2567">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="0" selection-start="2100" selection-end="2100" vertical-scroll-proportion="0.27943262" vertical-offset="704" max-vertical-offset="1411">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/UserGrid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="13" selection-start="70" selection-end="70" vertical-scroll-proportion="0.0964539" vertical-offset="0" max-vertical-offset="705">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/ConsultationGrid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="0" selection-start="954" selection-end="954" vertical-scroll-proportion="0.5978898" vertical-offset="0" max-vertical-offset="853">
+          <folding>
+            <element signature="e#779#780#0" expanded="true" />
+            <element signature="e#818#819#0" expanded="true" />
+            <element signature="e#894#895#0" expanded="true" />
+            <element signature="e#950#951#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/layouts/maindefault.jspx">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="44" selection-start="2679" selection-end="2679" vertical-scroll-proportion="1.2668067" vertical-offset="162" max-vertical-offset="1224">
+        <state line="18" column="78" selection-start="1093" selection-end="1093" vertical-scroll-proportion="-7.5" vertical-offset="111" max-vertical-offset="1224">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/main/consultation/ConsultationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="1044" selection-end="1044" vertical-scroll-proportion="0.812749" vertical-offset="0" max-vertical-offset="646">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="27" column="0" selection-start="1084" selection-end="1084" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin/turns/editTurn.jspx">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/style/adminIE.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="13" selection-start="2057" selection-end="2057" vertical-scroll-proportion="0.6241901" vertical-offset="476" max-vertical-offset="2261">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="683">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jspx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="65" selection-start="711" selection-end="711" vertical-scroll-proportion="0.26723096" vertical-offset="0" max-vertical-offset="827">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/entity/Consultation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="20" selection-start="636" selection-end="645" vertical-scroll-proportion="0.18288393" vertical-offset="65" max-vertical-offset="1530">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/i18n/messages.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="31" selection-start="3191" selection-end="3191" vertical-scroll-proportion="0.47245017" vertical-offset="1348" max-vertical-offset="2652">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/style/adminCSS.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="348" column="0" selection-start="8004" selection-end="8004" vertical-scroll-proportion="0.0" vertical-offset="5495" max-vertical-offset="8908">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/admin/AdminTurnController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="30" selection-start="1508" selection-end="1508" vertical-scroll-proportion="0.3440476" vertical-offset="0" max-vertical-offset="3638">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/astrea/logic/controller/admin/AdminTurnPriceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="13" selection-start="903" selection-end="903" vertical-scroll-proportion="0.11957796" vertical-offset="0" max-vertical-offset="1853">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/views.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="79" selection-start="1457" selection-end="1457" vertical-scroll-proportion="0.53810084" vertical-offset="0" max-vertical-offset="1173">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main/templetes/header.jspx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="21" selection-start="2241" selection-end="2241" vertical-scroll-proportion="0.80169284" vertical-offset="0" max-vertical-offset="3247">
           <folding />
         </state>
       </provider>

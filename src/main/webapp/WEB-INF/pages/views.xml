@@ -29,6 +29,11 @@
         <put-attribute name="current" value="users"/>
     </definition>
 
+    <!--<definition extends="default" name="admin/consultation">-->
+        <!--<put-attribute name="body" value="/WEB-INF/pages/admin/consultation/consultations.jspx" />-->
+        <!--<put-attribute name="current" value="consultation"/>-->
+    <!--</definition>-->
+
     <definition extends="maindefault" name="about">
         <put-attribute name="main_title" value="О компании" />
         <put-attribute name="main_content" value="/WEB-INF/pages/main/about/about.jspx" />
