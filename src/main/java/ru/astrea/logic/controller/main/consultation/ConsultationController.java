@@ -20,7 +20,7 @@ public class ConsultationController {
     String addConsultation(@RequestBody Consultation consultation) {
         LocalDate dateTime = new LocalDate();
         consultation.setCreationDate(dateTime);
-        consultation.setProcessed(false);
+        consultation.setStatus("Не обработана");
         consultationService.addConsultation(consultation);
         return "success";
     }

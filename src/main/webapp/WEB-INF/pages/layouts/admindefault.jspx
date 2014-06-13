@@ -35,6 +35,7 @@
         <spring:url value="/admin/turns" var="turnsUrl"/>
         <spring:url value="/admin/turnsprices" var="turnsPricesUrl"/>
         <spring:url value="/admin/users" var="usersUrl"/>
+        <spring:url value="/admin/consultation" var="consultationUrl"/>
 
         <link href="${admin_theme_url}" rel="stylesheet" type="text/css" media="screen"/>
         <link href="${IE_url}" rel="stylesheet" type="text/css" media="screen"/>
@@ -64,7 +65,7 @@
                     <li><div id="${current == 'prices' ? 'active' : ''}" class="hover"><a href="${turnsPricesUrl}">${button2}</a></div></li>
                     <li><div id="${current == 'qa' ? 'active' : ''}" class="hover"><a href="#">${button3}</a></div></li>
                     <li><div id="${current == 'reviews' ? 'active' : ''}" class="hover"><a href="#">${button4}</a></div></li>
-                    <li><div id="${current == 'consultation' ? 'active' : ''}" class="hover"><a href="#">${button5}</a></div></li>
+                    <li><div id="${current == 'consultation' ? 'active' : ''}" class="hover"><a href="${consultationUrl}">${button5}</a></div></li>
                     <li><div id="${current == 'other' ? 'active' : ''}" class="hover"><a href="#">${button6}</a></div></li>
                     <security:authorize access="hasRole('Администратор')">
                         <li><div id="${current == 'users' ? 'active' : ''}" class="hover"><a href="${usersUrl}">${button7}</a></div></li>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div id="turnInfo" xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:spring="http://www.springframework.org/tags"
+     xmlns:form="http://www.springframework.org/tags/form"
+     version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+
+    <spring:message code="label_no" var="labelNo"/>
+    <spring:message code="label_yes" var="labelYes"/>
+    <spring:message code="label_back" var="labelBack"/>
+    <spring:message code="label_list_consultation" var="labelListConsultation"/>
+    <spring:message code="label_consultation_form" var="labelConsultationForm"/>
+    <spring:message code="label_edit_consultation" var="labelEditConsultation"/>
+    <spring:message code="label_grid_name" var="labelName"/>
+    <spring:message code="label_grid_status" var="labelStatus"/>
+    <spring:message code="label_grid_email" var="labelEmail"/>
+    <spring:message code="label_grid_phone" var="labelPhone"/>
+    <spring:message code="label_creation_date" var="labelCreationDate"/>
+    <spring:message code="label_description_2" var="labelDescription"/>
+    <spring:message code="processed" var="processed"/>
+    <spring:message code="not_processed" var="notProcessed"/>
+    <spring:url value="/admin/consultation" var="consultationUrl"/>
+
+    <h4><a class="a_nav" onclick="javascript:history.back();"><c:out value="${labelBack}"/></a>|<a class="a_nav" href="${consultationUrl}"><c:out value="${labelListConsultation}"/></a></h4>
+    <h2><c:out value="${labelConsultationForm}"/></h2>
+    <c:if test="${not empty message}">
+        <div id="message" class="${message.type}"><c:out value="${message.message}"/></div>
+    </c:if>
+    <form:form method="POST" modelAttribute="consultation" cssClass="editTurnForm">
+
+        <div>
+            <h3>
+                <c:out value="${labelName}"/>
+            </h3>
+            <div class="consultationField"><c:out value="${consultation.name}"/></div>
+        </div>
+
+        <div>
+            <h3>
+                <c:out value="${labelPhone}"/>
+            </h3>
+            <div class="consultationField"><c:out value="${consultation.phone}"/></div>
+        </div>
+
+        <div>
+            <h3>
+                <c:out value="${labelEmail}"/>
+            </h3>
+            <div class="consultationField"><c:out value="${consultation.email}"/></div>
+        </div>
+
+        <div>
+            <h3>
+                <c:out value="${labelCreationDate}"/>
+            </h3>
+            <div class="consultationField"><c:out value="${consultation.creationDate}"/></div>
+        </div>
+
+        <div>
+            <h3>
+                <c:out value="${labelDescription}"/>
+            </h3>
+            <div class="consultationText"><c:out value="${consultation.description}"/></div>
+        </div>
+
+        <div>
+            <h3>
+                <form:label path="status" cssClass="formLabels">
+                    <c:out value="${labelStatus}"/>
+                </form:label>
+            </h3>
+            <form:select cssClass="formSections" path="status">
+                <c:choose>
+                    <c:when test="${status == processed}">
+                        <form:option value="${processed}" selected="selected"><c:out value="${processed}"/></form:option>
+                    </c:when>
+                    <c:otherwise>
+                        <form:option value="${processed}"><c:out value="${processed}"/></form:option>
+                    </c:otherwise>
+                </c:choose>
+                <c:choose>
+                    <c:when test="${status == notProcessed}">
+                        <form:option value="${notProcessed}" selected="selected"><c:out value="${notProcessed}"/></form:option>
+                    </c:when>
+                    <c:otherwise>
+                        <form:option value="${notProcessed}"><c:out value="${notProcessed}"/></form:option>
+                    </c:otherwise>
+                </c:choose>
+            </form:select>
+        </div>
+
+        <div>
+            <input class="formButton" type="submit" value="${labelEditConsultation}"/>
+        </div>
+
+    </form:form>
+</div>

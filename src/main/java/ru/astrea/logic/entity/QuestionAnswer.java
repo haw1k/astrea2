@@ -8,15 +8,26 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name="consultation")
-public class Consultation implements Serializable {
+@Table(name = "question_answer")
+public class QuestionAnswer implements Serializable {
     private long id;
     private String name;
     private String email;
     private String phone;
-    private String description;
+    private String question;
+    private String answer;
     private LocalDate creationDate;
-    private String status;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "question_answer_id")
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     @Column(name = "name")
     public String getName() {
@@ -25,26 +36,6 @@ public class Consultation implements Serializable {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    @Column(name = "status")
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "consultation_id")
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     @Column(name = "email")
@@ -65,13 +56,23 @@ public class Consultation implements Serializable {
         this.phone = phone;
     }
 
-    @Column(name = "description", length = 2000)
-    public String getDescription() {
-        return description;
+    @Column(name = "question", length = 2000)
+    public String getQuestion() {
+        return question;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
+
+    @Column(name = "answer", length = 2000)
+    public String getAnswer() {
+        return answer;
+    }
+
+    public void setAnswer(String answer) {
+        this.answer = answer;
     }
 
     @Column(name = "creation_date")
@@ -95,31 +96,29 @@ public class Consultation implements Serializable {
         return creationDateString;
     }
 
-
-    @Override
-    public String toString() {
-        return "Consultation{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", phone='" + phone + '\'' +
-                ", description='" + description + '\'' +
-                ", creationDate=" + creationDate +
-                ", status=" + status+
-                '}';
-    }
-
-    public Consultation() {
-    }
-
-    public Consultation(long id, String name, String email, String phone, String description, LocalDate creationDate, String status) {
-
+    public QuestionAnswer(long id, String name, String email, String phone, String question, String answer, LocalDate creationDate) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.phone = phone;
-        this.description = description;
+        this.question = question;
+        this.answer = answer;
         this.creationDate = creationDate;
-        this.status = status;
+    }
+
+    public QuestionAnswer() {
+    }
+
+    @Override
+    public String toString() {
+        return "QuestionAnswer{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", question='" + question + '\'' +
+                ", answer='" + answer + '\'' +
+                ", creationDate=" + creationDate +
+                '}';
     }
 }

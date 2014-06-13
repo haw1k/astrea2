@@ -29,10 +29,15 @@
         <put-attribute name="current" value="users"/>
     </definition>
 
-    <!--<definition extends="default" name="admin/consultation">-->
-        <!--<put-attribute name="body" value="/WEB-INF/pages/admin/consultation/consultations.jspx" />-->
-        <!--<put-attribute name="current" value="consultation"/>-->
-    <!--</definition>-->
+    <definition extends="default" name="admin/consultation">
+        <put-attribute name="body" value="/WEB-INF/pages/admin/consultation/consultations.jspx" />
+        <put-attribute name="current" value="consultation"/>
+    </definition>
+
+    <definition extends="default" name="admin/consultation/edit">
+        <put-attribute name="body" value="/WEB-INF/pages/admin/consultation/editConsultation.jspx" />
+        <put-attribute name="current" value="consultation"/>
+    </definition>
 
     <definition extends="maindefault" name="about">
         <put-attribute name="main_title" value="О компании" />

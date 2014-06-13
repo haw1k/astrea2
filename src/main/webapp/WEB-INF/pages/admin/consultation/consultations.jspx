@@ -1,0 +1,148 @@
+<div id="turnInfo" class="grids" xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:spring="http://www.springframework.org/tags"
+     xmlns:joda="http://www.joda.org/joda/time/tags"
+     version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <spring:message code="label_warning" var="labelWarning"/>
+    <spring:message code="label_error" var="labelError"/>
+    <spring:message code="label_yes" var="labelYes"/>
+    <spring:message code="label_no" var="labelNo"/>
+    <spring:message code="label_consultation_confirm_delete" var="labelConsultationConfirmDelete"/>
+    <spring:message code="label_consultation_not_selected" var="labelConsultationNotSelected"/>
+    <spring:message code="label_creation_date" var="labelCreationDate"/>
+    <spring:message code="label_grid_name" var="labelGridName"/>
+    <spring:message code="label_grid_email" var="labelGridEmail"/>
+    <spring:message code="label_grid_phone" var="labelGridPhone"/>
+    <spring:message code="label_grid_status" var="labelGridStatus"/>
+    <spring:message code="label_consultation" var="labelConsultation"/>
+    <spring:message code="label_consultations_empty" var="labelConsultationsEmpty"/>
+    <spring:message code="label_consultations_list" var="labelConsultationsList"/>
+    <spring:message code="label_delete" var="labelDelete"/>
+    <spring:message code="label_edit_consultation" var="labelEditConsultation"/>
+
+    <spring:message code="label_back" var="labelBack"/>
+    <spring:message code="label_main_page" var="labelMainPage"/>
+    <spring:url value="/admin/consultation" var="consultationUrl"></spring:url>
+    <spring:url value="/" var="mainPage"/>
+
+
+
+
+    <script type="text/javascript">
+
+        $(function(){
+
+            $("#consultation_list").jqGrid({
+                url:'${consultationUrl}/consultationlist',
+                datatype: 'json',
+                mtype: 'GET',
+                colNames:['${labelGridStatus}','${labelCreationDate}','${labelGridName}','${labelGridEmail}','${labelGridPhone}'],
+                colModel :[
+                    {name:'status', index:'status', width:20, align:"center"},
+                    {name:'creationDateString',index:'creationDate', width:20, align:"center" },
+                    {name:'name', index:'name', width:20, align:"center"},
+                    {name:'email', index:'email', width:20, align:"center"},
+                    {name:'phone', index:'phone', width:20, align:"center"}
+                ],
+                jsonReader : {
+                    root:"consultationData",
+                    page: "currentPage",
+                    total: "totalPages",
+                    records: "totalRecords",
+                    repeatitems: false,
+                    id: "id"
+                },
+                emptyrecords: "${labelConsultationsEmpty}",
+                pager: '#pager',
+                rowNum:20,
+                rowList:[20,30,40],
+                sortname: 'status',
+                sortorder: 'asc',
+                viewrecords: true,
+                autowidth:true,
+                gridview: true,
+                height:460,
+                caption: '${labelConsultationsList}'
+            });
+
+            $("#consultation_list").jqGrid('navGrid','#pager',
+                    {edit:false,add:false,del:false,search:false},
+                    {}, {}, {},
+                    {}
+            );
+
+            $("#consultation_list").navButtonAdd('#pager',
+                    {  caption:"${labelEditConsultation}",
+                        buttonicon:"ui-icon-pencil",
+                        onClickButton: editConsultation,
+                        position: "last",
+                        title:"",
+                        cursor: "pointer"
+                    }
+            );
+
+            $("#consultation_list").navButtonAdd('#pager',
+                    {  caption:"${labelDelete}",
+                        buttonicon:"ui-icon-trash",
+                        onClickButton: deleteConsultation,
+                        position: "last",
+                        title:"",
+                        cursor: "pointer"
+                    }
+            );
+
+        });
+    </script>
+    <script type="text/javascript">
+        function deleteConsultation() {
+            var id = $("#consultation_list").jqGrid('getGridParam','selrow');
+            if (id != null) {
+                $( "#dialog-confirm" ).dialog({
+                    resizable:false,
+                    height:160,
+                    modal: true,
+                    buttons: {
+                        "${labelYes}": function() {
+                            document.location.href = "${consultationUrl}/" + id + "?delete";
+                        },
+                        "${labelNo}": function() {
+                            $( this ).dialog( "close" );
+                        }
+                    }
+                });
+            } else {
+                $( "#dialogSelectConsultation" ).dialog({height:100, resizable:false, modal: true});
+            }
+        };
+
+        function editConsultation() {
+            var id = $("#consultation_list").jqGrid('getGridParam','selrow');
+            if (id != null) {
+                document.location.href = "${consultationUrl}/"+ id + "?edit";
+            }else {
+                $( "#dialogSelectConsultation" ).dialog({height:100, resizable:false, modal: true});
+            }
+
+        };
+    </script>
+        <h4><a class="a_nav" onclick="javascript:history.back();"><c:out value="${labelBack}"/></a>|<a class="a_nav" href="${mainPage}"><c:out value="${labelMainPage}"/> </a></h4>
+        <h2>${labelConsultation}</h2>
+        <c:if test="${not empty message}">
+            <div id="message" class="${message.type}">${message.message}</div>
+        </c:if>
+
+        <div id="consultation_grid">
+            <table id="consultation_list"><jsp:text/></table>
+            <div id="pager"><jsp:text/></div>
+        </div>
+
+        <div id="dialog-confirm" title="${labelWarning}" style="display:none">
+            <p>${labelConsultationConfirmDelete}</p>
+        </div>
+
+        <div id="dialogSelectConsultation" title="${labelError}" style="display:none">
+            <p>${labelConsultationNotSelected}</p>
+        </div>
+</div>
