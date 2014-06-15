@@ -241,6 +241,10 @@ a:hover {
         padding:10px;
     }
 
+    #about_textarea {
+        padding:10px;
+    }
+
     #category_textarea {
         padding:10px;
     }
@@ -292,16 +296,37 @@ a:hover {
         width:40%;
     }
 
+    #questions_grid {
+        float:left;
+        width:50%;
+    }
+
+    #questionsAnswers_grid {
+        float:left;
+        width:50%;
+    }
+
     #turnsprices_form {
         float:right;
-        height:300px;
         width:35%;
         margin-right: 50px;
     }
 
+    #formReviewWapper {
+        float:right;
+        width:45%;
+        margin-right: 50px;
+    }
+
     #turnsprices_grid {
+         float:left;
+         width:60%;
+         height:560px;
+     }
+
+    #reviews_grid {
         float:left;
-        width:60%;
+        width:50%;
         height:560px;
     }
 
@@ -549,3 +574,13 @@ a:hover {
     background: #ffffff;
     outline: none;
 }
+
+.question {
+    font-size: 20px;
+}
+
+#question, #answer {
+    width:700px;
+    float:left;
+}
+

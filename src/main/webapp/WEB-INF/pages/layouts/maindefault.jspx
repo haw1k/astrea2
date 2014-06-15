@@ -17,7 +17,9 @@
         <spring:url value="/resources/style/messages.css" var="messages_css"/>
         <spring:url value="/resources/js/jquery-1.11.1.min.js" var="jquery" />
         <spring:url value="/resources/js/jquery-ui-1.10.4.custom.min.js" var="jquery_ui" />
+        <spring:url value="/resources/js/jquery.twbsPagination.js" var="bootstrap_Pagination" />
         <spring:url value="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js" var="jqueryValid" />
+
         <spring:message code="title_templete" var="title_templete"/>
         <spring:message code="main_button_1" var="button1"/>
         <spring:message code="main_button_2" var="button2"/>
@@ -34,8 +36,9 @@
         <script type="text/javascript" src="${jquery_ui}"><jsp:text/></script>
         <script type="text/javascript" src="${jqueryui_ru}"><jsp:text/></script>
         <script type="text/javascript" src="${jqueryValid}"><jsp:text/></script>
+        <script type="text/javascript" src="${bootstrap_Pagination}"><jsp:text/></script>
 
-        <title>${title_templete}<tiles:insertAttribute name="main_title" ignore="true"/></title>
+        <title>${title_templete} <tiles:insertAttribute name="main_title" ignore="true"/></title>
     </head>
     <tiles:useAttribute name="current"/>
     <body>
@@ -45,18 +48,17 @@
             <ul>
                 <li><div id="${current == 'about' ? 'active' : ''}" class="hover"><a href="/about">${button1}</a></div></li>
                 <li><div id="${current == 'turns' ? 'active' : ''}" class="hover"><a href="/turns">${button2}</a></div></li>
-                <li><div id="${current == 'qa' ? 'active' : ''}" class="hover"><a href="#">${button3}</a></div></li>
-                <li><div id="${current == 'prices' ? 'active' : ''}" class="hover"><a href="#">${button4}</a></div></li>
-                <li><div id="${current == 'reviews' ? 'active' : ''}" class="hover"><a href="#">${button5}</a></div></li>
-                <li><div id="${current == 'contacts' ? 'active' : ''}" class="hover"><a href="#">${button6}</a></div></li>
+                <li><div id="${current == 'qa' ? 'active' : ''}" class="hover"><a href="/questionAnswer">${button3}</a></div></li>
+                <li><div id="${current == 'prices' ? 'active' : ''}" class="hover"><a href="/prices">${button4}</a></div></li>
+                <li><div id="${current == 'reviews' ? 'active' : ''}" class="hover"><a href="/review">${button5}</a></div></li>
+                <li><div id="${current == 'contacts' ? 'active' : ''}" class="hover"><a href="/contacts">${button6}</a></div></li>
             </ul>
         </div>
         <div id="main">
             <div id="all">
                 <tiles:insertAttribute name="main_leftmenu"/>
-                <tiles:insertAttribute name="main_rightmenu" ignore="true"/>
+                <tiles:insertAttribute name="main_rightmenu"/>
                 <div id="content">
-                    <tiles:insertAttribute name="main_crumbs" ignore="true"/>
                     <tiles:insertAttribute name="main_content" ignore="true"/>
                 </div>
             </div>

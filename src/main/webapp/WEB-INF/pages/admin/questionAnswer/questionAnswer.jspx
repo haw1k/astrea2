@@ -1,0 +1,249 @@
+<div id="turnInfo" class="grids" xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:spring="http://www.springframework.org/tags"
+     xmlns:joda="http://www.joda.org/joda/time/tags"
+     version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <spring:message code="label_edit" var="labelEdit"/>
+    <spring:message code="label_delete" var="labelDelete"/>
+    <spring:message code="label_add" var="labelAdd"/>
+    <spring:message code="label_id" var="labelId"/>
+    <spring:message code="label_no" var="labelNo"/>
+    <spring:message code="label_yes" var="labelYes"/>
+    <spring:message code="label_warning" var="labelWarning"/>
+    <spring:message code="label_error" var="labelError"/>
+
+    <spring:message code="label_creation_date" var="labelCreationDate"/>
+    <spring:message code="label_grid_name" var="labelName"/>
+    <spring:message code="label_grid_email" var="labelEmail"/>
+    <spring:message code="label_grid_phone" var="labelPhone"/>
+    <spring:message code="label_questions_list" var="labelQuestionsList"/>
+    <spring:message code="label_questions_answer_list" var="labelQuestionsAnswerList"/>
+    <spring:message code="label_questions_empty" var="labelQuestionsEmpty"/>
+    <spring:message code="label_question_answer" var="labelQuestionAnswer"/>
+    <spring:message code="label_question_confirm_delete" var="labelQuestionConfirmDelete"/>
+    <spring:message code="label_question_not_selected" var="labelQuestionNotSelected"/>
+    <spring:message code="label_answer" var="labelAnswer"/>
+    <spring:message code="label_back" var="labelBack"/>
+    <spring:message code="label_main_page" var="labelMainPage"/>
+    <spring:url value="/admin/questionAnswer" var="questionAnswerUrl"></spring:url>
+    <spring:url value="/" var="mainPage"/>
+
+
+
+
+    <script type="text/javascript">
+
+        $(function(){
+
+            $("#questions_list").jqGrid({
+                url:'${questionAnswerUrl}/questionslist',
+                datatype: 'json',
+                mtype: 'GET',
+                colNames:['${labelCreationDate}','${labelName}','${labelEmail}','${labelPhone}'],
+                colModel :[
+                    {name:'creationDateString',index:'creationDate', width:20, align:"center" },
+                    {name:'name', index:'name', width:20, align:"center"},
+                    {name:'email', index:'email', width:20, align:"center"},
+                    {name:'phone', index:'phone', width:20, align:"center"}
+                ],
+                jsonReader : {
+                    root:"questionData",
+                    page: "currentPage",
+                    total: "totalPages",
+                    records: "totalRecords",
+                    repeatitems: false,
+                    id: "id"
+                },
+                emptyrecords: "${labelQuestionsEmpty}",
+                pager: '#pager',
+                rowNum:20,
+                rowList:[20,30,40],
+                sortname: 'creationDate',
+                sortorder: 'asc',
+                viewrecords: true,
+                autowidth:true,
+                gridview: true,
+                height:460,
+                caption: '${labelQuestionsList}'
+            });
+
+
+            $("#questions_list").jqGrid('navGrid','#pager',
+                    {edit:false,add:false,del:false,search:false},
+                    {}, {}, {},
+                    {}
+            );
+
+            $("#questions_list").navButtonAdd('#pager',
+                    {  caption:"${labelAnswer}",
+                        buttonicon:"ui-icon-pencil",
+                        onClickButton: answerQuestion,
+                        position: "last",
+                        title:"",
+                        cursor: "pointer"
+                    }
+            );
+
+            $("#questions_list").navButtonAdd('#pager',
+                    {  caption:"${labelDelete}",
+                        buttonicon:"ui-icon-pencil",
+                        onClickButton: deleteQuestion,
+                        position: "last",
+                        title:"",
+                        cursor: "pointer"
+                    }
+            );
+
+            });
+
+            //Таблица jqGrid для Категорий
+            $(function(){
+                $("#questionsAnswers_list").jqGrid({
+                    url:'${questionAnswerUrl}/list',
+                    datatype: 'json',
+                    mtype: 'GET',
+                    colNames:['${labelCreationDate}','${labelName}','${labelEmail}','${labelPhone}'],
+                    colModel :[
+                        {name:'creationDateString',index:'creationDate', width:20, align:"center" },
+                        {name:'name', index:'name', width:20, align:"center"},
+                        {name:'email', index:'email', width:20, align:"center"},
+                        {name:'phone', index:'phone', width:20, align:"center"}
+                    ],
+                    jsonReader : {
+                        root:"questionAnswerData",
+                        page: "currentPage",
+                        total: "totalPages",
+                        records: "totalRecords",
+                        repeatitems: false,
+                        id: "id"
+                    },
+                    emptyrecords: "${labelQuestionsEmpty}",
+                    pager: '#pagerQuestionsAnswers',
+                    rowNum:20,
+                    rowList:[20,30,40],
+                    sortname: 'creationDate',
+                    sortorder: 'asc',
+                    viewrecords: true,
+                    gridview: true,
+                    autowidth:true,
+                    height:460,
+                    caption: '${labelQuestionsAnswerList}'
+                });
+
+                //Добавляем панель управления категориями
+                $("#questionsAnswers_list").jqGrid('navGrid','#pagerQuestionsAnswers',
+                        {edit:false,add:false,del:false,search:false},
+                        {}, {}, {},
+                        {}
+                );
+
+                //Добавляем кнопку редактирования к панели управления категориями
+                $("#questionsAnswers_list").navButtonAdd('#pagerQuestionsAnswers',
+                        {  caption:"${labelEdit}",
+                            buttonicon:"ui-icon-pencil",
+                            onClickButton: editQuestionAnswer,
+                            position: "last",
+                            title:"",
+                            cursor: "pointer"
+                        }
+                );
+                $("#questionsAnswers_list").navButtonAdd('#pagerQuestionsAnswers',
+                        {  caption:"${labelDelete}",
+                            buttonicon:"ui-icon-pencil",
+                            onClickButton: deleteQuestionAnswer,
+                            position: "last",
+                            title:"",
+                            cursor: "pointer"
+                        }
+                );
+             });
+    </script>
+    <script type="text/javascript">
+
+        function answerQuestion() {
+            var id = $("#questions_list").jqGrid('getGridParam','selrow');
+            if (id != null) {
+                document.location.href = "${questionAnswerUrl}/question/" + id + "?answer";
+            } else {
+                $( "#dialogSelectQuestion" ).dialog({height:100, resizable:false, modal: true});
+            }
+        };
+
+        function deleteQuestion() {
+            var id = $("#questions_list").jqGrid('getGridParam','selrow');
+            if (id != null) {
+                $( "#dialog-confirm" ).dialog({
+                        resizable:false,
+                        height:160,
+                        modal: true,
+                        buttons: {
+                            "${labelYes}": function() {
+                                document.location.href = "${questionAnswerUrl}/question/" + id + "?delete";
+                            },
+                            "${labelNo}": function() {
+                                $( this ).dialog( "close" );
+                            }
+                        }
+                });
+            } else {
+                $( "#dialogSelectQuestion" ).dialog({height:100, resizable:false, modal: true});
+            }
+        };
+
+        function editQuestionAnswer() {
+                var id = $("#questionsAnswers_list").jqGrid('getGridParam','selrow');
+                if (id != null) {
+                    document.location.href = "${questionAnswerUrl}/" + id + "?edit";
+                } else {
+                    $( "#dialogSelectQuestion" ).dialog({height:100, resizable:false, modal: true});
+                }
+         };
+
+        function deleteQuestionAnswer() {
+            var id = $("#questionsAnswers_list").jqGrid('getGridParam','selrow');
+            if (id != null) {
+                $( "#dialog-confirm" ).dialog({
+                    resizable:false,
+                    height:160,
+                    modal: true,
+                    buttons: {
+                        "${labelYes}": function() {
+                            document.location.href = "${questionAnswerUrl}/" + id + "?delete";
+                        },
+                        "${labelNo}": function() {
+                            $( this ).dialog( "close" );
+                        }
+                    }
+                });
+            } else {
+                $( "#dialogSelectQuestion" ).dialog({height:100, resizable:false, modal: true});
+            }
+        };
+    </script>
+        <h4><a class="a_nav" onclick="javascript:history.back();"><c:out value="${labelBack}"/></a>|<a class="a_nav" href="${mainPage}"><c:out value="${labelMainPage}"/> </a></h4>
+        <h2>${labelQuestionAnswer}</h2>
+        <c:if test="${not empty message}">
+            <div id="message" class="${message.type}">${message.message}</div>
+        </c:if>
+
+        <div id="questions_grid">
+            <table id="questions_list"><jsp:text/></table>
+            <div id="pager"><jsp:text/></div>
+        </div>
+
+        <div id="questionsAnswers_grid">
+            <table id="questionsAnswers_list"><jsp:text/></table>
+            <div id="pagerQuestionsAnswers"><jsp:text/></div>
+        </div>
+
+        <div id="dialog-confirm" title="${labelWarning}" style="display:none">
+        <p>${labelQuestionConfirmDelete}</p>
+        </div>
+
+        <div id="dialogSelectQuestion" title="${labelError}" style="display:none">
+        <p>${labelQuestionNotSelected}</p>
+        </div>
+
+</div>

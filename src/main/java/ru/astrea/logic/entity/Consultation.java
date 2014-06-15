@@ -65,7 +65,7 @@ public class Consultation implements Serializable {
         this.phone = phone;
     }
 
-    @Column(name = "description", length = 2000)
+    @Column(name = "description", length = 5000)
     public String getDescription() {
         return description;
     }

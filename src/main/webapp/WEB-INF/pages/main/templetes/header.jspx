@@ -33,6 +33,12 @@
     <spring:message code="label_close" var="labelClose"/>
     <spring:message code="label_success_signup_consultation" var="labelSuccessSignUpConsultation"/>
     <spring:url value="/resources/img/logo.png" var="logo_url" />
+    <spring:url value="/about" var="aboutUrl" />
+    <spring:url value="/turns" var="turnsUrl" />
+    <spring:url value="/questionAnswer" var="questionAnswerUrl" />
+    <spring:url value="/prices" var="pricesUrl" />
+    <spring:url value="/review" var="reviewUrl" />
+    <spring:url value="/contacts" var="contactsUrl" />
 
     <script type="text/javascript">
         $(document).ready(function() {
@@ -131,26 +137,26 @@
     </script>
     <div id="astreya"><jsp:text/></div>
     <div id="logo">
-        <a href=""><img src="${logo_url}" border="0"/></a>
+        <a href="/"><img src="${logo_url}" border="0"/></a>
     </div>
         <div class="secondaryMenu">
             <ul>
-                <li><a href="/about">${button1}</a></li>
-                <li><a href="/turns">${button2}</a></li>
-                <li><a href="#">${button3}</a></li>
-                <li><a href="#">${button4}</a></li>
-                <li><a href="#">${button5}</a></li>
-                <li><a href="#">${button6}</a></li>
+                <li><a href="${aboutUrl}">${button1}</a></li>
+                <li><a href="${turnsUrl}">${button2}</a></li>
+                <li><a href="${questionAnswerUrl}">${button3}</a></li>
+                <li><a href="${pricesUrl}">${button4}</a></li>
+                <li><a href="${reviewUrl}">${button5}</a></li>
+                <li><a href="${contactsUrl}">${button6}</a></li>
             </ul>
         </div>
         <div id="topInfo">
-            <div class="adress">г.Екатеринбург ул.Красноуральская 23 оф.310<br/></div>
-            <div class="worktime">Время работы: c 9:00 до 19:00 (Пн - Пт)<br/></div>
-            <div class="phones">+7(343) 268-69-39<br/>+7(902) 875-89-09<br/></div>
+            <div class="address">${other.address}<br/></div>
+            <div class="worktime">${other.worktime}<br/></div>
+            <div class="phones">${other.workphone}<br/>${other.mobilephone}<br/></div>
             <div class="consultation"><button id="joinConsultation">${labelSignUpConsultation}</button></div>
         </div>
-        <form id="searchBox">
-            <input id="search" type="text" placeholder="${labelSearchPlaceHolder}"/>
+        <form id="searchBox" action="/search" method="POST">
+            <input id="search" name="search" type="text" placeholder="${labelSearchPlaceHolder}"/>
             <input id="submit" type="submit" value="${labelSearch}"/>
         </form>
 

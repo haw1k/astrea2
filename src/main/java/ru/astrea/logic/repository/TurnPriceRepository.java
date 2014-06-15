@@ -8,6 +8,6 @@ import ru.astrea.logic.entity.TurnPrice;
 import java.util.List;
 
 public interface TurnPriceRepository extends PagingAndSortingRepository<TurnPrice, Long> {
-    @Query("SELECT t FROM TurnPrice t WHERE t.turn LIKE %:criterion%")
+    @Query("SELECT t FROM TurnPrice t WHERE t.turn LIKE %:criterion% or t.price LIKE %:criterion%")
     List<TurnPrice> findByCriterion(@Param("criterion") String criterion);
 }

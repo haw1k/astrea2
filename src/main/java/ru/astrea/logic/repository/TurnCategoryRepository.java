@@ -8,6 +8,6 @@ import ru.astrea.logic.entity.TurnCategory;
 import java.util.List;
 
 public interface TurnCategoryRepository extends PagingAndSortingRepository<TurnCategory, Long>{
-    @Query("SELECT c FROM TurnCategory c WHERE c.title LIKE %:criterion%")
+    @Query("SELECT c FROM TurnCategory c WHERE c.title LIKE %:criterion% or c.text LIKE %:criterion%")
     List<TurnCategory> findByCriterion(@Param("criterion") String criterion);
 }

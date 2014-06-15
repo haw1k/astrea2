@@ -6,6 +6,10 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <spring:message code="main_button_2" var="turnsTitle" />
+    <spring:url value="/turns" var="turnsUrl"/>
+    <div id="crumbs">
+        <a href="${turnsUrl}">${turnsTitle}</a>
+    </div>
 
     <h1>${turnsTitle}</h1>
         <c:forEach items="${categories}" var="category">

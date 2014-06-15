@@ -1,51 +1,58 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <div id="footer" xmlns:jsp="http://java.sun.com/JSP/Page"
      xmlns:spring="http://www.springframework.org/tags"
-     version="2.0">
+     version="2.0" xmlns:c="http://java.sun.com/jsp/jstl/core">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <jsp:directive.page pageEncoding="UTF-8"/>
     <spring:url value="/resources/img/bottomLogo.png" var="bottom_logo_url" />
     <spring:message code="copyright" var="copyright"/>
+    <spring:message code="label_our_services" var="labelOurServices"/>
+    <spring:message code="label_our_phones" var="labelOurPhones"/>
+    <spring:message code="label_our_address" var="labelOurAddress"/>
+    <spring:message code="label_main_menu" var="labelMainMenu"/>
+    <spring:message code="copyright" var="copyright"/>
+    <spring:message code="copyright" var="copyright"/>
+    <spring:url value="/resources/img/logo.png" var="logo_url" />
+    <spring:url value="/about" var="aboutUrl" />
+    <spring:url value="/turns" var="turnsUrl" />
+    <spring:url value="/questionAnswer" var="questionAnswerUrl" />
+    <spring:url value="/prices" var="pricesUrl" />
+    <spring:url value="/review" var="reviewUrl" />
+    <spring:url value="/contacts" var="contactsUrl" />
 
     <hr color="#cead56"/>
     <div id="bottomLogo">
-        <a href = ""><img src="${bottom_logo_url}" alt = "Астрея | Юридическое агенство" border="0"/></a>
+        <a href = "/"><img src="${bottom_logo_url}" border="0"/></a>
     </div>
-    <div id="copyright">Астрея © 2014. Все права защищены.</div>
+    <div id="copyright">${copyright}</div>
     <div class="bottomSecondaryMenu">
         <ul>
-            <h4>Главное меню</h4>
-            <li><a href="#">О компании</a></li>
-            <li><a href="#">Услуги</a></li>
-            <li><a href="#">Вопрос-ответ</a></li>
-            <li><a href="#">Стоимость услуг</a></li>
-            <li><a href="#">Отзывы</a></li>
-            <li><a href="#">Контакты</a></li>
+            <h4>${labelMainMenu}</h4>
+            <li><a href="${aboutUrl}">О компании</a></li>
+            <li><a href="${turnsUrl}">Услуги</a></li>
+            <li><a href="${questionAnswerUrl}">Вопрос-ответ</a></li>
+            <li><a href="${pricesUrl}">Стоимость услуг</a></li>
+            <li><a href="${reviewUrl}">Отзывы</a></li>
+            <li><a href="${contactsUrl}">Контакты</a></li>
         </ul>
     </div>
     <div class="bottomServices">
         <ul>
-            <h4>Наши услуги</h4>
-            <li><a href="#">Жилищное право</a></li>
-            <li><a href="#">Гражданское право</a></li>
-            <li><a href="#">Земельное право</a></li>
-            <li><a href="#">Семейное право</a></li>
-            <li><a href="#">Наследственное право</a></li>
-            <li><a href="#">Трудовое право</a></li>
-            <li><a href="#">Налоговое право</a></li>
-            <li><a href="#">Представительство в суде</a></li>
-            <li><a href="#">Недвижимость</a></li>
+            <h4>${labelOurServices}</h4>
+            <c:forEach items="${categories}" var="category">
+                <li><a href="/turns/categories/${category.id}">${category.title}</a></li>
+            </c:forEach>
         </ul>
     </div>
     <div id="bottomInfo">
         <div id="bottomPhones">
-            <h4>Наши телефоны:</h4>
-            <div class="bottomPhones">+7(343) 268-69-39<br/>+7(902) 875-89-09<br/></div>
+            <h4>${labelOurPhones}</h4>
+            <div class="bottomPhones">${other.workphone}<br/>${other.mobilephone}<br/></div>
         </div>
         <div id="bottomAdress">
-            <h4>Нам адрес:</h4>
-            <div class="bottomAdress">г.Екатеринбург ул.Красноуральская 23 оф.310<br/>
+            <h4>${labelOurAddress}</h4>
+            <div class="bottomAdress">${other.address}<br/>
         </div>
     </div>
     </div>

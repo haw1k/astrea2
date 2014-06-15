@@ -1,0 +1,79 @@
+<div id="turnInfo" xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:spring="http://www.springframework.org/tags"
+     xmlns:form="http://www.springframework.org/tags/form"
+     xmlns:joda="http://www.joda.org/joda/time/tags"
+     version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <spring:message code="label_edit" var="labelEdit"/>
+    <spring:message code="label_delete" var="labelDelete"/>
+    <spring:message code="label_add" var="labelAdd"/>
+    <spring:message code="label_id" var="labelId"/>
+    <spring:message code="label_no" var="labelNo"/>
+    <spring:message code="label_yes" var="labelYes"/>
+    <spring:message code="label_warning" var="labelWarning"/>
+    <spring:message code="label_error" var="labelError"/>
+
+    <spring:message code="label_creation_date" var="labelCreationDate"/>
+    <spring:message code="label_grid_name" var="labelName"/>
+    <spring:message code="label_grid_email" var="labelEmail"/>
+    <spring:message code="label_grid_phone" var="labelPhone"/>
+    <spring:message code="label_questions_list" var="labelQuestionsList"/>
+    <spring:message code="label_questions_answer_list" var="labelQuestionsAnswerList"/>
+    <spring:message code="label_questions_empty" var="labelQuestionsEmpty"/>
+    <spring:message code="label_question_answer" var="labelQuestionAnswer"/>
+    <spring:message code="label_question_confirm_delete" var="labelQuestionConfirmDelete"/>
+    <spring:message code="label_question_not_selected" var="labelQuestionNotSelected"/>
+    <spring:message code="label_answer_the_question" var="labelAnswer"/>
+    <spring:message code="label_back_to_question_list" var="labelBackToQuestionList"/>
+    <spring:message code="label_answer_the_question" var="labelAnswerTheQuestion"/>
+    <spring:message code="label_grid_name" var="labelName"/>
+    <spring:message code="label_grid_email" var="labelEmail"/>
+    <spring:message code="label_grid_phone" var="labelPhone"/>
+    <spring:message code="label_question" var="labelQuestion"/>
+    <spring:message code="label_back" var="labelBack"/>
+    <spring:message code="label_main_page" var="labelMainPage"/>
+    <spring:url value="/admin/questionAnswer" var="questionAnswerUrl"></spring:url>
+    <spring:url value="/" var="mainPage"/>
+
+    <h4><a class="a_nav" onclick="javascript:history.back();"><c:out value="${labelBack}"/></a>|<a class="a_nav" href="${questionAnswerUrl}"><c:out value="${labelBackToQuestionList}"/></a></h4>
+    <h2><c:out value="${labelAnswerTheQuestion}"/></h2>
+    <c:if test="${not empty message}">
+        <div id="message" class="${message.type}"><c:out value="${message.message}"/></div>
+    </c:if>
+
+    <div>
+        <div class="question">${labelName}  :  ${questionAnswer.name}</div>
+        <div class="question">${labelEmail}  :  ${questionAnswer.email}</div>
+        <div class="question">${labelPhone}  :  ${questionAnswer.phone}</div>
+        <div class="question">${labelCreationDate}  :  ${questionAnswer.creationDate}</div>
+    </div>
+
+    <form:form method="POST" modelAttribute="questionAnswer" cssClass="editTurnForm">
+
+        <div id="question">
+            <h3>
+                <form:label path="question" cssClass="formLabels">
+                    <c:out value="${labelQuestion}"/>
+                </form:label>
+            </h3>
+            <form:textarea cssClass="formSections" path="question" cols="100" rows="20" id="turn_textarea"></form:textarea>
+        </div>
+
+        <div id="answer">
+            <h3>
+                <form:label path="answer" cssClass="formLabels">
+                    <c:out value="${labelAnswer}"/>
+                </form:label>
+            </h3>
+            <form:textarea cssClass="formSections" path="answer" cols="100" rows="20" id="turn_textarea"></form:textarea>
+        </div>
+
+        <div>
+            <input class="formButton" type="submit" />
+            <input class="formButton" type="reset" />
+        </div>
+    </form:form>
+
+</div>

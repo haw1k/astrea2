@@ -1,0 +1,31 @@
+<div id="main_content" xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:spring="http://www.springframework.org/tags"
+     xmlns:joda="http://www.joda.org/joda/time/tags"
+     xmlns:form="http://www.springframework.org/tags/form"
+     version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <spring:message code="label_turnsprices" var="labelTurnPrices"/>
+    <spring:message code="label_turn" var="labelTurn"/>
+    <spring:message code="label_price" var="labelPrice"/>
+    <spring:message code="label_review" var="labelReview"/>
+    <spring:url value="/prices" var="${pricesUrl}"/>
+
+    <div id="crumbs">
+        <a href="${pricesUrl}">${labelTurnPrices}</a>
+    </div>
+    <h1>${labelTurnPrices}</h1>
+    <table class="bordered">
+        <tr>
+            <th>${labelTurn}</th>
+            <th>${labelPrice}</th>
+        </tr>
+        <c:forEach items="${prices}" var="price">
+            <tr>
+                <td>${price.turn}</td>
+                <td>${price.price}</td>
+            </tr>
+        </c:forEach>
+    </table>
+</div>

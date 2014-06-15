@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div id="turnInfo" xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:spring="http://www.springframework.org/tags"
+     xmlns:form="http://www.springframework.org/tags/form"
+     version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <spring:message code="label_back" var="labelBack"/>
+    <spring:message code="label_main_page" var="labelMainPage"/>
+    <spring:message code="label_other" var="labelOther"/>
+    <spring:message code="label_form_about" var="labelAbout"/>
+    <spring:message code="label_form_adress" var="labelAdress"/>
+    <spring:message code="label_form_worktime" var="labelWorkTime"/>
+    <spring:message code="label_form_workphone" var="labelWorkPhone"/>
+    <spring:message code="label_form_mobilephone" var="labelMobilePhone"/>
+    <spring:message code="label_form_email" var="labelEmail"/>
+    <spring:url value="/" var="mainPage"/>
+
+    <script type="text/javascript">
+        $(function() {
+            $("#about_textarea").ckeditor(
+                    {
+                        toolbar : 'Basic',
+                        uiColor : '#eddc99'
+                    }
+            );
+        });
+    </script>
+    <h4><a class="a_nav" onclick="javascript:history.back();"><c:out value="${labelBack}"/></a>|<a class="a_nav" href="${mainPage}"><c:out value="${labelMainPage}"/> </a></h4>
+    <h2><c:out value="${labelOther}"/></h2>
+    <form:form method="POST" modelAttribute="other" cssClass="editTurnForm">
+        <c:if test="${not empty message}">
+            <div id="message" class="${message.type}"><c:out value="${message.message}"/></div>
+        </c:if>
+        <div>
+            <h3>
+                <form:label path="address" cssClass="formLabels">
+                    <c:out value="${labelAdress}"/>
+                </form:label>
+            </h3>
+            <form:input cssClass="formSections" path="address" id="turn_input_title"/>
+        </div>
+
+        <div>
+            <h3>
+                <form:label path="worktime" cssClass="formLabels">
+                    <c:out value="${labelWorkTime}"/>
+                </form:label>
+            </h3>
+            <form:input cssClass="formSections" path="worktime" id="turn_input_title"/>
+        </div>
+
+        <div>
+            <h3>
+                <form:label path="workphone" cssClass="formLabels">
+                    <c:out value="${labelWorkPhone}"/>
+                </form:label>
+            </h3>
+            <form:input cssClass="formSections" path="workphone" id="turn_input_title"/>
+        </div>
+
+        <div>
+            <h3>
+                <form:label path="mobilephone" cssClass="formLabels">
+                    <c:out value="${labelMobilePhone}"/>
+                </form:label>
+            </h3>
+            <form:input cssClass="formSections" path="mobilephone" id="turn_input_title"/>
+        </div>
+
+        <div>
+            <h3>
+                <form:label path="email" cssClass="formLabels">
+                    <c:out value="${labelEmail}"/>
+                </form:label>
+            </h3>
+            <form:input cssClass="formSections" path="email" id="turn_input_title"/>
+        </div>
+
+        <div>
+            <h3>
+                <form:label path="about" cssClass="formLabels">
+                    <c:out value="${labelAbout}"/>
+                </form:label>
+            </h3>
+            <form:textarea cssClass="formSections" path="about" cols="210" rows="20" id="about_textarea"/>
+        </div>
+
+        <div>
+            <input class="formButton" type="submit" />
+            <input class="formButton" type="reset" />
+        </div>
+    </form:form>
+</div>

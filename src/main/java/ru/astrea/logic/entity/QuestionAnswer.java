@@ -56,7 +56,7 @@ public class QuestionAnswer implements Serializable {
         this.phone = phone;
     }
 
-    @Column(name = "question", length = 2000)
+    @Column(name = "question", length = 5000)
     public String getQuestion() {
         return question;
     }

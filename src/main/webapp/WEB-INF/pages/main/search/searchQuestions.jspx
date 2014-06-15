@@ -1,0 +1,26 @@
+<div id="main_content" xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:spring="http://www.springframework.org/tags"
+     xmlns:joda="http://www.joda.org/joda/time/tags"
+     version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <spring:message code="label_title_search" var="titleSeach" />
+    <spring:message code="label_found_questions_title" var="labelFoundQuestionsTitle" />
+    <spring:message code="label_all_questions" var="labelAllQuestions" />
+    <spring:message code="label_q" var="labelQ"/>
+    <spring:message code="label_a" var="labelA"/>
+    <div id="crumbs">
+        <a href="${titleSeach}">${titleSeach}</a>
+    </div>
+    <h1>${labelFoundQuestionsTitle}</h1>
+    <h3 id="allFound"><a href="/questionAnswer">${labelAllQuestions}</a></h3>
+        <c:forEach items="${questions}" var="question">
+            <div id='questionAnswer'>
+                <h3>${labelQ}</h3>
+                <div id='question'>${question.question}</div>
+                <h3>${labelA}</h3>
+                <div id='answer'>${question.answer}</div>
+            </div>
+        </c:forEach>
+</div>

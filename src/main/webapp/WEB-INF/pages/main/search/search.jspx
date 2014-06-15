@@ -1,0 +1,53 @@
+<div id="main_content" xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:spring="http://www.springframework.org/tags"
+     xmlns:joda="http://www.joda.org/joda/time/tags"
+     version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <spring:message code="label_title_search" var="titleSeach" />
+    <spring:message code="label_search_result" var="labelSearchResult" />
+    <spring:message code="label_search_turns" var="labelSearchTurns" />
+    <spring:message code="label_search_questions" var="labelSearchQuestions" />
+    <spring:message code="label_search_categories" var="labelSearchCategories" />
+    <spring:message code="label_search_reviews" var="labelSearchReviews" />
+    <spring:message code="label_search_prices" var="labelSearchPrices" />
+    <spring:message code="label_all_found" var="labelAllFound" />
+    <spring:message code="label_found_on_page_about" var="labelFoundOnPageAbout" />
+    <spring:message code="label_on_request" var="labelOnRequest" />
+    <spring:message code="label_matches" var="labelMatches" />
+    <spring:message code="label_not_found" var="labelNotFound" />
+    <div id="crumbs">
+        <a href="${titleSeach}">${titleSeach}</a>
+    </div>
+    <h1>${titleSeach}</h1>
+    <c:choose>
+        <c:when test="${size != 0}">
+            <h3><div class="searchResultsTitle">${labelAllFound} (${size}) ${labelOnRequest} (${search})</div></h3>
+            <h3><div class="searchResultsTitle">${labelSearchResult}</div></h3>
+            <ul id="searchResults">
+                <c:if test="${aboutSize != 0}">
+                    <li><a href="/about">${labelFoundOnPageAbout}</a></li>
+                </c:if>
+                <c:if test="${turnsSize != 0}">
+                    <li><a href="/search?turns=${search}">${labelSearchTurns} (${turnsSize})</a></li>
+                </c:if>
+                <c:if test="${categoriesSize != 0}">
+                    <li><a href="/search?categories=${search}">${labelSearchCategories} (${categoriesSize})</a></li>
+                </c:if>
+                <c:if test="${turnPricesSize != 0}">
+                    <li><a href="/search?prices=${search}">${labelSearchPrices} (${turnPricesSize})</a></li>
+                </c:if>
+                <c:if test="${questionAnswersSize != 0}">
+                    <li><a href="/search?questions=${search}">${labelSearchQuestions} (${questionAnswersSize})</a></li>
+                </c:if>
+                <c:if test="${reviewsSize != 0}">
+                    <li><a href="/search?reviews=${search}">${labelSearchReviews} (${reviewsSize})</a></li>
+                </c:if>
+            </ul>
+        </c:when>
+        <c:otherwise>
+            <h3><div class="searchResultsTitle">${labelMatches} ${labelOnRequest} (${search}) ${labelNotFound}</div></h3>
+        </c:otherwise>
+    </c:choose>
+</div>

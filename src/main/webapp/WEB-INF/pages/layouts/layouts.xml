@@ -6,21 +6,30 @@
 <tiles-definitions>
 
     <definition name="default" template="/WEB-INF/pages/layouts/admindefault.jspx">
+        <put-attribute name="title" value="О компании" />
         <put-attribute name="header" value="/WEB-INF/pages/admin/templetes/header.jspx" />
         <put-attribute name="footer" value="/WEB-INF/pages/admin/templetes/footer.jspx" />
     </definition>
 
     <definition name="maindefault" template="/WEB-INF/pages/layouts/maindefault.jspx">
         <put-attribute name="main_title" value="О компании" />
-        <put-attribute name="main_header" value="/WEB-INF/pages/main/templetes/header.jspx" />
+        <put-attribute name="main_header" value="main_header" />
         <put-attribute name="main_leftmenu" value="main_leftmenu" />
-        <put-attribute name="main_crumbs" value="main_crumbs" />
+        <put-attribute name="main_rightmenu" value="main_rightmenu" />
         <put-attribute name="main_content" value="" />
-        <put-attribute name="main_rightmenu" value="/WEB-INF/pages/main/templetes/rightmenu.jspx" />
-        <put-attribute name="main_footer" value="/WEB-INF/pages/main/templetes/footer.jspx" />
+        <put-attribute name="main_footer" value="main_footer" />
     </definition>
 
     <definition preparer="leftMenuController" name="main_leftmenu" template="/WEB-INF/pages/main/templetes/leftmenu.jspx">
+    </definition>
+
+    <definition preparer="rightMenuController" name="main_rightmenu" template="/WEB-INF/pages/main/templetes/rightmenu.jspx">
+    </definition>
+
+    <definition preparer="headerController" name="main_header" template="/WEB-INF/pages/main/templetes/header.jspx">
+    </definition>
+
+    <definition preparer="footerController" name="main_footer" template="/WEB-INF/pages/main/templetes/footer.jspx">
     </definition>
 
     <definition name="login" template="/WEB-INF/pages/login.jspx"/>

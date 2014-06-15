@@ -1,0 +1,21 @@
+<div id="main_content" xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:spring="http://www.springframework.org/tags"
+     xmlns:joda="http://www.joda.org/joda/time/tags"
+     version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <spring:message code="label_title_search" var="titleSeach" />
+    <spring:message code="label_found_categories_title" var="labelFoundCategoriesTitle" />
+    <spring:message code="label_all_turns_and_categories" var="labelAllTurnsAndCategories" />
+    <div id="crumbs">
+        <a href="${titleSeach}">${titleSeach}</a>
+    </div>
+    <h1>${labelFoundCategoriesTitle}</h1>
+    <h3 id="allFound"><a href="/turns">${labelAllTurnsAndCategories}</a></h3>
+    <ul id="searchResults">
+        <c:forEach items="${foundCategories}" var="category">
+            <li><a href="/turns/categories/${category.id}">${category.title}</a></li>
+        </c:forEach>
+    </ul>
+</div>

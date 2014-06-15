@@ -7,29 +7,18 @@
     <jsp:output omit-xml-declaration="yes"/>
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:directive.page pageEncoding="UTF-8"/>
+    <spring:url value="/review" var="reviewUrl"/>
 
     <div id="reviews">
-        <h2><a href="#">Отзывы</a></h2>
-        <div class="review">
-            <h3 class="name"><a href="#">Виктор Макаров</a></h3>
-            <div class="comment">
-                Факт №1: "БизнесТЕХНО"  оптимизирует Вас :D факт №2: "БизнесТЕХНО" заряжает Вас энергией факт №3: "БизнесТЕХНО" меняет ваше мышление ...
-                <a href="#">подробнее</a>
+        <h2><a href="${reviewUrl}">Отзывы</a></h2>
+        <c:forEach items="${reviews}" var="review">
+            <div class="review">
+                <h3 class="name">${review.name}</h3>
+                <div class="comment">
+                    ${review.review}
+                    <a href="${reviewUrl}">подробнее</a>
+                </div>
             </div>
-        </div>
-        <div class="review">
-            <h3 class="name"><a href="#">Дмитрий Дрофеев</a></h3>
-            <div class="comment">
-                С 15 лет, когда мне подключили интернет, я хотел открыть свой бизнес.Бизнес в интернете, которым нужно будет заниматься максимум 3 часа в день...
-                <a href="#">подробнее</a>
-            </div>
-        </div>
-        <div class="review">
-            <h3 class="name"><a href="#">Андрей Галактионов</a></h3>
-            <div class="comment">
-                Чем мне нравится проект БизнесТехно? БизнесТехно объединяет людей которые хотят изменить свою привычную жизнь, которые хотят выйти на новый уровень доходов...
-                <a href="#">подробнее</a>
-            </div>
-        </div>
+        </c:forEach>
     </div>
 </div>

@@ -1,0 +1,34 @@
+<div id="main_content" xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:spring="http://www.springframework.org/tags"
+     xmlns:joda="http://www.joda.org/joda/time/tags"
+     version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <spring:message code="main_button_6" var="contactsTitle" />
+    <spring:message code="label_location" var="labelLocation" />
+    <spring:message code="label_phones" var="labelPhones" />
+    <spring:message code="label_worktime" var="labelWorkTime" />
+    <spring:message code="label_our_email" var="labelOurEmail" />
+    <spring:message code="label_direction" var="labelDirection" />
+    <spring:url value="/contacts" var="contactsUrl"/>
+    <div id="crumbs">
+        <a href="${contactsUrl}">${contactsTitle}</a>
+    </div>
+    <h1>${contactsTitle}</h1>
+
+    <div class="contacts"><span class="contactsLabel">${labelLocation}</span> ${other.address}</div>
+
+    <div class="contacts"><span class="contactsLabel">${labelPhones}</span>  ${other.workphone}, ${other.mobilephone}</div>
+
+    <div class="contacts"><span class="contactsLabel">${labelWorkTime}</span>  ${other.worktime}</div>
+
+    <div class="contacts"><span class="contactsLabel">${labelOurEmail}</span>  <a href="mailto:${other.email}">${other.email}</a></div>
+
+    <h3 id="titleYandexMap">${labelDirection}</h3>
+    <![CDATA[
+        <script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=veSWcH4cA-6LykGzxCrmKb7Hrm-UiwI5&width=900&height=450"></script>
+    ]]>
+
+</div>
+

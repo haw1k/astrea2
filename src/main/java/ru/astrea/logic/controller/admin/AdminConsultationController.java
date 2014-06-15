@@ -32,14 +32,14 @@ public class AdminConsultationController {
     }
 
     @RequestMapping(value = "/{id}", params = "edit", method = RequestMethod.GET)
-    public String editTurnForm(@PathVariable("id") Long id, Model model) {
+    public String editConsultationForm(@PathVariable("id") Long id, Model model) {
 
         model.addAttribute("consultation", consultationService.findById(id));
         return "admin/consultation/edit";
     }
 
     @RequestMapping(value = "/{id}", params = "edit", method = RequestMethod.POST)
-    public String editTurn(@PathVariable("id") Long id, Consultation consultation, RedirectAttributes redirectAttributes, Locale locale) {
+    public String editConsultation(@PathVariable("id") Long id, Consultation consultation, RedirectAttributes redirectAttributes, Locale locale) {
         Consultation tmpConsultation = consultationService.findById(id);
         tmpConsultation.setStatus(consultation.getStatus());
         consultationService.editConsultation(tmpConsultation);

@@ -1,0 +1,25 @@
+<div id="main_content" xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:spring="http://www.springframework.org/tags"
+     xmlns:joda="http://www.joda.org/joda/time/tags"
+     version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <spring:message code="label_title_search" var="titleSeach" />
+    <spring:message code="label_found_reviews_title" var="labelFoundReviewsTitle" />
+    <spring:message code="label_all_reviews" var="labelAllReviews" />
+    <spring:message code="label_r" var="labelR"/>
+    <div id="crumbs">
+        <a href="${titleSeach}">${titleSeach}</a>
+    </div>
+    <h1>${labelFoundReviewsTitle}</h1>
+    <h3 id="allFound"><a href="/review">${labelAllReviews}</a></h3>
+        <c:forEach items="${foundReviews}" var="review">
+            <div id='reviewTitle'>
+                <h3>
+                    <div class='name'>${review.name}</div>
+                </h3>
+                <div id='review'>${review.review}</div>
+            </div>
+        </c:forEach>
+</div>

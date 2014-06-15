@@ -2,41 +2,73 @@
 <!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
 <tiles-definitions>
 	<definition extends="default" name="admin/turns">
+        <put-attribute name="title" value="Услуги и категории" />
 		<put-attribute name="body" value="/WEB-INF/pages/admin/turns/turns.jspx" />
         <put-attribute name="current" value="turns"/>
 	</definition>
     <definition extends="default" name="admin/turns/edit">
+        <put-attribute name="title" value="Услуги и категории" />
         <put-attribute name="body" value="/WEB-INF/pages/admin/turns/editTurn.jspx" />
         <put-attribute name="current" value="turns"/>
     </definition>
     <definition extends="default" name="admin/turns/add">
+        <put-attribute name="title" value="Услуги и категории" />
         <put-attribute name="body" value="/WEB-INF/pages/admin/turns/editTurn.jspx" />
         <put-attribute name="current" value="turns"/>
     </definition>
 
     <definition extends="default" name="admin/turns/category">
+        <put-attribute name="title" value="Услуги и категории" />
         <put-attribute name="body" value="/WEB-INF/pages/admin/categories/editCategory.jspx" />
         <put-attribute name="current" value="turns"/>
     </definition>
 
     <definition extends="default" name="admin/turnsprices">
+        <put-attribute name="title" value="Цены на услуги" />
         <put-attribute name="body" value="/WEB-INF/pages/admin/turnsprices/turnsprices.jspx" />
         <put-attribute name="current" value="prices"/>
     </definition>
 
     <definition extends="default" name="admin/users">
+        <put-attribute name="title" value="Пользователи" />
         <put-attribute name="body" value="/WEB-INF/pages/admin/users/users.jspx" />
         <put-attribute name="current" value="users"/>
     </definition>
 
     <definition extends="default" name="admin/consultation">
+        <put-attribute name="title" value="Консультация" />
         <put-attribute name="body" value="/WEB-INF/pages/admin/consultation/consultations.jspx" />
         <put-attribute name="current" value="consultation"/>
     </definition>
 
     <definition extends="default" name="admin/consultation/edit">
+        <put-attribute name="title" value="Консультация" />
         <put-attribute name="body" value="/WEB-INF/pages/admin/consultation/editConsultation.jspx" />
         <put-attribute name="current" value="consultation"/>
+    </definition>
+
+    <definition extends="default" name="admin/questionAnswer">
+        <put-attribute name="title" value="Вопрос-ответ" />
+        <put-attribute name="body" value="/WEB-INF/pages/admin/questionAnswer/questionAnswer.jspx" />
+        <put-attribute name="current" value="qa"/>
+    </definition>
+
+    <definition extends="default" name="admin/questionAnswer/question">
+        <put-attribute name="title" value="Вопрос-ответ" />
+        <put-attribute name="body" value="/WEB-INF/pages/admin/questionAnswer/question.jspx" />
+        <put-attribute name="current" value="qa"/>
+    </definition>
+
+    <definition extends="default" name="admin/reviews">
+        <put-attribute name="title" value="Отзывы" />
+        <put-attribute name="body" value="/WEB-INF/pages/admin/reviews/reviews.jspx" />
+        <put-attribute name="current" value="reviews"/>
+    </definition>
+
+    <definition extends="default" name="admin/other">
+        <put-attribute name="title" value="Остальной контент" />
+        <put-attribute name="body" value="/WEB-INF/pages/admin/other/other.jspx" />
+        <put-attribute name="current" value="other"/>
     </definition>
 
     <definition extends="maindefault" name="about">
@@ -63,7 +95,69 @@
         <put-attribute name="current" value="turns"/>
     </definition>
 
-    <!--<definition extends="maindefault" name="main_leftmenu">-->
-        <!--<put-attribute name="main_leftmenu" value="/WEB-INF/pages/main/templetes/leftmenu.jspx"/>-->
-    <!--</definition>-->
+    <definition extends="maindefault" name="questionAnswer">
+        <put-attribute name="main_title" value="Вопрос-ответ" />
+        <put-attribute name="main_content" value="/WEB-INF/pages/main/questionAnswer/questionAnswer.jspx" />
+        <put-attribute name="current" value="qa"/>
+    </definition>
+
+    <definition extends="maindefault" name="review">
+        <put-attribute name="main_title" value="Отзывы" />
+        <put-attribute name="main_content" value="/WEB-INF/pages/main/review/review.jspx" />
+        <put-attribute name="current" value="reviews"/>
+    </definition>
+
+    <definition extends="maindefault" name="turnprices">
+        <put-attribute name="main_title" value="Цены на услуги" />
+        <put-attribute name="main_content" value="/WEB-INF/pages/main/turnprices/turnprices.jspx" />
+        <put-attribute name="current" value="prices"/>
+    </definition>
+
+    <definition extends="maindefault" name="turnprices">
+        <put-attribute name="main_title" value="Цены на услуги" />
+        <put-attribute name="main_content" value="/WEB-INF/pages/main/turnprices/turnprices.jspx" />
+        <put-attribute name="current" value="prices"/>
+    </definition>
+
+    <definition extends="maindefault" name="contacts">
+        <put-attribute name="main_title" value="Контакты" />
+        <put-attribute name="main_content" value="/WEB-INF/pages/main/contacts/contacts.jspx" />
+        <put-attribute name="current" value="contacts"/>
+    </definition>
+
+    <definition extends="maindefault" name="search">
+        <put-attribute name="main_title" value="Поиск" />
+        <put-attribute name="main_content" value="/WEB-INF/pages/main/search/search.jspx" />
+        <put-attribute name="current" value="search"/>
+    </definition>
+
+    <definition extends="maindefault" name="searchTurns">
+        <put-attribute name="main_title" value="Поиск" />
+        <put-attribute name="main_content" value="/WEB-INF/pages/main/search/searchTurns.jspx" />
+        <put-attribute name="current" value="search"/>
+    </definition>
+
+    <definition extends="maindefault" name="searchCategories">
+        <put-attribute name="main_title" value="Поиск" />
+        <put-attribute name="main_content" value="/WEB-INF/pages/main/search/searchCategories.jspx" />
+        <put-attribute name="current" value="search"/>
+    </definition>
+
+    <definition extends="maindefault" name="searchPrices">
+        <put-attribute name="main_title" value="Поиск" />
+        <put-attribute name="main_content" value="/WEB-INF/pages/main/search/searchPrices.jspx" />
+        <put-attribute name="current" value="search"/>
+    </definition>
+
+    <definition extends="maindefault" name="searchQuestions">
+        <put-attribute name="main_title" value="Поиск" />
+        <put-attribute name="main_content" value="/WEB-INF/pages/main/search/searchQuestions.jspx" />
+        <put-attribute name="current" value="search"/>
+    </definition>
+
+    <definition extends="maindefault" name="searchReviews">
+        <put-attribute name="main_title" value="Поиск" />
+        <put-attribute name="main_content" value="/WEB-INF/pages/main/search/searchReviews.jspx" />
+        <put-attribute name="current" value="search"/>
+    </definition>
 </tiles-definitions>

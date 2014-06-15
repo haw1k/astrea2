@@ -1,0 +1,182 @@
+<div id="main_content" xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:spring="http://www.springframework.org/tags"
+     xmlns:joda="http://www.joda.org/joda/time/tags"
+     xmlns:form="http://www.springframework.org/tags/form"
+     version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <spring:message code="label_question_answer" var="labelQuestionAnswer"/>
+    <spring:message code="label_name" var="labelName"/>
+    <spring:message code="label_name_example" var="labelNameExample"/>
+    <spring:message code="label_email" var="labelEmail"/>
+    <spring:message code="label_email_example" var="labelEmailExample"/>
+    <spring:message code="label_phone" var="labelPhone"/>
+    <spring:message code="label_phone_example" var="labelPhoneExample"/>
+    <spring:message code="label_question" var="labelQuestion"/>
+    <spring:message code="label_ask_question" var="labelAskQuestion"/>
+    <spring:message code="label_q" var="labelQ"/>
+    <spring:message code="label_a" var="labelA"/>
+    <spring:message code="valid.name.Size" var="nameSize"/>
+    <spring:message code="valid.name.NotEmpty" var="nameNotEmpty"/>
+    <spring:message code="valid.email" var="email"/>
+    <spring:message code="valid.phone" var="phone"/>
+    <spring:message code="valid.phone.NotEmpty" var="phoneNotEmpty"/>
+    <spring:url value="/questionAnswer" var="${questionAnswerUrl}"/>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#formQuestion").validate(
+                    {
+                        rules: {
+                            name: {
+                                required: true,
+                                minlength: 2
+                            },
+                            phone: {
+                                required: true,
+                                digits: true,
+                                maxlength: 20
+                            },
+                            email: {
+                                email: true
+                            }
+                        },
+                        messages:{
+                            name: {
+                                required: "${nameNotEmpty}",
+                                minlength: "${nameSize}"
+                            },
+                            phone: {
+                                required: "${phoneNotEmpty}",
+                                digits: "${phone}"
+                            },
+                            email: {
+                                email: "${email}"
+                            }
+                        },
+                        errorElement: "span"
+                    }
+            );
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#pagination-sm').twbsPagination({
+                totalPages: GetTotalPage(),
+                onPageClick: function (event, page) {
+                        var pageData = {
+                            numberPage: page
+                        }
+                        $.ajax({
+                            url:"/questionAnswer/questionsAnswersPage",
+                            contentType:"application/json",
+                            data:JSON.stringify(pageData),
+                            type:"POST",
+                            success:
+                            <![CDATA[ function(data) {
+                                var questionsAnswers = "";
+
+                                for (var i = 0; i < data.length; i++) {
+                                    questionsAnswers+="<div id='questionAnswer'><h3>${labelQ}</h3><div id='question'>" +data[i].question + "</div><h3>${labelA}</h3><div id='answer'>" + data[i].answer + "</div></div>";
+                                }
+
+                                $("#questionsData").html(questionsAnswers);
+
+                            }]]> ,
+                            error: function (xhr, status, err) {
+                                var err = eval("(" + xhr.responseText + ")");
+                                alert(err.Message);
+                            }
+                        });
+                }
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        function GetTotalPage() {
+            var totalPages = 0;
+            $.ajax({
+                url:"/questionAnswer/totalPages",
+                contentType:"application/json",
+                data:"",
+                type:"GET",
+                async:false,
+                dataType:"json",
+                success: <![CDATA[ function(data) {
+                    totalPages = data;
+                    if (totalPages != 0) {
+                        $("#askQuestionLink").html("<a href='#askQuestion'>${labelAskQuestion}</a>");
+                    }
+                }]]>,
+                error: function (xhr, status, err) {
+                    var err = eval("(" + xhr.responseText + ")");
+                    alert(err.Message);
+                }
+            });
+        return totalPages;
+        }
+
+    </script>
+
+    <div id="crumbs">
+        <a href="${questionAnswerUrl}">${labelQuestionAnswer}</a>
+    </div>
+    <h1>${labelQuestionAnswer}</h1>
+    <ul id="pagination-sm" class="questionsPagination"><jsp:text/></ul>
+    <div id="askQuestionLink"><jsp:text/></div>
+    <div id='questionsData'><jsp:text/></div>
+    <h2 id="askQuestion">${labelAskQuestion}</h2>
+        <form:form method="POST" modelAttribute="question" cssClass="editTurnForm" id="formQuestion">
+            <c:if test="${not empty message}">
+                <div id="message" class="${message.type}"><c:out value="${message.message}"/></div>
+            </c:if>
+            <div class="formBox">
+                <h3>
+                    <form:label path="name" cssClass="formLabels">
+                        <c:out value="${labelName}"/>
+                    </form:label>
+                </h3>
+                <form:input cssClass="formSections" path="name" id="name_input"/>
+                <form:errors path="name" cssClass="error"/>
+                <div class="example">${labelNameExample}</div>
+            </div>
+
+            <div class="formBox">
+                <h3>
+                    <form:label path="email" cssClass="formLabels">
+                        <c:out value="${labelEmail}"/>
+                    </form:label>
+                </h3>
+                <form:input cssClass="formSections" path="email" id="email_input"/>
+                <form:errors path="email" cssClass="error"/>
+                <div class="example">${labelEmailExample}</div>
+            </div>
+
+            <div class="formBox">
+                <h3>
+                    <form:label path="phone" cssClass="formLabels">
+                        <c:out value="${labelPhone}"/>
+                    </form:label>
+                </h3>
+                <form:input cssClass="formSections" path="phone" id="phone_input"/>
+                <form:errors path="phone" cssClass="error"/>
+                <div class="example">${labelPhoneExample}</div>
+            </div>
+
+            <div class="formBox">
+                <h3>
+                    <form:label path="question" cssClass="formLabels">
+                        <c:out value="${labelQuestion}"/>
+                    </form:label>
+                </h3>
+                <form:textarea cssClass="formSections" path="question" cols="145" rows="10" id="turn_textarea"/>
+            </div>
+
+            <div>
+                <input class="formButton" type="submit" />
+            </div>
+        </form:form>
+</div>

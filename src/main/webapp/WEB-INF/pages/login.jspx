@@ -12,7 +12,7 @@
     <spring:url value="/resources/style/login.css" var="login_css"/>
     <spring:url value="/resources/style/messages.css" var="messages_css"/>
     <spring:url value="/j_spring_security_check" var="loginUrl"/>
-    <title>22 лучших формы входа и регистрации | Vladmaxi.net</title>
+    <title>Авторизация</title>
     <link rel="stylesheet" href="${login_css}"/>
     <link rel="stylesheet" href="${messages_css}"/>
     <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
